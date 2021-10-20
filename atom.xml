@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-16T06:19:45.844Z</updated>
+  <updated>2021-10-20T01:14:50.613Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,22 +17,25 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="http://example.com/2021/10/16/%E5%B8%A6%E5%9B%BE%E6%96%87%E7%AB%A0%E6%B5%8B%E8%AF%95/"/>
-    <id>http://example.com/2021/10/16/%E5%B8%A6%E5%9B%BE%E6%96%87%E7%AB%A0%E6%B5%8B%E8%AF%95/</id>
-    <published>2021-10-16T06:08:44.128Z</published>
-    <updated>2021-10-16T06:19:45.844Z</updated>
+    <title>Logseq 插件与效率小技巧</title>
+    <link href="http://example.com/2021/10/20/Logseq%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    <id>http://example.com/2021/10/20/Logseq%E5%B0%8F%E6%8A%80%E5%B7%A7/</id>
+    <published>2021-10-20T01:07:45.081Z</published>
+    <updated>2021-10-20T01:14:50.613Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="这是标题"><a href="#这是标题" class="headerlink" title="这是标题"></a>这是标题</h3><h3 id="插入图片测试"><a href="#插入图片测试" class="headerlink" title="插入图片测试"></a>插入图片测试</h3><p><img src="https://mypicture-1257351426.cos.ap-beijing.myqcloud.com/MyNotes%2FGIF%202021-10-15%2017-58-57.gif" alt="图片测试"></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="闪卡系统"><a href="#闪卡系统" class="headerlink" title="闪卡系统"></a>闪卡系统</h3><p>我们可以在任意一个地方新建这样的内容，用第一行来描述问题，并在末尾加上 #card 的 tag，然后在第二行写上你的答案。在左侧边栏中的 Flashcard 中，就可以汇总并复习你所有的卡片。</p><p><img src="https://mypicture-1257351426.cos.ap-beijing.myqcloud.com/MyNotes/%E5%9B%BE%E7%89%8740.jpg"></p><p>然后你就能够定期通过这种方式，来复习你认为需要定期回顾的东西了。</p><p><img src="https://mypicture-1257351426.cos.ap-beijing.myqcloud.com/MyNotes/%E5%9B%BE%E7%89%8741.gif"></p><h3 id="插件系统"><a href="#插件系统" class="headerlink" title="插件系统"></a>插件系统</h3><h4 id="外观主题"><a href="#外观主题" class="headerlink" title="外观主题"></a>外观主题</h4><p>目前 Logseq 的插件市场才刚上线，所以插件生态还不算丰富，跟 Obsidian 相比还有一大段距离，但我相信随着 Logseq 的快速迭代，会有更多的开发者加入进来，今天就先演示几个比较常用的插件。</p><p><img src="https://mypicture-1257351426.cos.ap-beijing.myqcloud.com/MyNotes/%E5%9B%BE%E7%89%8742.png"></p><p>首先，Logseq 的主题目前是以插件的形式来安装的，安装后就可自由切换。如果你懂得 CSS ，也可自己编写主题。</p><p><img src="https://mypicture-1257351426.cos.ap-beijing.myqcloud.com/MyNotes/%E5%9B%BE%E7%89%8743.jpg"></p><h4 id="小组件"><a href="#小组件" class="headerlink" title="小组件"></a>小组件</h4><ul><li><strong>笔记漫游：</strong>随机跳转到某个 page 中，跟那些被你遗忘了的记录来个不期而遇</li><li><strong>笔记热力图：</strong>如图所示</li></ul><p><img src="https://mypicture-1257351426.cos.ap-beijing.myqcloud.com/MyNotes/%E5%9B%BE%E7%89%8744.jpg"></p><ul><li><strong>Markmap</strong>：实现类似幕布大纲转化为思维导图的效果</li></ul><p><img src="https://mypicture-1257351426.cos.ap-beijing.myqcloud.com/MyNotes/%E5%9B%BE%E7%89%8745.gif"></p><ul><li><strong>Tabs：</strong>多标签浏览</li></ul><p><img src="https://mypicture-1257351426.cos.ap-beijing.myqcloud.com/MyNotes/%E5%9B%BE%E7%89%8746.gif"></p><h3 id="效率技巧"><a href="#效率技巧" class="headerlink" title="效率技巧"></a>效率技巧</h3><h4 id="模板命令"><a href="#模板命令" class="headerlink" title="模板命令"></a>模板命令</h4><p><strong>适用场景：</strong>晨间日记、会议记录、日报周报、常用清单等</p><p><strong>应用目的：</strong>快速输入频繁出现，且格式固定的内容</p><p><strong>用法介绍：</strong></p><p><img src="https://mypicture-1257351426.cos.ap-beijing.myqcloud.com/MyNotes/%E5%9B%BE%E7%89%8747.jpg"></p><p><img src="https://mypicture-1257351426.cos.ap-beijing.myqcloud.com/MyNotes/%E5%9B%BE%E7%89%8748.gif"></p><h4 id="块引用"><a href="#块引用" class="headerlink" title="块引用"></a>块引用</h4><p><strong>适用场景：</strong>引用笔记，当原文改动时，引用的内容也能同步变化，类似 Excel 引用单元格</p><p><strong>用法介绍：</strong></p><p><img src="https://mypicture-1257351426.cos.ap-beijing.myqcloud.com/MyNotes/%E5%9B%BE%E7%89%8749.gif"></p><h4 id="BLock-嵌入和-Page-嵌入"><a href="#BLock-嵌入和-Page-嵌入" class="headerlink" title="BLock 嵌入和 Page 嵌入"></a>BLock 嵌入和 Page 嵌入</h4><p>用途类似 Notion 中的 synced block</p><p><img src="https://mypicture-1257351426.cos.ap-beijing.myqcloud.com/MyNotes/%E5%9B%BE%E7%89%8750.gif"></p><p><img src="https://mypicture-1257351426.cos.ap-beijing.myqcloud.com/MyNotes/%E5%9B%BE%E7%89%8751.gif"></p><h4 id="建立目录"><a href="#建立目录" class="headerlink" title="建立目录"></a>建立目录</h4><p><strong>应用目的</strong></p><ol><li>避免将所有的页面堆积在 daily note 中，不便翻找</li><li>建立快速访问书签</li></ol><p><img src="https://mypicture-1257351426.cos.ap-beijing.myqcloud.com/MyNotes/%E5%9B%BE%E7%89%8752.jpg"></p><h4 id="Page-近义词"><a href="#Page-近义词" class="headerlink" title="Page 近义词"></a>Page 近义词</h4><p><strong>适用场景：</strong>当某样东西有多个不同叫法，比如特朗普、懂王、川普，这三个关键词指的都是同一个人，我们会希望含有这三个关键词的三段话，都能被集中在同一个 Page 中</p><p><img src="https://mypicture-1257351426.cos.ap-beijing.myqcloud.com/MyNotes/%E5%9B%BE%E7%89%8753.png"></p><p><img src="https://mypicture-1257351426.cos.ap-beijing.myqcloud.com/MyNotes/%E5%9B%BE%E7%89%8754.gif"></p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;h3 id=&quot;这是标题&quot;&gt;&lt;a href=&quot;#这是标题&quot; class=&quot;headerlink&quot; title=&quot;这是标题&quot;&gt;&lt;/a&gt;这是标题&lt;/h3&gt;&lt;h3 id=&quot;插入图片测试&quot;&gt;&lt;a href=&quot;#插入图片测试&quot; class=&quot;headerlink&quot; title=&quot;插入图片测</summary>
-      
+    <summary type="html">有任何问题欢迎留言</summary>
     
     
     
+    
+    <category term="笔记软件" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="效率工具" scheme="http://example.com/tags/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="Logseq" scheme="http://example.com/tags/Logseq/"/>
     
   </entry>
   
