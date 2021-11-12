@@ -24,8 +24,9 @@
 <meta property="og:description" content="本教程保持更新，欢迎收藏">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://mypicture-1257351426.cos.ap-beijing.myqcloud.com/MyNotes/%E7%9C%8B%E6%9D%BF%E6%BC%94%E7%A4%BA.gif">
+<meta property="og:image" content="https://mypicture-1257351426.cos.ap-beijing.myqcloud.com/MyNotes/%E4%BB%BB%E5%8A%A1%E8%BF%9B%E5%BA%A6%E6%9D%A1.gif">
 <meta property="article:published_time" content="2021-11-11T10:32:06.402Z">
-<meta property="article:modified_time" content="2021-11-11T10:50:48.901Z">
+<meta property="article:modified_time" content="2021-11-12T10:31:26.006Z">
 <meta property="article:author" content="二一">
 <meta property="article:tag" content="使用教程">
 <meta name="twitter:card" content="summary_large_image">
@@ -204,7 +205,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.2k 字
+      1.3k 字
     </span>
   
 
@@ -262,6 +263,11 @@
 <li>将记事本拉到最下面</li>
 <li>复制粘贴以下代码，保存后关闭文件夹即可<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-comment">/* #kanbansmall : smaller font with hover zoom */</span><br><span class="hljs-selector-tag">div</span><span class="hljs-selector-attr">[data-refs-self*=<span class="hljs-string">&quot;kanban-small&quot;</span>]</span> &gt; <span class="hljs-selector-class">.block-children</span> <span class="hljs-selector-class">.block-content</span> &#123;<br>	<span class="hljs-attribute">font-size</span>: <span class="hljs-number">11px</span>;<br>	<span class="hljs-attribute">font-weight</span>: <span class="hljs-number">300</span>;<br>&#125;<br><span class="hljs-selector-tag">div</span><span class="hljs-selector-attr">[data-refs-self*=<span class="hljs-string">&quot;kanban-small&quot;</span>]</span> &gt; <span class="hljs-selector-class">.block-children</span> <span class="hljs-selector-class">.block-content</span><span class="hljs-selector-pseudo">:hover</span> &#123;<br>	<span class="hljs-attribute">font-size</span>: <span class="hljs-number">14px</span> <span class="hljs-meta">!important</span>;<br>	<span class="hljs-attribute">min-width</span>: <span class="hljs-number">100px</span>;<br>	<span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">10px</span>;<br>&#125;<br><span class="hljs-comment">/* #kanban-w[100-300] : force width of the columns */</span><br><span class="hljs-selector-tag">div</span><span class="hljs-selector-attr">[data-refs-self*=<span class="hljs-string">&quot;kanban-w100&quot;</span>]</span> &gt; <span class="hljs-selector-class">.block-children</span> <span class="hljs-selector-class">.block-content</span> &#123;<br>	<span class="hljs-attribute">width</span>:<span class="hljs-number">100px</span>;<br>&#125;<br><span class="hljs-selector-tag">div</span><span class="hljs-selector-attr">[data-refs-self*=<span class="hljs-string">&quot;kanban-w200&quot;</span>]</span> &gt; <span class="hljs-selector-class">.block-children</span> <span class="hljs-selector-class">.block-content</span> &#123;<br>	<span class="hljs-attribute">width</span>:<span class="hljs-number">200px</span>;<br>&#125;<br><span class="hljs-selector-tag">div</span><span class="hljs-selector-attr">[data-refs-self*=<span class="hljs-string">&quot;kanban-w300&quot;</span>]</span> &gt; <span class="hljs-selector-class">.block-children</span> <span class="hljs-selector-class">.block-content</span> &#123;<br>	<span class="hljs-attribute">width</span>:<span class="hljs-number">300px</span>;<br>&#125;<br><span class="hljs-selector-tag">div</span><span class="hljs-selector-attr">[data-refs-self*=<span class="hljs-string">&quot;kanban-w300&quot;</span>]</span> &gt; <span class="hljs-selector-class">.block-children</span> &#123;<br>	<span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid var(--ls-block-bullet-border-color);<br>	<span class="hljs-attribute">padding</span>: <span class="hljs-number">10px</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-selector-tag">div</span><span class="hljs-selector-attr">[data-refs-self*=<span class="hljs-string">&quot;kanban-w400&quot;</span>]</span> &gt; <span class="hljs-selector-class">.block-children</span> <span class="hljs-selector-class">.block-content</span> &#123;<br>	<span class="hljs-attribute">width</span>:<span class="hljs-number">380px</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 <h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2>在 block 后面添加 #kanban 标签即可，可使用例如 <code>#kanban-w400</code> 或者<code>#kanban-w200</code>来的定义看板的宽度</li>
+</ol>
+<h1 id="任务进度条"><a href="#任务进度条" class="headerlink" title="任务进度条"></a>任务进度条</h1><h2 id="功能演示-1"><a href="#功能演示-1" class="headerlink" title="功能演示"></a>功能演示</h2><p><img src="https://mypicture-1257351426.cos.ap-beijing.myqcloud.com/MyNotes/%E4%BB%BB%E5%8A%A1%E8%BF%9B%E5%BA%A6%E6%9D%A1.gif" srcset="/img/loading.gif" lazyload></p>
+<h2 id="安装教程"><a href="#安装教程" class="headerlink" title="安装教程"></a>安装教程</h2><ol>
+<li>下载并解压<code>任务进度条插件</code><br>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1Cvd12-vNbsnM59D8LX6wXA">https://pan.baidu.com/s/1Cvd12-vNbsnM59D8LX6wXA</a><br>提取码：eygo </li>
+<li>打开 Logseq - 插件 - 手动载入插件，选择解压后的文件夹，即可完成安装<h2 id="使用方法-1"><a href="#使用方法-1" class="headerlink" title="使用方法"></a>使用方法</h2>在 block 后面使用 <code>/</code>命令，唤出<code>TODO Master</code>即可</li>
 </ol>
 
             </div>
