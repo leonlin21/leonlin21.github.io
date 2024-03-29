@@ -16,32 +16,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>使用 Obsidian 作为 Hexo 编辑器的可行性分析 - 二一的笔记</title>
+  <title>Notion 知识星球半月报 ｜202403 第一期 - 二一的笔记</title>
 
   
-    <meta name="description" content="编辑器基础功能Obsidian 自带 YAML 管理功能 不过 abbrlink 默认就是数字 1，继续新建一篇文章，发现 abbrlink 变成了数字 2，似乎是自动递增的。 问题 1 ：这会不会影响永久链接的生成？  并且终端内出现如下提示 1234567891011INFO  Start processingINFO  Hexo is running at http:&#x2F;&#x2F;localhost:">
+    <meta name="description" content="大家好，从今天开始试运营「知识星球半月报」这个专栏，旨在为大家搜集整理这半个月来，在知识星球内产生的有价值的资讯或讨论。随着星球成员数量的增加，相信本专栏的内容会越来越丰富，如有任何意见或建议，也欢迎你在本帖下留言。 时间范围 本期时间：2024.02.25 — 2024.03.10 下期更新时间预计在 2024.03.30  Notion 官方更新 Notion 代码块更新自动缩进：http:&#x2F;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用 Obsidian 作为 Hexo 编辑器的可行性分析">
-<meta property="og:url" content="https://eryiblog.ink/posts/1.html">
+<meta property="og:title" content="Notion 知识星球半月报 ｜202403 第一期">
+<meta property="og:url" content="https://eryiblog.ink/posts/202403291725.html">
 <meta property="og:site_name" content="二一的笔记">
-<meta property="og:description" content="编辑器基础功能Obsidian 自带 YAML 管理功能 不过 abbrlink 默认就是数字 1，继续新建一篇文章，发现 abbrlink 变成了数字 2，似乎是自动递增的。 问题 1 ：这会不会影响永久链接的生成？  并且终端内出现如下提示 1234567891011INFO  Start processingINFO  Hexo is running at http:&#x2F;&#x2F;localhost:">
+<meta property="og:description" content="大家好，从今天开始试运营「知识星球半月报」这个专栏，旨在为大家搜集整理这半个月来，在知识星球内产生的有价值的资讯或讨论。随着星球成员数量的增加，相信本专栏的内容会越来越丰富，如有任何意见或建议，也欢迎你在本帖下留言。 时间范围 本期时间：2024.02.25 — 2024.03.10 下期更新时间预计在 2024.03.30  Notion 官方更新 Notion 代码块更新自动缩进：http:&#x2F;">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://pic.eryinote.com/PicGo/202403281544571.png">
-<meta property="og:image" content="https://pic.eryinote.com/PicGo/202403281546890.png">
-<meta property="og:image" content="https://pic.eryinote.com/PicGo/202403281556496.png">
-<meta property="og:image" content="https://pic.eryinote.com/PicGo/202403281558717.png">
-<meta property="article:published_time" content="2024-03-28T07:42:39.729Z">
-<meta property="article:modified_time" content="2024-03-28T08:04:57.540Z">
+<meta property="article:published_time" content="2024-03-29T09:25:53.000Z">
+<meta property="article:modified_time" content="2024-03-29T09:25:53.000Z">
 <meta property="article:author" content="二一">
-<meta property="article:tag" content="Hexo">
-<meta property="article:tag" content="博客搭建">
-<meta property="article:tag" content="Obsidian">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://pic.eryinote.com/PicGo/202403281544571.png">
   
   
   
-  <meta name="keywords" content="Hexo,博客搭建,Obsidian">
+  
 
   <!-- feed -->
   
@@ -70,7 +62,7 @@
 <div class="widgets">
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/posts/1.html"><span class="title">使用 Obsidian 作为 Hexo 编辑器的可行性分析</span></a><a class="item title" href="/posts/16107.html"><span class="title">Hello World</span></a><a class="item title" href="/posts/6247.html"><span class="title">Mac 系统搭建 Hexo + Github 免费博客全流程｜新手教程、零基础手把手教学</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/posts/62677.html"><span class="title">使用 Obsidian 作为 Hexo 编辑器的可行性分析</span></a><a class="item title" href="/posts/202403291725.html"><span class="title">Notion 知识星球半月报 ｜202403 第一期</span></a><a class="item title" href="/posts/37910.html"><span class="title">Hexo + Github 免费博客搭建全流程 | 新手零基础教学</span></a><a class="item title" href="/posts/16107.html"><span class="title">Hello World</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -82,34 +74,62 @@
 <div class="article banner top">
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
-<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/">技术教程</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-03-28T07:42:39.729Z">2024-03-28</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-03-28T08:04:57.540Z">2024-03-28</time></span></div></div></div>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E7%9F%A5%E8%AF%86%E6%98%9F%E7%90%83/">知识星球</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-03-29T09:25:53.000Z">2024-03-29</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-03-29T09:25:53.000Z">2024-03-29</time></span></div></div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>使用 Obsidian 作为 Hexo 编辑器的可行性分析</span></h1>
+        <h1 class="text title"><span>Notion 知识星球半月报 ｜202403 第一期</span></h1>
         
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><h2 id="编辑器基础功能"><a href="#编辑器基础功能" class="headerlink" title="编辑器基础功能"></a>编辑器基础功能</h2><h3 id="Obsidian-自带-YAML-管理功能"><a href="#Obsidian-自带-YAML-管理功能" class="headerlink" title="Obsidian 自带 YAML 管理功能"></a>Obsidian 自带 YAML 管理功能</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403281544571.png"></p>
-<p>不过 abbrlink 默认就是数字 1，继续新建一篇文章，发现 abbrlink 变成了数字 2，似乎是自动递增的。</p>
-<p><strong>问题 1 ：这会不会影响永久链接的生成？</strong></p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403281546890.png"></p>
-<p>并且终端内出现如下提示</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.</span><br><span class="line">INFO  No title found for post [source/_posts/未命名.md][  ]</span><br><span class="line">INFO  Generate link [0] for post [source/_posts/未命名.md][  ]</span><br><span class="line">INFO  Generated: categories [undefined] for post [source/_posts/未命名.md][  ]</span><br><span class="line">INFO  No title found for post [source/_posts/未命名.md][  ]</span><br><span class="line">INFO  Generate link [1] for post [source/_posts/未命名.md][  ]</span><br><span class="line">INFO  Generated: categories [undefined] for post [source/_posts/未命名.md][  ]</span><br><span class="line">INFO  No title found for post [source/_posts/未命名.md][  ]</span><br><span class="line">INFO  Generate link [2] for post [source/_posts/未命名.md][  ]</span><br><span class="line">INFO  Generated: categories [undefined] for post [source/_posts/未命名.md][  ]</span><br></pre></td></tr></table></figure>
+  </div><article class="md-text content"><p>大家好，从今天开始<strong>试运营</strong>「知识星球半月报」这个专栏，旨在为大家搜集整理这半个月来，在知识星球内产生的有价值的资讯或讨论。随着星球成员数量的增加，相信本专栏的内容会越来越丰富，<strong>如有任何意见或建议，也欢迎你在本帖下留言。</strong></p>
+<h3 id="时间范围"><a href="#时间范围" class="headerlink" title="时间范围"></a>时间范围</h3><ol>
+<li>本期时间：2024.02.25 — 2024.03.10</li>
+<li>下期更新时间预计在 2024.03.30</li>
+</ol>
+<h3 id="Notion-官方更新"><a href="#Notion-官方更新" class="headerlink" title="Notion 官方更新"></a>Notion 官方更新</h3><ol>
+<li>Notion 代码块更新自动缩进：<a target="_blank" rel="noopener" href="http://eryi.ink/G7dz">http://eryi.ink/G7dz</a></li>
+<li>Notion 官方发布了奥斯卡投票模板：<a target="_blank" rel="noopener" href="http://eryi.ink/Frct">http://eryi.ink/Frct</a></li>
+<li>Notion 手机端新增快捷回复：<a target="_blank" rel="noopener" href="http://eryi.ink/2cNL">http://eryi.ink/2cNL</a></li>
+<li>Notion 可自定义 Button 颜色：<a target="_blank" rel="noopener" href="http://eryi.ink/eCPd">http://eryi.ink/eCPd</a></li>
+</ol>
+<h3 id="Notion-功能答疑："><a href="#Notion-功能答疑：" class="headerlink" title="Notion 功能答疑："></a>Notion 功能答疑：</h3><ol>
+<li>Notion 旅行模板的复用：<a target="_blank" rel="noopener" href="http://eryi.ink/RJjR">http://eryi.ink/RJjR</a></li>
+<li>Notion 微信剪藏插件推荐：<a target="_blank" rel="noopener" href="http://eryi.ink/6SZk">http://eryi.ink/6SZk</a></li>
+<li>Notion 能嵌入高德地图吗：<a target="_blank" rel="noopener" href="http://eryi.ink/LuN6">http://eryi.ink/LuN6</a></li>
+<li>Notion 与 wolai 的对比：<a target="_blank" rel="noopener" href="http://eryi.ink/XGcd">http://eryi.ink/XGcd</a></li>
+<li>Notion 能做相册管理吗：<a target="_blank" rel="noopener" href="http://eryi.ink/nJAs">http://eryi.ink/nJAs</a></li>
+<li>Notion 如何离线导出：<a target="_blank" rel="noopener" href="http://eryi.ink/qB5d">http://eryi.ink/qB5d</a></li>
+<li>Notion 如何快速创建分栏：<a target="_blank" rel="noopener" href="http://eryi.ink/69ru">http://eryi.ink/69ru</a></li>
+<li>Notion 如何导入 Excel 数据：<a target="_blank" rel="noopener" href="http://eryi.ink/i7TR">http://eryi.ink/i7TR</a></li>
+<li>Notion 能做出 OB 的双链吗：<a target="_blank" rel="noopener" href="http://eryi.ink/6HEB">http://eryi.ink/6HEB</a></li>
+</ol>
+<h3 id="Notion-技巧与资源"><a href="#Notion-技巧与资源" class="headerlink" title="Notion 技巧与资源"></a>Notion 技巧与资源</h3><ol>
+<li>Notion 快速将子页面的内容移动到上级页面：<a target="_blank" rel="noopener" href="http://eryi.ink/vnwv">http://eryi.ink/vnwv</a></li>
+<li>用 Notion 做的 Formula 查阅表：<a target="_blank" rel="noopener" href="http://eryi.ink/5V6b">http://eryi.ink/5V6b</a></li>
+<li>Notion 增强插件 Notion Mate：<a target="_blank" rel="noopener" href="http://eryi.ink/BiFz">http://eryi.ink/BiFz</a></li>
+<li>Notion 同步 Keep 跑步数据：<a target="_blank" rel="noopener" href="http://eryi.ink/NaK3">http://eryi.ink/NaK3</a></li>
+<li>Notion 搭配 Arc 浏览器效果：<a target="_blank" rel="noopener" href="http://eryi.ink/gv9r">http://eryi.ink/gv9r</a></li>
+<li>Notion Formula 日期格式修改：<a target="_blank" rel="noopener" href="http://eryi.ink/kFuh">http://eryi.ink/kFuh</a></li>
+<li>用 Notion 做了一张笔记软件全搜集表格：<a target="_blank" rel="noopener" href="http://eryi.ink/Q5Kp">http://eryi.ink/Q5Kp</a></li>
+</ol>
+<h3 id="其他笔记软件讨论"><a href="#其他笔记软件讨论" class="headerlink" title="其他笔记软件讨论"></a>其他笔记软件讨论</h3><ol>
+<li>关于 iPhone 笔记软件<strong>「手记」</strong>的讨论：<a target="_blank" rel="noopener" href="http://eryi.ink/Vs46">http://eryi.ink/Vs46</a></li>
+<li>关于 Heptabase 白板笔记软件的讨论：<a target="_blank" rel="noopener" href="http://eryi.ink/H89d">http://eryi.ink/H89d</a></li>
+</ol>
+<h3 id="更多效率工具推荐"><a href="#更多效率工具推荐" class="headerlink" title="更多效率工具推荐"></a>更多效率工具推荐</h3><p>本期共有 7 位用户分享了自己正在用的各类效率工具其中包括：</p>
+<ol>
+<li>flomo 和 微信读书 被提及了4 次</li>
+<li>Arc 和 幕布 分别被提及了 3 次。</li>
+<li>1Password, 小报童, 小宇宙, notion, craft, things3, 习惯点点, apollo, 和 飞书 各被提及了 2 次。</li>
+<li>其他 App 被提及1次。</li>
+</ol>
+<p>在本期应用推荐中，<strong>flomo</strong> 和 <strong>微信读书</strong> 是最受关注的App，而 <strong>Arc</strong> 和 <strong>幕布</strong> 也相对受到较多用户的喜爱。你可以在这份「作业」中查看更具体的讨论：<a target="_blank" rel="noopener" href="http://eryi.ink/fBy9">http://eryi.ink/fBy9</a></p>
 
-<p>似乎只要在 Obsidian 内新建一篇文章，后台就会自动生成 abbrlink。</p>
-<p><strong>问题 2：使用 <code>hexo g</code> + <code>hexo s</code> 命令后，会不会重新生成链接？</strong></p>
-<p>答案是不会，本地访问下可见链接确实是从数字 1 和 2 开始，所以的确是只要在 Obsidian 内新建文章，就会自动生成 abbrlink。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403281556496.png"></p>
-<p>同时因为没有在 YAML 里写入 Title，所以文章是没有标题的，只有日期：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403281558717.png"></p>
-<p>**问题 3：如果删掉链接为 2 的文章，然后再新建文章，会不会从数字 3 开始生成？</p>
-<p>答案是会的，abbrlink 为 2 的文章被删掉后，再新建文档，数字会变成 3，以此类推。</p>
-<h3 id="Obsidian-如何设置固定的-YAML-模板"><a href="#Obsidian-如何设置固定的-YAML-模板" class="headerlink" title="Obsidian 如何设置固定的 YAML 模板"></a>Obsidian 如何设置固定的 YAML 模板</h3>
 <div class="article-footer fs14">
     <section id="license">
       <div class="header"><span>许可协议</span></div>
@@ -118,7 +138,7 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/16107.html">Hello World</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/62677.html">使用 Obsidian 作为 Hexo 编辑器的可行性分析</a></div></section></div>
 
 
 
@@ -134,7 +154,7 @@
 
 
 
-<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%BE%91%E5%99%A8%E5%9F%BA%E7%A1%80%E5%8A%9F%E8%83%BD"><span class="toc-text">编辑器基础功能</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Obsidian-%E8%87%AA%E5%B8%A6-YAML-%E7%AE%A1%E7%90%86%E5%8A%9F%E8%83%BD"><span class="toc-text">Obsidian 自带 YAML 管理功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Obsidian-%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E5%9B%BA%E5%AE%9A%E7%9A%84-YAML-%E6%A8%A1%E6%9D%BF"><span class="toc-text">Obsidian 如何设置固定的 YAML 模板</span></a></li></ol></li></ol></div><div class="widget-footer">
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E8%8C%83%E5%9B%B4"><span class="toc-text">时间范围</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Notion-%E5%AE%98%E6%96%B9%E6%9B%B4%E6%96%B0"><span class="toc-text">Notion 官方更新</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Notion-%E5%8A%9F%E8%83%BD%E7%AD%94%E7%96%91%EF%BC%9A"><span class="toc-text">Notion 功能答疑：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Notion-%E6%8A%80%E5%B7%A7%E4%B8%8E%E8%B5%84%E6%BA%90"><span class="toc-text">Notion 技巧与资源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E8%AE%A8%E8%AE%BA"><span class="toc-text">其他笔记软件讨论</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E5%A4%9A%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90"><span class="toc-text">更多效率工具推荐</span></a></li></ol></div><div class="widget-footer">
 
 <a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
 </div></aside><div class='float-panel blur'>

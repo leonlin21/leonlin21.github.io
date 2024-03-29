@@ -16,15 +16,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>Mac 系统搭建 Hexo + Github 免费博客全流程｜新手教程、零基础手把手教学 - 二一的笔记</title>
+  <title>Hexo + Github 免费博客搭建全流程 | 新手零基础教学 - 二一的笔记</title>
 
   
-    <meta name="description" content="提供了一个详细的教程，指导新手如何在 Mac 系统上使用 Hexo 和 GitHub 搭建免费博客。教程分为三部分：首先是安装和配置 Hexo 环境；其次是在本地测试发布文章；最后是将 Hexo 博客部署到 GitHub 上，使其可以在线访问">
+    <meta name="description" content="使用 Hexo 之前，你需要具备一定的 Markdown 基础，推荐观看我的 这期视频 。 1. 搭建环境，部署本地的 Hexo 博客 打开 Mac 自带的 终端  使用 command+P，输入关键词 终端 然后回车打开 请注意，后面步骤中的代码都需要你复制下来，然后直接粘贴到终端里，然后回车   安装 Homebrew  1&#x2F;bin&#x2F;bash -c &quot;$(curl -fsSL htt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac 系统搭建 Hexo + Github 免费博客全流程｜新手教程、零基础手把手教学">
-<meta property="og:url" content="https://eryiblog.ink/posts/6247.html">
+<meta property="og:title" content="Hexo + Github 免费博客搭建全流程 | 新手零基础教学">
+<meta property="og:url" content="https://eryiblog.ink/posts/37910.html">
 <meta property="og:site_name" content="二一的笔记">
-<meta property="og:description" content="提供了一个详细的教程，指导新手如何在 Mac 系统上使用 Hexo 和 GitHub 搭建免费博客。教程分为三部分：首先是安装和配置 Hexo 环境；其次是在本地测试发布文章；最后是将 Hexo 博客部署到 GitHub 上，使其可以在线访问">
+<meta property="og:description" content="使用 Hexo 之前，你需要具备一定的 Markdown 基础，推荐观看我的 这期视频 。 1. 搭建环境，部署本地的 Hexo 博客 打开 Mac 自带的 终端  使用 command+P，输入关键词 终端 然后回车打开 请注意，后面步骤中的代码都需要你复制下来，然后直接粘贴到终端里，然后回车   安装 Homebrew  1&#x2F;bin&#x2F;bash -c &quot;$(curl -fsSL htt">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://pic.eryinote.com/2024/03/26/cleanshot20240326cleanshot004717.png">
 <meta property="og:image" content="http://pic.eryinote.com/2024/03/26/fang-da20240326hexo0046702x.png">
@@ -43,17 +43,16 @@
 <meta property="og:image" content="http://pic.eryinote.com/2024/03/26/arc20240326new-personal-access-token-classic004708.png">
 <meta property="og:image" content="http://pic.eryinote.com/2024/03/26/arc20240326leonlin21eryinotegithubio0046992x.png">
 <meta property="og:image" content="http://pic.eryinote.com/2024/03/26/arc20240326pages0047102x.png">
-<meta property="article:published_time" content="2024-03-25T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-03-28T02:37:27.216Z">
+<meta property="article:published_time" content="2024-03-29T08:13:01.349Z">
+<meta property="article:modified_time" content="2024-03-29T09:13:00.629Z">
 <meta property="article:author" content="二一">
 <meta property="article:tag" content="Hexo">
-<meta property="article:tag" content="博客搭建">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://pic.eryinote.com/2024/03/26/cleanshot20240326cleanshot004717.png">
   
   
   
-  <meta name="keywords" content="Hexo,博客搭建">
+  <meta name="keywords" content="Hexo">
 
   <!-- feed -->
   
@@ -82,7 +81,7 @@
 <div class="widgets">
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/posts/1.html"><span class="title">使用 Obsidian 作为 Hexo 编辑器的可行性分析</span></a><a class="item title" href="/posts/16107.html"><span class="title">Hello World</span></a><a class="item title" href="/posts/6247.html"><span class="title">Mac 系统搭建 Hexo + Github 免费博客全流程｜新手教程、零基础手把手教学</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/posts/62677.html"><span class="title">使用 Obsidian 作为 Hexo 编辑器的可行性分析</span></a><a class="item title" href="/posts/202403291725.html"><span class="title">Notion 知识星球半月报 ｜202403 第一期</span></a><a class="item title" href="/posts/37910.html"><span class="title">Hexo + Github 免费博客搭建全流程 | 新手零基础教学</span></a><a class="item title" href="/posts/16107.html"><span class="title">Hello World</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -94,33 +93,20 @@
 <div class="article banner top">
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
-<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/">技术教程</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-03-25T16:00:00.000Z">2024-03-26</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-03-28T02:37:27.216Z">2024-03-28</time></span></div></div></div>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/">技术教程</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/Hexo-%E5%BB%BA%E7%AB%99/">Hexo 建站</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-03-29T08:13:01.349Z">2024-03-29</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-03-29T09:13:00.629Z">2024-03-29</time></span></div></div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>Mac 系统搭建 Hexo + Github 免费博客全流程｜新手教程、零基础手把手教学</span></h1>
+        <h1 class="text title"><span>Hexo + Github 免费博客搭建全流程 | 新手零基础教学</span></h1>
         
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><p>提供了一个详细的教程，指导新手如何在 Mac 系统上使用 Hexo 和 GitHub 搭建免费博客。教程分为三部分：首先是安装和配置 Hexo 环境；其次是在本地测试发布文章；最后是将 Hexo 博客部署到 GitHub 上，使其可以在线访问</p>
-<span id="more"></span>
-
-
-
-<ul>
-<li><a href="#mac%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BA-hexo-github%E5%85%8D%E8%B4%B9%E5%8D%9A%E5%AE%A2%E5%85%A8%E6%B5%81%E7%A8%8B%EF%BD%9C%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B%E3%80%81%E9%9B%B6%E5%9F%BA%E7%A1%80%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E5%AD%A6">Mac 系统搭建 Hexo + Github 免费博客全流程｜新手教程、零基础手把手教学</a><ul>
-<li><a href="#%E4%B8%80%E3%80%81%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83%EF%BC%8C%E9%83%A8%E7%BD%B2%E6%9C%AC%E5%9C%B0%E7%9A%84hexo%E5%8D%9A%E5%AE%A2">一、搭建环境，部署本地的 Hexo 博客</a></li>
-<li><a href="#%E4%BA%8C%E3%80%81%E6%9C%AC%E5%9C%B0%E6%96%87%E7%AB%A0%E5%8F%91%E5%B8%83%E6%B5%8B%E8%AF%95">二、本地文章发布测试</a></li>
-<li><a href="#%E4%B8%89%E3%80%81%E5%B0%86hexo%E9%83%A8%E7%BD%B2%E5%88%B0-github">三、将 Hexo 部署到 Github</a></li>
-</ul>
-</li>
-</ul>
-<p>使用 Hexo 之前，你需要具备一定的 Markdown 基础，推荐观看我的 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Ve4y1s7Qs/">这期视频</a> 。</p>
-<h2 id="一、搭建环境，部署本地的-Hexo-博客"><a href="#一、搭建环境，部署本地的-Hexo-博客" class="headerlink" title="一、搭建环境，部署本地的 Hexo 博客"></a>一、搭建环境，部署本地的 Hexo 博客</h2><ol>
+  </div><article class="md-text content"><p>使用 Hexo 之前，你需要具备一定的 Markdown 基础，推荐观看我的 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Ve4y1s7Qs/">这期视频</a> 。</p>
+<h2 id="1-搭建环境，部署本地的-Hexo-博客"><a href="#1-搭建环境，部署本地的-Hexo-博客" class="headerlink" title="1. 搭建环境，部署本地的 Hexo 博客"></a>1. 搭建环境，部署本地的 Hexo 博客</h2><ol>
 <li><p>打开 Mac 自带的 <strong>终端</strong></p>
 <ul>
 <li>使用 command+P，输入关键词 <code>终端</code> 然后回车打开</li>
@@ -135,8 +121,7 @@
  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>安装 Git</p>
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure>
-</li>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure></li>
 <li><p>安装 Hexo </p>
  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 </li>
@@ -144,7 +129,7 @@
 </li>
 <li><p>进入这个文件夹内，然后右键空白处，点击「显示简介」</p>
 </li>
-<li><p>在弹出的菜单中，找到文件夹的地址，然后复制这段地址，如下图中的划线位置<br> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/26/cleanshot20240326cleanshot004717.png" alt="CleanShot20240326CleanShot004717"></p>
+<li><p>在弹出的菜单中，找到文件夹的地址，然后复制这段地址，如下图中的划线位置<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/26/cleanshot20240326cleanshot004717.png" alt="CleanShot20240326CleanShot004717"></p>
 </li>
 <li><p>在这段地址的最后加上 <code>Hexo</code> 这几个字，获得完整的文件夹地址，例如 <code>/Users/NAS-Home/Document/Hexo</code></p>
 </li>
@@ -165,8 +150,8 @@
 <p><strong>注意：</strong> 所有与 Hexo 相关的命令，都需要你通过终端的 CD 命令进入到 Hexo 文件夹内容，然后再执行。这个命令你可以在第一大点的步骤 10 中找到</p>
 <ol>
 <li>准备一篇写好的 Markdown 文章</li>
-<li>在这篇文章的最开头加上以下代码<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 你拟定的标题</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-请注意，你必须按照这个格式，否则 Hexo 将无法识别你的文章</li>
+<li>在这篇文章的最开头加上以下代码 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">   title: 你拟定的标题</span><br><span class="line">   ---</span><br></pre></td></tr></table></figure>
+ 请注意，你必须按照这个格式，否则 Hexo 将无法识别你的文章</li>
 <li>导出这篇文章的 Markdown 文件</li>
 <li>将这个文件放到 Hexo 文件夹中的 <code>Source - posts</code> 子文件夹中，如下图所示<br> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/26/fang-da20240326posts0046762x.png" alt="访达20240326_posts004676@2x"></li>
 <li>打开终端，依次使用下面的几个命令<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
@@ -180,7 +165,7 @@
 </li>
 <li><p>点击按钮，新建一个 repository<br> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/26/arc20240326github0046812x.png" alt="Arc20240326GitHub004681@2x"></p>
 </li>
-<li><p>在 <code>Repository name</code> 这一栏，填入 <code>Github 用户名+固定格式</code>，比如我填写的是 <code>leonlin21.github.io</code>，其中 <code>leonlin21</code> 与你的 Github 账号相同，但最后的固定格式<code>.github.io</code> 则必须保留：<br> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/26/arc20240326new-repository0047032x.png" alt="Arc20240326New repository004703@2x"></p>
+<li><p>在 <code>Repository name</code> 这一栏，填入 <code>Github 用户名+固定格式</code>，比如我填写的是 <code>leonlin21.github.io</code>，其中 <code>leonlin21</code> 改成你的 Github 账号，欠我的最后的固定格式<code>.github.io</code> 则必须保留：<br> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/26/arc20240326new-repository0047032x.png" alt="Arc20240326New repository004703@2x"></p>
 </li>
 <li><p>点击右下角的 <code>Create repository</code> 按钮，完成 repository 的创建</p>
 </li>
@@ -197,7 +182,7 @@
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;example@example.com&quot;</span><br></pre></td></tr></table></figure>
 <p>请注意引号内的网址，需要替换为你的 Github 登录邮箱。输入代码后，按三下回车，然后可能会要求你输入密码，这个时候输入你的开机密码然后回车就好，执行完成后会在<code>~/.ssh/id_rsa.pub</code>目录下生成一个公钥文件 <code>id_rsa.pub</code>。</p>
-<p>如果你找不到这个目录，请参考下图所示的文件夹的位置,并且该文件夹有可能是隐藏状态，你需要使用快捷键 command+shift+. 来显示隐藏的文件夹。</p>
+<p>如果你找不到这个目录，请参考下图所示的文件夹的位置：</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/26/fang-da20240326ssh0046962x.png" alt="访达20240326.ssh004696@2x"></p>
 <ol start="7">
 <li><p>右键 <code>id_rsa.pub</code> 这个文件，然后使用 <code>文本编辑</code> 的方式打开，打开后复制里面的所有内容</p>
@@ -256,7 +241,7 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/16107.html">Hello World</a></div><div class="item" id="next"></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/62677.html">使用 Obsidian 作为 Hexo 编辑器的可行性分析</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/16107.html">Hello World</a></div></section></div>
 
 
 
@@ -272,7 +257,7 @@
 
 
 
-<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83%EF%BC%8C%E9%83%A8%E7%BD%B2%E6%9C%AC%E5%9C%B0%E7%9A%84-Hexo-%E5%8D%9A%E5%AE%A2"><span class="toc-text">一、搭建环境，部署本地的 Hexo 博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%9C%AC%E5%9C%B0%E6%96%87%E7%AB%A0%E5%8F%91%E5%B8%83%E6%B5%8B%E8%AF%95"><span class="toc-text">二、本地文章发布测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%B0%86-Hexo-%E9%83%A8%E7%BD%B2%E5%88%B0-Github"><span class="toc-text">三、将 Hexo 部署到 Github</span></a></li></ol></div><div class="widget-footer">
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83%EF%BC%8C%E9%83%A8%E7%BD%B2%E6%9C%AC%E5%9C%B0%E7%9A%84-Hexo-%E5%8D%9A%E5%AE%A2"><span class="toc-text">1. 搭建环境，部署本地的 Hexo 博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%9C%AC%E5%9C%B0%E6%96%87%E7%AB%A0%E5%8F%91%E5%B8%83%E6%B5%8B%E8%AF%95"><span class="toc-text">二、本地文章发布测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%B0%86-Hexo-%E9%83%A8%E7%BD%B2%E5%88%B0-Github"><span class="toc-text">三、将 Hexo 部署到 Github</span></a></li></ol></div><div class="widget-footer">
 
 <a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
 </div></aside><div class='float-panel blur'>
