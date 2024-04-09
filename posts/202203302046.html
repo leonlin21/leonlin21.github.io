@@ -1,0 +1,791 @@
+
+<!DOCTYPE html><html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.27.0" theme-name="Stellar" theme-version="1.27.0">
+  
+  <meta name="generator" content="Hexo 7.1.1">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>Obsidian 的 8 种用法 - 二一的笔记</title>
+
+  
+    <meta name="description" content="前言如今的笔记软件用户中，很多人会陷入「用笔记软件来记录如何使用笔记软件」的误区。即使避免了这个陷阱，也很可能花过不少功夫整理关于「卡片笔记写作法」（来自同名图书，英文原版题为 _How to take smart notes_）的笔记。还有很多人自觉精通了「心流」，但却只在研究笔记方法论时能沉浸其中，对于真正需要记录的内容则还是只消半小时就能忘掉。 这种「假装高产实则摸鱼」的问题，在很多人初">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Obsidian 的 8 种用法">
+<meta property="og:url" content="https://eryiblog.ink/posts/202203302046.html">
+<meta property="og:site_name" content="二一的笔记">
+<meta property="og:description" content="前言如今的笔记软件用户中，很多人会陷入「用笔记软件来记录如何使用笔记软件」的误区。即使避免了这个陷阱，也很可能花过不少功夫整理关于「卡片笔记写作法」（来自同名图书，英文原版题为 _How to take smart notes_）的笔记。还有很多人自觉精通了「心流」，但却只在研究笔记方法论时能沉浸其中，对于真正需要记录的内容则还是只消半小时就能忘掉。 这种「假装高产实则摸鱼」的问题，在很多人初">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028307838.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028307858.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028307871.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028307890.png">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028307913.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028307932.gif">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028307960.gif">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028307985.gif">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308019.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308034.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308051.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308065.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308081.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308098.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308113.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308128.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308145.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308163.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308180.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308198.gif">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308228.gif">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308262.gif">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308301.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308320.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308338.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308358.gif">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308402.gif">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308454.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308474.gif">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308514.gif">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308551.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308570.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308590.gif">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308640.gif">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308688.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308705.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308725.gif">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308780.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308801.gif">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308880.gif">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308945.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308965.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028308986.gif">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028309052.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028309072.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028309090.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028309109.webP">
+<meta property="og:image" content="http://pic.eryinote.com/2024/03/30/17118028309131.webP">
+<meta property="article:published_time" content="2022-03-31T12:46:45.000Z">
+<meta property="article:modified_time" content="2022-03-31T12:46:45.000Z">
+<meta property="article:author" content="二一">
+<meta property="article:tag" content="笔记软件">
+<meta property="article:tag" content="Obsidian">
+<meta property="article:tag" content="插件">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://pic.eryinote.com/2024/03/30/17118028307838.webP">
+  
+  
+  
+  <meta name="keywords" content="笔记软件,Obsidian,插件">
+
+  <!-- feed -->
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.27.0">
+
+  
+
+  
+
+  <link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css" media="print" onload="this.media='all'">
+</head>
+<body>
+
+<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://pic.eryinote.com/PicGo/202403280735497.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">二一的笔记</div><div class="sub normal cap">等待和希望</div><div class="sub hover cap" style="opacity:0"> 记录我的所见所闻，所思所想</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+<nav class="menu dis-select"></nav>
+</div>
+<div class="widgets">
+
+
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/posts/202404041429.html"><span class="title">用 Obsidian 插件将文章发布到 WordPress 博客</span></a><a class="item title" href="/posts/202404021415.html"><span class="title">聊聊近况 ｜ 二一的笔记 001</span></a><a class="item title" href="/posts/202403312231.html"><span class="title">Hexo Stellar 主题插件效果记录</span></a><a class="item title" href="/posts/16107.html"><span class="title">Hello World</span></a><a class="item title" href="/posts/202403111725.html"><span class="title">Notion 知识星球半月报 ｜ 202403 第 1 期</span></a><a class="item title" href="/posts/202403291755.html"><span class="title">Notion 知识星球半月报 ｜ 202403 第 2 期</span></a><a class="item title" href="/posts/62677.html"><span class="title">使用 Obsidian 作为 Hexo 编辑器的可行性分析</span></a><a class="item title" href="/posts/202210302044.html"><span class="title">我来笔记 2022 综合测评</span></a><a class="item title" href="/posts/202210130547.html"><span class="title">Logseq 的 5 种用法</span></a><a class="item title" href="/posts/202210120726.html"><span class="title">永不消失的笔记！全自动的备份、加密与安全策略</span></a></div></widget>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://space.bilibili.com/319417" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403292128856.svg"/></a><a class="social" href="https://sspai.com/series/303/list" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403292126678.svg"/></a><a class="social" href="https://twitter.com/eryidebiji" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403292132510.svg"/></a></div></footer>
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/">笔记软件</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2022-03-31T12:46:45.000Z">2022-03-31</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2022-03-31T12:46:45.000Z">2022-03-31</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>Obsidian 的 8 种用法</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><span id="more"></span>
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>如今的笔记软件用户中，很多人会陷入「用笔记软件来记录如何使用笔记软件」的误区。即使避免了这个陷阱，也很可能花过不少功夫整理关于「卡片笔记写作法」（来自同名图书，英文原版题为 _How to take smart notes_）的笔记。还有很多人自觉精通了「心流」，但却只在研究笔记方法论时能沉浸其中，对于真正需要记录的内容则还是只消半小时就能忘掉。</p>
+<p>这种「假装高产实则摸鱼」的问题，在很多人初学 Obsidian 时尤为明显——由于这款软件的丰富插件生态，我们一边要学习它不算简单的逻辑，一边还不得不消耗额外的意志力，去对抗那种按耐不住想要折腾插件的冲动；更糟的是每个插件用起来都不简单。</p>
+<p>在这个问题上，我这种自己钟情于「折腾」笔记软件、又喜欢与别人分享折腾经历的人，似乎是一个「帮凶」。但我的本意绝非让大家把时间都花在摆弄设置上。今天这篇文章，我就不扯太多方法论，用一看就懂且有实践意义的 8 个用法去尝试解答 Obsidian 都能做到什么，并用尽量扼要的方式介绍步骤和操作。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028307838.webP">​</p>
+<p>在介绍这些用法的过程中，我将穿插介绍数个常用插件。但篇幅有限，如果你对插件的进阶功能感兴趣，请阅读我一并贴出的开发者文档，或者期待我的下一篇文章吧。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028307858.webP">​</p>
+<h2 id="初始安装"><a href="#初始安装" class="headerlink" title="初始安装"></a>初始安装</h2><hr>
+<p>我个人很不习惯默认开启黑暗模式的设置，也不太喜欢自带的暗色主题。因此，建议安装后马上将笔记主题切换到明亮模式，或者尽快找到一款自己喜爱的第三方主题——只能说 Bear 和 Notion 会受欢迎是有原因的，颜值还真就是生产力。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028307871.webP">​</p>
+<p>如果你想要追求更好看的<strong>原生排版体验</strong>，也不喜欢折腾插件，我会更推荐思源笔记，同样支持本地离线 + 双向链接，这篇文章就是用思源笔记写的，请期待我的后续测评。</p>
+<h1 id="用法-1：日记随笔（Daily-Note）"><a href="#用法-1：日记随笔（Daily-Note）" class="headerlink" title="用法 1：日记随笔（Daily Note）"></a>用法 1：日记随笔（Daily Note）</h1><hr>
+<p>Obsidian 默认不开启 Daily Note 功能，Logseq 或 RoamResearch 用户可能会很不习惯，而对另一些没有接触过 Daily Note 概念的用户来说，也很有必要先介绍一下它的应用场景和配置方法。</p>
+<h2 id="什么时候记-Daily-Note？"><a href="#什么时候记-Daily-Note？" class="headerlink" title="什么时候记 Daily Note？"></a>什么时候记 Daily Note？</h2><ol>
+<li>当你想写日记的时候，它就是一个支持 Markdown 的日记本</li>
+<li>当你想快速记录灵感的时候，你不用也不该纠结应该放在哪个文件夹，就像传统纸笔，翻开就能写，就像摄影，拍到比拍好更重要。<strong>而使用传统的笔记软件，你总要先找到（或建立）一个合适的文件夹用来存放</strong>，但灵感和冲动往往消失在这个麻烦的时候。</li>
+</ol>
+<h2 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h2><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028307890.png" alt="image-20221013061914169"></p>
+<h2 id="日记模板"><a href="#日记模板" class="headerlink" title="日记模板"></a>日记模板</h2><p>一般来说我更习惯于用无序列表来让记录这件事更纯粹一点，模板对我来说会有填空的压力。但你也可以事先设置诸如晨间日记、每日工作等模板。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028307913.webP">​</p>
+<p>设置好模板后，<strong>使用快捷键</strong>创建日记文档，就能自动调用这个模板，就像下图这样子：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028307932.gif">​</p>
+<p>当然你也可以让 Obsidian 在启动后，自动载入当天的日记页面，在 <strong>设置</strong> &gt; <strong>插件选项</strong> &gt; <strong>日记</strong> 中你可以找到这个选项。</p>
+<h2 id="日记进阶：双链入门"><a href="#日记进阶：双链入门" class="headerlink" title="日记进阶：双链入门"></a>日记进阶：双链入门</h2><p>之所以能够随心所欲、不用分类地在 Daily Note 中记录一切内容，是因为有双向链接这个功能的托底。</p>
+<p>点击每一个被 <code>[[]]</code>​ 框住的关键词，都会自动创建一个以这个关键词为名的文档，然后进入到这个文档中。比如在下图中我就通过这种方式创建了一个名为 <code>Notion</code>​ 的文档。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028307960.gif">​</p>
+<p>打开这个文档的反向链接面板，它会在笔记库内搜索<strong>这个关键词曾经出现过的位置</strong>：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028307985.gif">​</p>
+<p>所以我们用 Daily Note 记录那些不成主题的碎片信息，直到你有明确的专项题目可以拓展，再通过反链面板去回溯过去在 Daily Note 中留下的碎片记录，有时候靠那不经意的一句吐槽都能带来无穷的启发。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308019.webP">​</p>
+<h2 id="日记进阶：初级任务管理"><a href="#日记进阶：初级任务管理" class="headerlink" title="日记进阶：初级任务管理"></a>日记进阶：初级任务管理</h2><p>使用 Task 插件能用非常简单的语法，将分散于各篇日记的任务集中于一处管理，请在安装并启用 Task 插件后，执行如下操作</p>
+<ol>
+<li>在 <strong>设置</strong> &gt; <strong>快捷键</strong> 中，搜索 <strong>Tasks</strong>，并为 <strong>Task: Create or edit task</strong> 创建一个快捷键命令，例如 <code>Ctrl+T</code>​；</li>
+<li>使用快捷键 <code>Ctrl+T</code>​ 唤出 Task 任务面板，然后在下图的自定义选项设置你的任务：</li>
+</ol>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308034.webP">​</p>
+<p>设置完毕后，你就可使用非常丰富的选项，来制定你的个性化任务面板，下面这段最简单的代码，能让你筛选出你<strong>整个笔记库内所有未完成的任务。</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">‍‍‍‍‍‍```task</span><br><span class="line">not done</span><br><span class="line">‍‍‍‍‍```</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308051.webP">​</p>
+<p>你还可以参考开发者的这份<a target="_blank" rel="noopener" href="https://schemar.github.io/obsidian-tasks/getting-started/">文档</a>，制定更加个性化的任务面板，也可简单参考我下图中的命令。</p>
+<h1 id="用法-2：日程与任务进阶管理"><a href="#用法-2：日程与任务进阶管理" class="headerlink" title="用法 2：日程与任务进阶管理"></a>用法 2：日程与任务进阶管理</h1><hr>
+<h2 id="Day-Planner-插件"><a href="#Day-Planner-插件" class="headerlink" title="Day Planner 插件"></a>Day Planner 插件</h2><p>Day Planner 与前文提到的 Tasks ，都能对笔记库中的 To-do 内容进行集中管理，Tasks 插件会更自由灵活，它能够扫描到笔记库内<strong>任意地方</strong>的 To-do 内容；而 <strong>Day Planner 则只能扫描特定的文件夹</strong>，但换来了更加精细、更加有趣的日程 &#x2F; 任务管理方式，包括文档顶部自动生成甘特图、右侧自动生成时间线、底部右下角有全局的任务提示等。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308065.webP">​</p>
+<p>当任务到点时，还能弹出系统级的通知提醒：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308081.webP">​</p>
+<h3 id="文档模式-File-mode"><a href="#文档模式-File-mode" class="headerlink" title="文档模式 File mode"></a>文档模式 File mode</h3><p>安装完 Day Planner 插件后：</p>
+<ol>
+<li>会默认开启 File mode 功能；</li>
+<li>会在笔记列表根目录中自动创建名为 <code>Day Planner</code>​ 的文件夹；</li>
+<li>在 <code>Day Planner</code>​ 文件夹内，每天都会自动创建一个新的日程文件；</li>
+<li>你需要用下列语法格式来书写你的日程，才能被插件正确识别：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">## 任务标题</span><br><span class="line">-[]07:00 任务</span><br></pre></td></tr></table></figure>
+
+<p>几点提示：</p>
+<ul>
+<li>你也可以使用 Ctrl+Enter 来快速创建 Checkbox</li>
+<li>时间需要 24 小时制，1:00 应写成 01:00</li>
+<li>时间与任务描述之间需要空格</li>
+</ul>
+<p>如果右侧时间线没有正确显示，请使用下列操作：</p>
+<ul>
+<li>使用快捷键 <code>Ctrl+P</code>​ 唤出命令面板；</li>
+<li>搜索关键词 <strong>show</strong> ，然后选择 <strong>Show the Day Planner Timeline</strong>：</li>
+</ul>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308098.webP">​</p>
+<h3 id="命令模式-Command-mode"><a href="#命令模式-Command-mode" class="headerlink" title="命令模式 Command mode"></a>命令模式 Command mode</h3><p>在插件设置中，将 File mode 切换到 Command mode，<strong>能够让你在任意一页文档中使用 Day Planner 插件</strong>，而无需创建额外的 Day Planner 文件夹。任务书写语法与 File mode 一样，但你还需要执行下面的操作:</p>
+<ol>
+<li>使用快捷键 <code>Ctrl+P</code>​ 唤出命令面板</li>
+<li>搜索关键词 <code>link</code>​ ，然后选择 <code>Link todays&#39; Day Planner to the current note</code>​</li>
+</ol>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308113.webP">​</p>
+<h2 id="Kanban-插件"><a href="#Kanban-插件" class="headerlink" title="Kanban 插件"></a>Kanban 插件</h2><p>你可以像 Trello、Teambition、或者 Notion 中的 Board 面板 一样，去使用 Kanban 插件，它在常规看板的基础上，同样支持了双向链接功能，完整介绍你可以参考开发者这份<a target="_blank" rel="noopener" href="https://matthewmeye.rs/obsidian-kanban/">文档</a>。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308128.webP">​</p>
+<h3 id="创建看板的两种方式"><a href="#创建看板的两种方式" class="headerlink" title="创建看板的两种方式"></a><strong>创建看板的两种方式</strong></h3><ol>
+<li>右键点击任意一个文件夹， 选择 <strong>新看板</strong>；</li>
+<li><code>Ctrl+P</code>​ 唤出命令面板，搜索 <strong>Kanban</strong> ，并选择 <strong>创建新看板</strong>。</li>
+</ol>
+<h3 id="启用看板复选框"><a href="#启用看板复选框" class="headerlink" title="启用看板复选框"></a><strong>启用看板复选框</strong></h3><p><strong>设置</strong> &gt; <strong>插件选项</strong> &gt; <strong>Kanban</strong> 中，开启 <strong>展示卡片复选框</strong> 功能.</p>
+<h3 id="看板与双链联动"><a href="#看板与双链联动" class="headerlink" title="看板与双链联动"></a><strong>看板与双链联动</strong></h3><p>为看板卡片添加时间，例如 <code>[[2022-03-24]]</code>​，当那天到来时，你就能在 24 号日记的<strong>反向链接面板</strong>看到这张卡片：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308145.webP">​</p>
+<p>每一张卡片都能创建为一份文档， 就像 Notion 中的 <strong>&#x2F;page</strong> 命令 ，你只需要点击 <strong>从卡片新建笔记</strong> 即可。</p>
+<h1 id="用法-3：工作记录-报告复盘"><a href="#用法-3：工作记录-报告复盘" class="headerlink" title="用法 3：工作记录 &amp; 报告复盘"></a>用法 3：工作记录 &amp; 报告复盘</h1><hr>
+<p>工作最让我感到厌烦的，不是工作本身具有难度，而是每周、甚至每天都得形式化地写又臭又长、根本没有人看的工作报告，于是我用下面两个插件来尽可能地减轻这种痛苦：用 <strong>Templater</strong> 插件来创建自动化的模板，以及使用 <strong>Dataview</strong> 插件来让 Obsidian 拥有高级检索能力。</p>
+<h2 id="Templater-插件"><a href="#Templater-插件" class="headerlink" title="Templater 插件"></a>Templater 插件</h2><p>这个插件能让你在不同文件夹创建文档时，自动调用不同的模板。</p>
+<p>例如在「日报」文件夹创建文档则调用「日报」模板，在「会议」文件夹则调用「会议记录」模板，它比 Notion 的 Template button 更便捷，比 Logseq 的 Template 的自定义程度更高，比印象笔记要加载半个世纪的模板库更是不知快到哪里去了。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308163.webP">​</p>
+<h3 id="插件配置"><a href="#插件配置" class="headerlink" title="插件配置"></a>插件配置</h3><ol>
+<li><p>你需要先建立一个专门用来存放模板的模板文件夹，并且提前写好你所需要的模板</p>
+</li>
+<li><p>打开 <strong>设置</strong> &gt; <strong>插件选项</strong> &gt; <strong>Templater</strong></p>
+<ol>
+<li>在 <strong>Template folder location</strong> 将路径指向模板文件夹</li>
+<li>打开 <strong>Trigger Templater on new file creation</strong> 这个选项</li>
+<li>然后在 <strong>Add New</strong> 那一栏，将文件夹与模板一一对应。如下图所示，左边是文件夹，右边是模板文件。</li>
+</ol>
+</li>
+</ol>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308180.webP">​</p>
+<p>如此一来，当我们在 <code>会议记录</code>​ 文件夹新建文档，它创建的就不是空白文档，而是加载了模板的文档了。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308198.gif">​</p>
+<p>你可能注意到了，上图调用模板生成文档时，还自动生成了时间 <code>2022-03-22</code>​，原因是我在模板中使用了 Templater 提供的时间变量，用法类似 Excel 中的 <code>=today()</code>​ 函数。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">今天：&lt;% tp.date.now(&quot;Do MMMM YYYY&quot;) %&gt;</span><br><span class="line">昨天：&lt;% tp.date.yesterday(&quot;Do MMMM YYYY&quot;) %&gt;</span><br><span class="line">明天：&lt;% tp.date.tomorrow(&quot;Do MMMM YYYY&quot;) %&gt; </span><br><span class="line">从 Unsplash 随机载入一张图片：&lt;% tp.web.random_picture() %&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>更多变量你可以参考阅读开发者的这份<a target="_blank" rel="noopener" href="https://silentvoid13.github.io/Templater/introduction.html">文档</a>，活用变量和双链，你还可以在每天生成的日报中显示 <code>上一页</code>​ 和 <code>下一页</code>​ 的效果。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308228.gif">​</p>
+<p>这时你可能又会注意到，使用 Templater 插件创建的文档都叫 <code>未命名</code>​，那么有没有办法在创建文档的时候就自动使用当天的日期作为文档标题呢？答案是有的，你需要的那个插件叫 QuickAdd。</p>
+<h2 id="QuickAdd-插件"><a href="#QuickAdd-插件" class="headerlink" title="QuickAdd 插件"></a>QuickAdd 插件</h2><p>这又是一个非常强大的插件， 不过今天我们只介绍它的四个功能之一：Template。它有两个特性，分别是为 Templater 插件的模板创建一个快捷键，而无需像之前那样通过右键文件夹来创建文档。另一个特性，则是让 Templater 插件创建文档时，让文档标题能以特定格式来自动生成，例如我们现在需要的「日期」。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308262.gif">​</p>
+<p>配置步骤上，首先，为 <code>创建日报</code>​ 添加一个 QuickAdd 动作：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308301.webP">​</p>
+<p>然后，点击闪电图标，这样才能在命令面板（<code>Ctrl+P</code>​）中直接搜索到；再点击小齿轮， 进入详细配置界面：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308320.webP">​</p>
+<p>在这里我仅介绍了 QuickAdd 可能不到十分之一的功能用法，更多用法可以参考这份<a target="_blank" rel="noopener" href="https://github.com/chhoumann/quickadd">开发者文档</a>。</p>
+<h2 id="Dataview-插件"><a href="#Dataview-插件" class="headerlink" title="Dataview 插件"></a>Dataview 插件</h2><p>假设现在到了周五临近下班的时间，我们需要<strong>快速将 5 篇日报和 3 场会议记录整合成一篇周报</strong>，如果是以前使用传统文档记录，我们可能需要<strong>分别打开 8 个文件</strong>，来回切换窗口，然后慢慢地将它们复制粘贴在一起，这真是一件既费心又烦人的事。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308338.webP">​</p>
+<p>而同样的事情如果发生在 Obsidian 中，事情则会变得轻松不少。</p>
+<p>如下图所示，当我在周报文件夹创建文档，触发了 Templater 的模板，而这个模板则用了 Dataview 语法进行了配置。我利用 Dataview 插件，自动汇总了过去一周的所有日报和会议记录：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308358.gif">​</p>
+<p>你可以 <code>Ctrl</code>​  + 鼠标左键点击 ，来打开同一份文档。左侧窗口使用 <code>Ctrl+E</code>​ 进入阅读视图，鼠标悬停在日报标题上方，通过弹出的小窗获取周报所需要的信息，然后就可以在右侧编辑视图下快速输入了。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308402.gif">​</p>
+<h3 id="Dataview-配置方法"><a href="#Dataview-配置方法" class="headerlink" title="Dataview 配置方法"></a>Dataview 配置方法</h3><p>将下面这段代码放到 Templater 模板库中，然后命名为 <code>周报模板</code>​</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">‍‍‍‍‍‍```dataview</span><br><span class="line">list from &quot;工作&quot;</span><br><span class="line">‍‍‍‍‍‍```</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>然后再设置当 <code>在周报文件夹创建文档</code>​ ，则 <code>调用周报模板</code>​</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308454.webP">​</p>
+<p>但是你会发现，上面那段代码会汇总 <code>工作</code>​ 文件夹中的<strong>所有文件</strong>，因为我们还没添加过滤条件</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308474.gif">​</p>
+<p>显然我们需要的只有那些创建时间在一周之内的日报和会议记录文档，所以我们还需要两个步骤</p>
+<ol>
+<li>为需要的文档打标签，分别是 <code>创建时间</code>​、<code>日报</code>​、以及 <code>会议记录</code>​</li>
+<li>让 Dataview 筛选过滤这些标签</li>
+</ol>
+<h3 id="用-YAML-语言为文档打标签"><a href="#用-YAML-语言为文档打标签" class="headerlink" title="用 YAML 语言为文档打标签"></a>用 YAML 语言为文档打标签</h3><p>你可以在日报最开头手动输入下面的内容，<strong>注意是英文输入法下的冒号，并且冒号后面需要空格</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">创建时间: 2022-03-22 </span><br><span class="line">标签: 日报</span><br><span class="line">---</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>也可以用 Templater 插件在创建日报文档时自动插入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">创建时间: &lt;% tp.file.creation_date () %&gt;</span><br><span class="line">标签: 日报</span><br><span class="line">---</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>好了现在我们可以让 Dataview 插件正确过滤<strong>创建时间在 7 日之内</strong>，并且<strong>包含日报标签</strong>的文档了。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">‍‍‍‍‍‍‍```dataview</span><br><span class="line">list from &quot;Work&quot;</span><br><span class="line">where 创建时间 &gt;= date(today) - dur(7 days)</span><br><span class="line">where contains(标签,&quot;日报&quot;)</span><br><span class="line">sort 创建时间 desc</span><br><span class="line">‍‍‍‍‍‍‍```</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308514.gif">​</p>
+<p>后面，我还会反复提到这个插件，你可以自行阅读 <a target="_blank" rel="noopener" href="https://blacksmithgu.github.io/obsidian-dataview/">Dataview 插件开发者文档</a>，学习更多高端操作，也可以点击下面大图，参考 Dataview 的部分语法。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308551.webP">​</p>
+<h1 id="用法-4：读书批注"><a href="#用法-4：读书批注" class="headerlink" title="用法 4：读书批注"></a>用法 4：读书批注</h1><hr>
+<h2 id="Annotator-插件"><a href="#Annotator-插件" class="headerlink" title="Annotator 插件"></a>Annotator 插件</h2><p>Obsidian 原生支持 PDF 阅读，你只需要将 PDF 文件<strong>拖到文件夹上</strong>即可载入，而安装 <code>Annotator 插件</code>​ 除了能让 Obsidian 额外支持阅读 EPUB 格式的文件，还能进行高亮、批注等操作。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308570.webP">​</p>
+<p>插件用法如下：</p>
+<ol>
+<li>将你的 PDF 文件拖入 Obsidian 的文件夹上</li>
+<li>新建一个文档，然后在文档的最开头添加下面这样的 YAML 语法</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">annotation-target: 路径/文件名.pdf</span><br><span class="line">---</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>例如，如果我要打开存放在 <code>附件</code>​ 文件夹中的 <code>基督山伯爵.pdf</code>​，则正确的语法应该是</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">annotation-target: 附件/基督山伯爵.pdf</span><br><span class="line">---</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>然后 <code>Ctrl+E</code>​ 进入阅读视图，如果无法正确读取 PDF 文档，可以点击右上角的三个小点，然后再点击 Annotate。</p>
+<p>关于添加的批注，需要了解的是：</p>
+<ol>
+<li>所有高亮和批注都会成为侧边栏中的卡片</li>
+<li>点击卡片即可跳转回 PDF 原文位置</li>
+<li>你还可以为批注打上可被 Obsidian 识别的标签</li>
+</ol>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308590.gif">​</p>
+<p>点击右上角的 <strong>Open as MD</strong> 关闭批注模式，然后进入阅读视图，你就能看到所有的高亮和批注都被搜集起来组成一篇文档了。</p>
+<h2 id="Mindmap-插件"><a href="#Mindmap-插件" class="headerlink" title="Mindmap 插件"></a>Mindmap 插件</h2><p>这个插件能够让文档的各级标题成为思维导图中的各个节点，并且导图中的各个节点也都是可以点击的。虽然导图的样式单一，且配色实在辣眼，但胜在简单易用。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308640.gif">​</p>
+<h1 id="用法-5：动态表格"><a href="#用法-5：动态表格" class="headerlink" title="用法 5：动态表格"></a>用法 5：动态表格</h1><hr>
+<p>这个用法本质上还是 Dataview 插件的另一种应用， 与前面的清单（list）不同，这次我们要绘制的是一张可以动态变化的表格（table）。假设我们为 4 本书分别写了 4 篇读后感，并在文档的最开头用 YAML 语法进行一点配置（打标签）。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308688.webP">​</p>
+<p>然后使用下面的 Dataview 语法进行配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">‍‍‍```dataview</span><br><span class="line">table 阅读时间, 作者, 类型, 评分</span><br><span class="line">from &quot;用法 4、读书笔记&quot;</span><br><span class="line">sort 阅读时间 desc</span><br><span class="line">‍‍‍```</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>其中：</p>
+<ul>
+<li><code>table</code>​ 定义的是 Dataview 的展现方式；</li>
+<li><code>table</code>​ 后面接的是你在 YAML 中打的标签；逗号要是英文输入状态；逗号后面接空格；</li>
+<li><code>from &quot;&quot;</code>​ 引号里的是你所要搜索的文件夹名称；</li>
+<li><code>sort</code>​ 这段，表示按照阅读时间这一项进行降序排列（descend）；</li>
+<li>你也可以把阅读时间换成评分，把 <code>desc</code>​ 换成 <code>asc</code>​，这样一来就是按照评分进行升序排列了。</li>
+</ul>
+<p>生成这样的表格效果如下图所示：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308705.webP">​</p>
+<p>这个表格会动态更新，你写一篇，它就会自动增加一行：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308725.gif">​</p>
+<p>你除了可以用前面反复提到的 Templater 插件来自动嵌入 YAML 标签，还可以搭配 QuickAdd 这个插件来进一步提高效率，这里就不展开讲解了。</p>
+<h1 id="用法-6：视频笔记"><a href="#用法-6：视频笔记" class="headerlink" title="用法 6：视频笔记"></a>用法 6：视频笔记</h1><hr>
+<p>作为一名新人 UP 主，我会特别注意视频中弹幕激增的节点，然后去分析这个 UP 主说了哪些话来激发观众发送弹幕的热情，很多看似 UP 主不经意的一句话，其实背后都能找到很多运营的门道。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308780.webP">​</p>
+<p>B 站本身自带视频笔记功能，但只能说堪堪够用，回看笔记的入口很深，而且完全线上保存无法导出，好处是原生功能，打开即用无需折腾。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308801.gif">​</p>
+<p>在 Obsidian 中，你可以这么操作：</p>
+<ol>
+<li>复制粘贴视频网址到 Obsidian 中；</li>
+<li>在阅读视图下，链接才能在 Obsidian 内部打开；</li>
+<li>在编辑视图下，才能通过右上角的五角星截取时间点。</li>
+</ol>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308880.gif">​</p>
+<h2 id="案例：如何更有效地「骗」弹幕？"><a href="#案例：如何更有效地「骗」弹幕？" class="headerlink" title="案例：如何更有效地「骗」弹幕？"></a>案例：如何更有效地「骗」弹幕？</h2><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308945.webP">​</p>
+<p>如上图所示，我会使用 Media Extended 和 Media Extended Bilibili Plugin，将笔记和视频界面并列来学习其他 UP 主的视频。（如果这个插件无法正常启动，请先关闭 Annotator 这个插件，重启 Obsidian，再尝试启用。）</p>
+<p>具体而言，通过内嵌的视频窗口，以及<strong>点击即可回溯的时间节点</strong>，能让我在复习这段话术时，更直观且更深刻地去学习这个 UP 主通过视频所能呈现出来的方方面面，<strong>因为我不止要学习他说了什么，还要学习他是怎么说的</strong>，学习他搭配了什么样的画面，语调的抑扬顿挫以及搭配的 BGM 节奏如何，而这种便捷的笔记 + 视频的呈现方式，是绝大多数只能单纯内嵌视频的软件所无法做到的。</p>
+<p>例如，下面是我在看一个视频时记录的一些观察，供参考：</p>
+<blockquote>
+<p><strong>话题质量够好</strong></p>
+<ul>
+<li>话题本身很吸引人</li>
+<li>话题和每个人息息相关</li>
+<li>每个人都会存在不一样的情况</li>
+<li>每个人都会好奇别人是什么样的情况</li>
+<li>发弹幕无需思考成本</li>
+</ul>
+<p><strong>引导方式合理</strong></p>
+<ul>
+<li><strong>随机抽样：</strong>没有针对性，不侵犯个人隐私</li>
+<li><strong>常用三个软件：</strong>无需成本，每个人不一样，可预见弹幕会很丰富，不会同质化刷屏</li>
+<li><strong>我会在后台统计数据占比：</strong>为用户提供发弹幕的意义，是有互动的，不是发完弹幕就没了</li>
+<li><strong>看看是否符合我的猜测：</strong>提供弹幕发完之后的期待感，或许可以增加关注</li>
+</ul>
+</blockquote>
+<h1 id="用法-7：数据复盘"><a href="#用法-7：数据复盘" class="headerlink" title="用法 7：数据复盘"></a>用法 7：数据复盘</h1><hr>
+<p>说实话，如果你有正经的数据分析工作，还是用正经的 Excel 或者其他专业软件来分析，此处仅用来展示 Obsidian 在数据呈现这块的可能性。</p>
+<h2 id="使用-Dataview-来聚合数据"><a href="#使用-Dataview-来聚合数据" class="headerlink" title="使用 Dataview 来聚合数据"></a>使用 Dataview 来聚合数据</h2><p>以我的 B 站投稿为例，我将视频数据放在 YAML 表头，然后在正文记录运营相关的分析和复盘</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308965.webP">​</p>
+<p>然后就像前面提到的阅读清单，这张表格也是可以实时动态更新的。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028308986.gif">​</p>
+<h2 id="使用-Charts-让数据可视化"><a href="#使用-Charts-让数据可视化" class="headerlink" title="使用 Charts 让数据可视化"></a>使用 Charts 让数据可视化</h2><p>这个插件能够让你手动插入如下图所示的五种图表：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028309052.webP">​</p>
+<p>安装完插件后，使用 <code>Ctrl+P</code>​ 唤出命令菜单，然后搜索 charts 关键词，选择 Insert new Chart 即可，然后剩下的就是手动输入数据的基本操作了。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028309072.webP">​</p>
+<h1 id="用法-8：编年史迹"><a href="#用法-8：编年史迹" class="headerlink" title="用法 8：编年史迹"></a>用法 8：编年史迹</h1><hr>
+<p>之所以叫「史迹」而不叫「史记」，是因为你除了可以用它来生成史料的时间轴，也能按照时间线来记录你的旅游足迹。</p>
+<h2 id="Timelines-插件效果"><a href="#Timelines-插件效果" class="headerlink" title="Timelines 插件效果"></a>Timelines 插件效果</h2><p>你可以做一份投稿时间轴，也可以做一份游记时间轴，其实没有什么实际用处，但因为它能做，所以我就做啦。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028309090.webP">​</p>
+<p>除了竖轴，还有横轴可以选择。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028309109.webP">​</p>
+<h3 id="Timelines-插件配置方法"><a href="#Timelines-插件配置方法" class="headerlink" title="Timelines 插件配置方法"></a>Timelines 插件配置方法</h3><p>乍一看，配置时间轴的代码非常简单，只需要像下面这样，筛选出所有包含投稿标签的文章即可</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">‍‍‍‍‍```timeline</span><br><span class="line">影评</span><br></pre></td></tr></table></figure>
+
+<p>首先是必不可少的还是用 YAML 语言打上几个标签，其中 <code>timeline</code>​ 标签是必须的，另一个标签则可由你自定义。你可能注意到了，我们可以在 <code>[]</code>​ 内一次性输入多个标签。</p>
+<p>但这样做的前提是，我们需要在被筛选的文章内，先进行一点点配置。</p>
+<p>然后还需要在<strong>正文</strong>中插入一段 HTML 代码，来定义时间轴中的文章封面、标题、时间等。  </p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;span </span><br><span class="line">      <span class="class"><span class="keyword">class</span>=</span><span class="string">&#x27;ob-timelines&#x27;</span> </span><br><span class="line">      data-date=<span class="string">&#x27;2021-08-21&#x27;</span></span><br><span class="line">      data-title=<span class="string">&#x27;标题&#x27;</span></span><br><span class="line">      data-class=<span class="string">&#x27;orange&#x27;</span></span><br><span class="line">      data-img= <span class="string">&#x27;图片链接（在线链接或笔记附件位置都可以）&#x27;</span></span><br><span class="line">      data-type=<span class="string">&#x27;range&#x27;</span></span><br><span class="line">      data-end=<span class="string">&quot;2000-10-20-00&quot;</span>&gt;</span><br><span class="line">      这里填封面简介</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+
+<p>如果你直接复制上面的代码，记得自行修改一下引号内的内容。其中我们需要修改的部分有 <code>date</code>​ 、<code>title</code>​ 、以及 <code>img</code>​ 这三项，否则时间轴的时间、标题和封面将无法正确显示。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://pic.eryinote.com/2024/03/30/17118028309131.webP">​</p>
+<p>更多关于 Timelines 的教程，可以阅读插件作者的这份<a target="_blank" rel="noopener" href="https://github.com/Darakah/obsidian-timelines">文档</a>。</p>
+<p>本文只能粗略展示 Obsidian 的简单用法。Obsidian 现在一共有 <a target="_blank" rel="noopener" href="https://obsidian.md/plugins">523</a> 个插件，我想应该没有什么需求是满足不了的。但还是要提醒一句，插件不求多，只要找到适合自己的那一两个就足够了。须知吾生有涯，而折腾也无涯，把更多时间花在创作上才是正道。</p>
+
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本站所有文章，如无特殊说明或标注，均为本站原创发布。任何个人或组织，在未征得本站同意时，禁止复制、盗用、采集、发布本站内容到任何网站、书籍等各类媒体平台。</p>
+</div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/202210020757.html">我的 B 站运营指南</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/202403301131.html"> Logseq + 简悦搭建个人知识库教程 ｜ 从零开始万字教程</a></div></section></div>
+
+
+
+
+
+
+<footer class="page-footer footnote"><hr><div class="text"><script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"3HvmahY3CrAtqhI7",ck:"3HvmahY3CrAtqhI7"})</script>
+<script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/3HvmahY3CrAtqhI7/quote.js?theme=0&f=12&display=0,0,0,1,0,0,1,1"></script>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%AE%89%E8%A3%85"><span class="toc-text">初始安装</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E6%B3%95-1%EF%BC%9A%E6%97%A5%E8%AE%B0%E9%9A%8F%E7%AC%94%EF%BC%88Daily-Note%EF%BC%89"><span class="toc-text">用法 1：日记随笔（Daily Note）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%AE%B0-Daily-Note%EF%BC%9F"><span class="toc-text">什么时候记 Daily Note？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95"><span class="toc-text">配置方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A5%E8%AE%B0%E6%A8%A1%E6%9D%BF"><span class="toc-text">日记模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A5%E8%AE%B0%E8%BF%9B%E9%98%B6%EF%BC%9A%E5%8F%8C%E9%93%BE%E5%85%A5%E9%97%A8"><span class="toc-text">日记进阶：双链入门</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A5%E8%AE%B0%E8%BF%9B%E9%98%B6%EF%BC%9A%E5%88%9D%E7%BA%A7%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86"><span class="toc-text">日记进阶：初级任务管理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E6%B3%95-2%EF%BC%9A%E6%97%A5%E7%A8%8B%E4%B8%8E%E4%BB%BB%E5%8A%A1%E8%BF%9B%E9%98%B6%E7%AE%A1%E7%90%86"><span class="toc-text">用法 2：日程与任务进阶管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Day-Planner-%E6%8F%92%E4%BB%B6"><span class="toc-text">Day Planner 插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E6%A1%A3%E6%A8%A1%E5%BC%8F-File-mode"><span class="toc-text">文档模式 File mode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F-Command-mode"><span class="toc-text">命令模式 Command mode</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Kanban-%E6%8F%92%E4%BB%B6"><span class="toc-text">Kanban 插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%9C%8B%E6%9D%BF%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="toc-text">创建看板的两种方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E7%94%A8%E7%9C%8B%E6%9D%BF%E5%A4%8D%E9%80%89%E6%A1%86"><span class="toc-text">启用看板复选框</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9C%8B%E6%9D%BF%E4%B8%8E%E5%8F%8C%E9%93%BE%E8%81%94%E5%8A%A8"><span class="toc-text">看板与双链联动</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E6%B3%95-3%EF%BC%9A%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95-%E6%8A%A5%E5%91%8A%E5%A4%8D%E7%9B%98"><span class="toc-text">用法 3：工作记录 &amp; 报告复盘</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Templater-%E6%8F%92%E4%BB%B6"><span class="toc-text">Templater 插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE"><span class="toc-text">插件配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QuickAdd-%E6%8F%92%E4%BB%B6"><span class="toc-text">QuickAdd 插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Dataview-%E6%8F%92%E4%BB%B6"><span class="toc-text">Dataview 插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Dataview-%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95"><span class="toc-text">Dataview 配置方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8-YAML-%E8%AF%AD%E8%A8%80%E4%B8%BA%E6%96%87%E6%A1%A3%E6%89%93%E6%A0%87%E7%AD%BE"><span class="toc-text">用 YAML 语言为文档打标签</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E6%B3%95-4%EF%BC%9A%E8%AF%BB%E4%B9%A6%E6%89%B9%E6%B3%A8"><span class="toc-text">用法 4：读书批注</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Annotator-%E6%8F%92%E4%BB%B6"><span class="toc-text">Annotator 插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mindmap-%E6%8F%92%E4%BB%B6"><span class="toc-text">Mindmap 插件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E6%B3%95-5%EF%BC%9A%E5%8A%A8%E6%80%81%E8%A1%A8%E6%A0%BC"><span class="toc-text">用法 5：动态表格</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E6%B3%95-6%EF%BC%9A%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0"><span class="toc-text">用法 6：视频笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B%EF%BC%9A%E5%A6%82%E4%BD%95%E6%9B%B4%E6%9C%89%E6%95%88%E5%9C%B0%E3%80%8C%E9%AA%97%E3%80%8D%E5%BC%B9%E5%B9%95%EF%BC%9F"><span class="toc-text">案例：如何更有效地「骗」弹幕？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E6%B3%95-7%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%A4%8D%E7%9B%98"><span class="toc-text">用法 7：数据复盘</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-Dataview-%E6%9D%A5%E8%81%9A%E5%90%88%E6%95%B0%E6%8D%AE"><span class="toc-text">使用 Dataview 来聚合数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-Charts-%E8%AE%A9%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-text">使用 Charts 让数据可视化</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E6%B3%95-8%EF%BC%9A%E7%BC%96%E5%B9%B4%E5%8F%B2%E8%BF%B9"><span class="toc-text">用法 8：编年史迹</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Timelines-%E6%8F%92%E4%BB%B6%E6%95%88%E6%9E%9C"><span class="toc-text">Timelines 插件效果</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Timelines-%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95"><span class="toc-text">Timelines 插件配置方法</span></a></li></ol></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+<script type="text/javascript">
+  const ctx = {
+    date_suffix: {
+      just: `刚刚`,
+      min: `分钟前`,
+      hour: `小时前`,
+      day: `天前`,
+    },
+    root : `/`,
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+  };
+  const deps = {
+    jquery: `https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js`,
+    marked: `https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+    
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      let retryTimes = 3;
+      utils.onLoading(el);
+      function req() {
+        return new Promise((resolve, reject) => {
+          let status = 0; // 0 等待 1 完成 2 超时
+          let timer = setTimeout(() => {
+            if (status === 0) {
+              status = 2;
+              timer = null;
+              reject('请求超时');
+              if (retryTimes == 0) {
+                onFailure();
+              }
+            }
+          }, 5000);
+          fetch(url).then(function(response) {
+            if (status !== 2) {
+              clearTimeout(timer);
+              resolve(response);
+              timer = null;
+              status = 1;
+            }
+            if (response.ok) {
+              return response.json();
+            }
+            throw new Error('Network response was not ok.');
+          }).then(function(data) {
+            retryTimes = 0;
+            utils.onLoadSuccess(el);
+            callback(data);
+          }).catch(function(error) {
+            if (retryTimes > 0) {
+              retryTimes -= 1;
+              setTimeout(() => {
+                req();
+              }, 5000);
+            } else {
+              utils.onLoadFailure(el);
+              onFailure();
+            }
+          });
+        });
+      }
+      req();
+    },
+  };
+</script>
+
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+
+<!-- required -->
+<script src="/js/main.js?v=1.27.0" async></script>
+
+<!-- optional -->
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.bootcdn.net/ajax/libs/flying-pages/2.1.2/flying-pages.min.js"></script><script defer src="https://cdn.bootcdn.net/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+</script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.min.css`,
+    js: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.umd.min.js`
+  };
+  var selector = '[data-fancybox]:not(.error)';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const els = document.getElementsByClassName('ds-memos');
+    if (els != undefined && els.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || null
+        }
+      });
+    })
+  }
+</script><script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script><script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+
+</div></body></html>

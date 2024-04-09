@@ -16,34 +16,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>使用 Obsidian 作为 Hexo 编辑器的可行性分析 - 二一的笔记</title>
+  <title>二一的笔记</title>
 
   
-    <meta name="description" content="如果你对 Obsidian 不够了解的话，欢迎阅读或观看下面我写的视频与文章。  视频：《Obsidian 的 8 种用法》 图文：《Obsidian 8 个进阶用法 | 全网最细图文详解》  1.使用 Obsidian 打开 Hexo 文件夹1.1 基础操作Obsidian 作为一款完全本地的 Markdown 编辑器，可以打开任意一个本地文件夹，然后将其作为编辑器存放与编辑文档的库，只需要点击">
+    <meta name="description" content="20242024&#x2F;032024-03-27 花了将近 4 个小时，终于成功上线我的 Hexo 博客了，当然时间主要是花在了写这篇 《Hexo 博客搭建新手教程》上，截点好看的图是真麻烦啊。 修改 Logo、标题，字体日期：2024-03-28   完善 Logo、Title  自定义博客字体  优化永久链接格式   听从作者的 指导 ，直接在根目录创建主题 _config.stellar">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用 Obsidian 作为 Hexo 编辑器的可行性分析">
-<meta property="og:url" content="https://eryiblog.ink/posts/62677.html">
+<meta property="og:title" content="二一的笔记">
+<meta property="og:url" content="https://eryiblog.ink/posts/1.html">
 <meta property="og:site_name" content="二一的笔记">
-<meta property="og:description" content="如果你对 Obsidian 不够了解的话，欢迎阅读或观看下面我写的视频与文章。  视频：《Obsidian 的 8 种用法》 图文：《Obsidian 8 个进阶用法 | 全网最细图文详解》  1.使用 Obsidian 打开 Hexo 文件夹1.1 基础操作Obsidian 作为一款完全本地的 Markdown 编辑器，可以打开任意一个本地文件夹，然后将其作为编辑器存放与编辑文档的库，只需要点击">
+<meta property="og:description" content="20242024&#x2F;032024-03-27 花了将近 4 个小时，终于成功上线我的 Hexo 博客了，当然时间主要是花在了写这篇 《Hexo 博客搭建新手教程》上，截点好看的图是真麻烦啊。 修改 Logo、标题，字体日期：2024-03-28   完善 Logo、Title  自定义博客字体  优化永久链接格式   听从作者的 指导 ，直接在根目录创建主题 _config.stellar">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://pic.eryinote.com/PicGo/202403291532783.png">
-<meta property="og:image" content="https://pic.eryinote.com/PicGo/202403291544283.png">
-<meta property="og:image" content="https://pic.eryinote.com/PicGo/202403291550611.png">
-<meta property="og:image" content="https://pic.eryinote.com/PicGo/202403291605440.png">
-<meta property="og:image" content="https://pic.eryinote.com/PicGo/202403291607270.png">
-<meta property="og:image" content="https://pic.eryinote.com/PicGo/202403291751643.png">
-<meta property="article:published_time" content="2024-03-29T08:22:34.569Z">
-<meta property="article:modified_time" content="2024-03-29T10:05:24.871Z">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202403281224081.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202403281635744.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202403281509741.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202403292037089.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202403292051215.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202403292102834.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202403300930823.png">
+<meta property="article:published_time" content="2024-03-29T10:59:10.004Z">
+<meta property="article:modified_time" content="2024-04-09T04:46:47.150Z">
 <meta property="article:author" content="二一">
-<meta property="article:tag" content="Obsidian">
-<meta property="article:tag" content="插件">
-<meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://pic.eryinote.com/PicGo/202403291532783.png">
+<meta name="twitter:image" content="https://pic.eryinote.com/PicGo/202403281224081.png">
   
   
   
-  <meta name="keywords" content="Obsidian,插件,Hexo">
+  
 
   <!-- feed -->
   
@@ -85,61 +83,115 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/">技术教程</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/Hexo-%E5%BB%BA%E7%AB%99/">Hexo 建站</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-03-29T08:22:34.569Z">2024-03-29</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-03-29T10:05:24.871Z">2024-03-29</time></span></div></div></div>
-    
-    <div class="bottom only-title">
-      
-      <div class="text-area">
-        <h1 class="text title"><span>使用 Obsidian 作为 Hexo 编辑器的可行性分析</span></h1>
-        
-      </div>
-    </div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-03-29T10:59:10.004Z">2024-03-29</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-04-09T04:46:47.150Z">2024-04-09</time></span></div></div></div>
     
   </div>
-  </div><article class="md-text content"><p>如果你对 Obsidian 不够了解的话，欢迎阅读或观看下面我写的视频与文章。</p>
+  </div><article class="md-text content"><h2 id="2024"><a href="#2024" class="headerlink" title="2024"></a>2024</h2><h3 id="2024-03"><a href="#2024-03" class="headerlink" title="2024&#x2F;03"></a>2024&#x2F;03</h3><p><strong>2024-03-27</strong></p>
+<p>花了将近 4 个小时，终于成功上线我的 Hexo 博客了，当然时间主要是花在了写这篇 <a href="https://eryiblog.ink/posts/6247.html">《Hexo 博客搭建新手教程》</a>上，截点好看的图是真麻烦啊。</p>
+<h4 id="修改-Logo、标题，字体"><a href="#修改-Logo、标题，字体" class="headerlink" title="修改 Logo、标题，字体"></a>修改 Logo、标题，字体</h4><p><strong>日期：2024-03-28</strong></p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV18a411r7mt/">视频：《Obsidian 的 8 种用法》</a></li>
-<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/MEPva7Os_nOyl1vgTBZTwQ">图文：《Obsidian 8 个进阶用法 | 全网最细图文详解》</a></li>
+<li><input checked="" disabled="" type="checkbox"> 完善 Logo、Title</li>
+<li><input checked="" disabled="" type="checkbox"> 自定义博客字体</li>
+<li><input checked="" disabled="" type="checkbox"> 优化永久链接格式</li>
 </ul>
-<h2 id="1-使用-Obsidian-打开-Hexo-文件夹"><a href="#1-使用-Obsidian-打开-Hexo-文件夹" class="headerlink" title="1.使用 Obsidian 打开 Hexo 文件夹"></a>1.使用 Obsidian 打开 Hexo 文件夹</h2><h3 id="1-1-基础操作"><a href="#1-1-基础操作" class="headerlink" title="1.1 基础操作"></a>1.1 基础操作</h3><p>Obsidian 作为一款完全本地的 Markdown 编辑器，可以打开任意一个本地文件夹，然后将其作为编辑器存放与编辑文档的库，只需要点击左下角的按钮，然后打开 Hexo 文件夹即可。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403291532783.png"></p>
-<h3 id="1-2-过滤-Obsidian-文件夹"><a href="#1-2-过滤-Obsidian-文件夹" class="headerlink" title="1.2 过滤 Obsidian 文件夹"></a>1.2 过滤 Obsidian 文件夹</h3><p><strong>使用插件进行过滤</strong></p>
-<p>因为 Hexo 文件夹内存在很多与文档编辑无关的文件夹，所以我们可以使用 <a target="_blank" rel="noopener" href="https://github.com/JonasDoesThings/obsidian-hide-folders">Hide Folders</a> 插件将不想看到的文件夹过滤掉，眼不见为净。</p>
-<p>最后过滤完，只剩下发布 Hexo 文章用的 <code>_posts</code> 文件夹了：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403291544283.png"></p>
-<p><strong>使用 obsidian 设置进行过滤</strong></p>
-<p>这个时候虽然看不见文件夹，但你之后在 Obsidian 搜索查询的时候，还是有可能会出现这些文件夹中的文档，这个时候我们可以进入 Obsidian 的设置中，在 <code>文件与链接</code> 这个选项卡中，点击 <code>忽略文件</code> 按钮，然后添加你想过滤的文件夹即可。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403291550611.png"></p>
-<h3 id="1-3-新建草稿文件夹"><a href="#1-3-新建草稿文件夹" class="headerlink" title="1.3 新建草稿文件夹"></a>1.3 新建草稿文件夹</h3><p>因为 <code>_posts</code> 文件夹中的文档都会被编译渲染，所以我们需要为日常的草稿或者笔记创建一个草稿文件夹 <code>_drats</code>。</p>
-<p>注：文件或文件夹开头名称为 _（下划线）或隐藏的文件会被忽略。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403291605440.png"></p>
-<p>同时，我们需要在 Obsidian 设置中，将这个 <code>_drafts</code> 文件夹设置为新建文档时用来存放的文件夹：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403291607270.png"></p>
-<h3 id="1-4-自动生成分类"><a href="#1-4-自动生成分类" class="headerlink" title="1.4 自动生成分类"></a>1.4 自动生成分类</h3><p>由于 Obsidian 是以文件夹为文档的基本管理方式，长此以往，在 <code>_posts</code> 文件夹中就会出现非常多的子文件夹，又因为后期写作中，管理分类是一件相当麻烦且枯燥的事情，所以我们可以用一个 Hexo 插件来根据文档所在的文件夹（或子文件夹）来自动生成它的 <code>categories</code>。</p>
-<p><strong>插件名称：</strong><a target="_blank" rel="noopener" href="https://github.com/xu-song/hexo-auto-category">hexo-auto-category</a></p>
-<p><strong>安装方法</strong></p>
 <ol>
-<li>使用 CD 命令进入安装 Hexo 的文件夹</li>
-<li>使用下面的代码安装插件</li>
+<li>听从作者的 <a target="_blank" rel="noopener" href="https://xaoxuu.com/wiki/stellar/theme-settings/">指导</a> ，直接在根目录创建主题 <code>_config.stellar.yml</code> 文件。<strong>后面的所有代码都是直接放在这个文件内</strong></li>
+<li>修改网页字体为霞鹜文楷，直接在  <code>_config.stellar.yml</code> 文件内使用以下代码</li>
 </ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-auto-category --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">inject:</span><br><span class="line">  head:</span><br><span class="line">    - &lt;link rel=&quot;stylesheet&quot; href=&quot;https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css&quot; media=&quot;print&quot; onload=&quot;this.media=&#x27;all&#x27;&quot;&gt; #字体</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">style:</span><br><span class="line">  font-family:</span><br><span class="line">    body: &#x27;&quot;LXGW WenKai Screen&quot;, sans-serif&#x27;</span><br></pre></td></tr></table></figure>
 
 <ol start="3">
-<li>打开 Hexo 根目录下的 <code>_config.yml</code> 文件，并添加如下代码，然后保存</li>
+<li>但是文章的标题也变成霞鹜文楷了，不太好看，有时间得找个办法修改</li>
 </ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Generate categories from directory-tree</span><br><span class="line"># Dependencies: https://github.com/xu-song/hexo-auto-category</span><br><span class="line"># depth: the max_depth of directory-tree you want to generate, should &gt; 0</span><br><span class="line"># multiple: multiple category hierarchies</span><br><span class="line">auto_category:</span><br><span class="line"> enable: true</span><br><span class="line"> multiple: false</span><br><span class="line"> depth: </span><br></pre></td></tr></table></figure>
+<p>注：修改为鸿蒙字体的方法见 👉 <a target="_blank" rel="noopener" href="https://www.panoshu.top/blog/7f3b7e3a/">https://www.panoshu.top/blog/7f3b7e3a/</a></p>
+<h4 id="修改永久链接格式"><a href="#修改永久链接格式" class="headerlink" title="修改永久链接格式"></a>修改永久链接格式</h4><p><strong>日期：2024-03-28</strong></p>
+<p><strong>修改原因：</strong></p>
+<p>Hexo 默认文章链接生成规则是按照年、月、日、标题来生成的。一旦文章标题或者发布时间被修改，URL 就会发生变化，之前文章地址也将不可访问。</p>
+<p><strong>修改方法：安装 hexo-abbrlink 插件</strong></p>
+<ol>
+<li>在终端中，使用 CD 命令进入 Hexo 的文件夹</li>
+<li>使用以下代码安装插件</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>修改博客根目录配置文件 <code>_config.yml</code> 的 permalink</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># permalink: :year/:month/:day/:title/</span><br><span class="line">permalink: posts/:abbrlink.html  # posts 是可以自定义的前缀</span><br></pre></td></tr></table></figure>
 
 <ol start="4">
-<li>重新渲染文件</li>
+<li>将以下代码放到博客根目录的 <code>_config.stellar.yml</code> <strong>Stellar 主题文件</strong>中</li>
 </ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">## abbrlink config</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc32      #support crc16(default) and crc32 进制</span><br><span class="line">  rep: hex        #support dec(default) and hex  算法</span><br><span class="line">  drafts: false   #(true)Process draft,(false)Do not process draft. false(default) </span><br></pre></td></tr></table></figure>
+
+<p><strong>一些参考过的文章</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.duheweb.com/post/20210414222449.html">https://www.duheweb.com/post/20210414222449.html</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42464282/article/details/130982114">https://blog.csdn.net/weixin_42464282/article/details/130982114</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/35668237">https://zhuanlan.zhihu.com/p/35668237</a></li>
+</ul>
+<h4 id="添加-51la-流量统计代码"><a href="#添加-51la-流量统计代码" class="headerlink" title="添加 51la 流量统计代码"></a>添加 51la 流量统计代码</h4><p><strong>不蒜子</strong></p>
+<p>尝试了一下 <a target="_blank" rel="noopener" href="https://busuanzi.ibruce.info/">不蒜子</a> 的统计代码，非常简单，但是效果太简陋了，而且会将本地访问的流量统计进去。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403281224081.png"></p>
+<p><strong>51La</strong></p>
+<p>51la 目前看来个人用户完全可以免费使用，安装方法也很简单。</p>
+<ol>
+<li>注册账号，并打开代码配置面板</li>
+<li>复制如下图所示的参数</li>
+</ol>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403281635744.png"></p>
+<ol start="3">
+<li>将这串代码粘贴到 Hexo 文件夹根目录的 <code>_config.stellar.yml</code> 文件内</li>
+</ol>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403281509741.png"></p>
+<p>代码格式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">footer:</span><br><span class="line">  content: |</span><br><span class="line">    &lt;script charset=&quot;UTF-8&quot; id=&quot;LA_COLLECT&quot; src=&quot;//sdk.51.la/js-sdk-pro.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script&gt;LA.init(&#123;id:&quot;&quot;,ck:&quot;&quot;&#125;)&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
 
-<h2 id="2-Obsidian-插件"><a href="#2-Obsidian-插件" class="headerlink" title="2. Obsidian 插件"></a>2. Obsidian 插件</h2><h3 id="2-1-用-Templater-自动生成-Front-matter"><a href="#2-1-用-Templater-自动生成-Front-matter" class="headerlink" title="2.1 用 Templater 自动生成 Front-matter"></a>2.1 用 Templater 自动生成 Front-matter</h3><p><strong>代码如下</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &lt;% tp.file.title %&gt;</span><br><span class="line">date: &lt;% tp.date.now(format=&quot;YYYY-MM-DD HH:mm:ss&quot;) %&gt;</span><br><span class="line">abbrlink: &lt;% date = tp.date.now(&quot;YYYYMMDDHHmm&quot;) %&gt;</span><br><span class="line">categories: </span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>注意，上面的代码不能直接复制，你需要替换成你从 51 中获取的代码，另外代码生效的时间有点慢，需要稍等几分钟。</p>
+<h4 id="网站备案"><a href="#网站备案" class="headerlink" title="网站备案"></a>网站备案</h4><ul>
+<li>3 月 28 日，根据腾讯云的 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/243">这份文档</a>，提交了备案信息，等待备案中。</li>
+<li>4 月 9 日，收到备案通过的短信</li>
+</ul>
+<p><strong>日期：2024-03-29</strong></p>
+<h4 id="Obsidian-管理-Hexo-文档库"><a href="#Obsidian-管理-Hexo-文档库" class="headerlink" title="Obsidian 管理 Hexo 文档库"></a>Obsidian 管理 Hexo 文档库</h4><p>相关记录见：</p>
+<h4 id="修改-Stellar-主题细节"><a href="#修改-Stellar-主题细节" class="headerlink" title="修改 Stellar 主题细节"></a>修改 Stellar 主题细节</h4><p><strong>侧边栏顶部导航按钮</strong></p>
+<p>最终目的是要实现这样的导航栏按钮效果：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403292037089.png" alt="Arc20240329Stellar：使用 Stellar 主题的博客 - XAOXUU004826@2x.png"></p>
+<p>首先需要在你想要跳转的目标文章的 Front-Matter 位置添加一个 <code>menu_id</code> 字段，并给这个字段一个自定义的值，例如下图我就给 <code>hello-world</code> 这篇文章设置了 <code>test</code> 的 menu_id：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403292051215.png" alt="Obsidian20240329hello-world - Hexo - Obsidian v1.5.11004828@2x.png"></p>
+<p>然后在 Hexo 文件夹根目录的 <code>_config.stellar.yml</code> 文件内，添加以下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 侧边栏主功能导航菜单</span><br><span class="line"></span><br><span class="line">menubar:</span><br><span class="line">	columns: 4 # 一行多少个</span><br><span class="line">	items: # 可按照自己需求增加，符合以下格式即可</span><br><span class="line">		- id: test # 页面中高亮的 menu_id</span><br><span class="line">		theme: &#x27;#1BCDFC&#x27; # 高亮时的颜色，仅 svg 中 fill=&quot;currentColor&quot; 时有效</span><br><span class="line">		icon: solar:documents-bold-duotone # 支持 svg/img 标签，可以定义在 icons.yml 文件中，也支持外部图片的 URL</span><br><span class="line">		title: 博客 # 标题</span><br><span class="line">		url: https://space.bilibili.com/319417 # 跳转链接，支持相对路径和绝对路径</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p><strong>效果</strong></p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403291751643.png"></p>
+<p>其中 <code>id</code> 后面的值对应自定义的 id 值，url 则如注释所写，支持绝对路径或相对路径。</p>
+<p>开发者写的教程如下：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403292102834.png" alt="Arc20240329Stellar：侧边栏配置 - XAOXUU004830@2x.png"></p>
+<p><strong>侧边栏底部社交按钮</strong></p>
+<p>在 Hexo 文件夹根目录的 <code>_config.stellar.yml</code> 文件内，添加以下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">footer:</span><br><span class="line">	social:</span><br><span class="line">		bilibili:</span><br><span class="line">			icon: &#x27;&lt;img src=&quot;https://pic.eryinote.com/PicGo/202403292128856.svg&quot;/&gt;&#x27;</span><br><span class="line">			url: https://space.bilibili.com/319417</span><br><span class="line">		Notion:</span><br><span class="line">			icon: &#x27;&lt;img src=&quot;https://pic.eryinote.com/PicGo/202403292126678.svg&quot;/&gt;&#x27;</span><br><span class="line">			url: https://sspai.com/series/303/list</span><br><span class="line">		Twitter:</span><br><span class="line">			icon: &#x27;&lt;img src=&quot;https://pic.eryinote.com/PicGo/202403292132510.svg&quot;/&gt;&#x27;</span><br><span class="line">			url: https://twitter.com/eryidebiji</span><br></pre></td></tr></table></figure>
+
+<p>就能实现如下效果：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403300930823.png" alt="Arc20240330二一的笔记004832@2x.png"></p>
+<p><strong>2024-03-31</strong></p>
+<p><strong>安装「相关文章推荐」插件</strong></p>
+<ol>
+<li>CD 进入 Hexo 文件夹，并执行以下命令</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-related-popular-posts</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>在主题配置文件中开启：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">article:</span><br><span class="line">  # npm i hexo-related-popular-posts</span><br><span class="line">  related_posts:</span><br><span class="line">    enable: true</span><br><span class="line">    title: 您可能感兴趣的文章</span><br></pre></td></tr></table></figure>
+
+<p>但是似乎没有生效？可能是文章数量不够多，需要再多发几篇文章试试。</p>
+<p>[X] 修改文章许可协议</p>
+<h4 id="创建独立页面：About"><a href="#创建独立页面：About" class="headerlink" title="创建独立页面：About"></a>创建独立页面：About</h4><ol>
+<li>在 Source 文件夹创建 about 文件夹</li>
+<li></li>
+</ol>
 
 <div class="article-footer fs14">
     <section id="license">
@@ -149,7 +201,7 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/202403291755.html">Notion 知识星球半月报 ｜ 202403 第 2 期</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/2.html">2024-03-29</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/202403312231.html">Hexo Stellar 主题插件效果记录</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/202403291755.html">Notion 知识星球半月报 ｜ 202403 第 2 期</a></div></section></div>
 
 
 
@@ -165,7 +217,7 @@
 
 
 
-<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%BD%BF%E7%94%A8-Obsidian-%E6%89%93%E5%BC%80-Hexo-%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-text">1.使用 Obsidian 打开 Hexo 文件夹</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C"><span class="toc-text">1.1 基础操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E8%BF%87%E6%BB%A4-Obsidian-%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-text">1.2 过滤 Obsidian 文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E6%96%B0%E5%BB%BA%E8%8D%89%E7%A8%BF%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-text">1.3 新建草稿文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E5%88%86%E7%B1%BB"><span class="toc-text">1.4 自动生成分类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Obsidian-%E6%8F%92%E4%BB%B6"><span class="toc-text">2. Obsidian 插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E7%94%A8-Templater-%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90-Front-matter"><span class="toc-text">2.1 用 Templater 自动生成 Front-matter</span></a></li></ol></li></ol></div><div class="widget-footer">
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2024"><span class="toc-text">2024</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2024-03"><span class="toc-text">2024&#x2F;03</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9-Logo%E3%80%81%E6%A0%87%E9%A2%98%EF%BC%8C%E5%AD%97%E4%BD%93"><span class="toc-text">修改 Logo、标题，字体</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%B0%B8%E4%B9%85%E9%93%BE%E6%8E%A5%E6%A0%BC%E5%BC%8F"><span class="toc-text">修改永久链接格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0-51la-%E6%B5%81%E9%87%8F%E7%BB%9F%E8%AE%A1%E4%BB%A3%E7%A0%81"><span class="toc-text">添加 51la 流量统计代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BD%91%E7%AB%99%E5%A4%87%E6%A1%88"><span class="toc-text">网站备案</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Obsidian-%E7%AE%A1%E7%90%86-Hexo-%E6%96%87%E6%A1%A3%E5%BA%93"><span class="toc-text">Obsidian 管理 Hexo 文档库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9-Stellar-%E4%B8%BB%E9%A2%98%E7%BB%86%E8%8A%82"><span class="toc-text">修改 Stellar 主题细节</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%8B%AC%E7%AB%8B%E9%A1%B5%E9%9D%A2%EF%BC%9AAbout"><span class="toc-text">创建独立页面：About</span></a></li></ol></li></ol></li></ol></div><div class="widget-footer">
 
 <a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
 </div></aside><div class='float-panel blur'>

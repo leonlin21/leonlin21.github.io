@@ -1,0 +1,612 @@
+
+<!DOCTYPE html><html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.27.0" theme-name="Stellar" theme-version="1.27.0">
+  
+  <meta name="generator" content="Hexo 7.1.1">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>Logseq 的 5 种用法 - 二一的笔记</title>
+
+  
+    <meta name="description" content="体验一款笔记软件最快乐的时候，是看着茫茫多的功能列表然后发动想象力，你总能屡试不爽地预支一些并不存在的成就感。而放弃一款笔记软件，是当你两三天过后再打开它，思索片刻后发现，其实我那价值贫乏且低产的工作，好像也没有什么好写的。为什么都用了无数款笔记软件，我却依然还写不好这一生？我想原因就在于，从「快乐地幻想」到「失望地卸载」，这个圈一直在循环，正如 GTD 软件，正如记账软件。 幸好这种低落">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Logseq 的 5 种用法">
+<meta property="og:url" content="https://eryiblog.ink/posts/202210130547.html">
+<meta property="og:site_name" content="二一的笔记">
+<meta property="og:description" content="体验一款笔记软件最快乐的时候，是看着茫茫多的功能列表然后发动想象力，你总能屡试不爽地预支一些并不存在的成就感。而放弃一款笔记软件，是当你两三天过后再打开它，思索片刻后发现，其实我那价值贫乏且低产的工作，好像也没有什么好写的。为什么都用了无数款笔记软件，我却依然还写不好这一生？我想原因就在于，从「快乐地幻想」到「失望地卸载」，这个圈一直在循环，正如 GTD 软件，正如记账软件。 幸好这种低落">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-10-13T12:36:57.000Z">
+<meta property="article:modified_time" content="2022-10-13T12:36:57.000Z">
+<meta property="article:author" content="二一">
+<meta property="article:tag" content="Logseq">
+<meta property="article:tag" content="笔记软件">
+<meta name="twitter:card" content="summary">
+  
+  
+  
+  <meta name="keywords" content="Logseq,笔记软件">
+
+  <!-- feed -->
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.27.0">
+
+  
+
+  
+
+  <link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css" media="print" onload="this.media='all'">
+</head>
+<body>
+
+<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://pic.eryinote.com/PicGo/202403280735497.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">二一的笔记</div><div class="sub normal cap">等待和希望</div><div class="sub hover cap" style="opacity:0"> 记录我的所见所闻，所思所想</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+<nav class="menu dis-select"></nav>
+</div>
+<div class="widgets">
+
+
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/posts/202404041429.html"><span class="title">用 Obsidian 插件将文章发布到 WordPress 博客</span></a><a class="item title" href="/posts/202404021415.html"><span class="title">聊聊近况 ｜ 二一的笔记 001</span></a><a class="item title" href="/posts/202403312231.html"><span class="title">Hexo Stellar 主题插件效果记录</span></a><a class="item title" href="/posts/16107.html"><span class="title">Hello World</span></a><a class="item title" href="/posts/202403111725.html"><span class="title">Notion 知识星球半月报 ｜ 202403 第 1 期</span></a><a class="item title" href="/posts/202403291755.html"><span class="title">Notion 知识星球半月报 ｜ 202403 第 2 期</span></a><a class="item title" href="/posts/62677.html"><span class="title">使用 Obsidian 作为 Hexo 编辑器的可行性分析</span></a><a class="item title" href="/posts/202210302044.html"><span class="title">我来笔记 2022 综合测评</span></a><a class="item title" href="/posts/202210130547.html"><span class="title">Logseq 的 5 种用法</span></a><a class="item title" href="/posts/202210120726.html"><span class="title">永不消失的笔记！全自动的备份、加密与安全策略</span></a></div></widget>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://space.bilibili.com/319417" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403292128856.svg"/></a><a class="social" href="https://sspai.com/series/303/list" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403292126678.svg"/></a><a class="social" href="https://twitter.com/eryidebiji" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403292132510.svg"/></a></div></footer>
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/">笔记软件</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2022-10-13T12:36:57.000Z">2022-10-13</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2022-10-13T12:36:57.000Z">2022-10-13</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>Logseq 的 5 种用法</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><span id="more"></span>
+
+
+
+<p>体验一款笔记软件最快乐的时候，是看着茫茫多的功能列表然后发动想象力，你总能屡试不爽地预支一些并不存在的成就感。而放弃一款笔记软件，是当你两三天过后再打开它，思索片刻后发现，其实我那价值贫乏且低产的工作，好像也没有什么好写的。<strong>为什么都用了无数款笔记软件，我却依然还写不好这一生？</strong>我想原因就在于，从「快乐地幻想」到「失望地卸载」，这个圈一直在循环，正如 GTD 软件，正如记账软件。</p>
+<p>幸好这种低落的情绪总是来得快去得也快，让我在完全放弃之前，还能遇到 Logseq。它用一种很奇妙的方式让我发现，原来我也有值得写的东西，而我也真的用它写了 30 万字，<strong>动力就来自软件机制所制造的持续不断的正反馈</strong>。</p>
+<p>如果你好奇这是怎样的一个实现过程，欢迎你继续阅读：</p>
+<p>![[source&#x2F;_attachment&#x2F;fe571902d916c2575a844cfc0122cfa5_MD5.webp]]​</p>
+<h1 id="信任的起点：开源离线、隐私至上"><a href="#信任的起点：开源离线、隐私至上" class="headerlink" title="信任的起点：开源离线、隐私至上"></a>信任的起点：开源离线、隐私至上</h1><hr>
+<p>这是一款由国人开发的支持<strong>双向链接</strong>的大纲笔记软件，如果你对 Roam Research 有所耳闻，想找一款基础用法大差不差的平替，Logseq 会是目前市面上最好的选择之一。但须知它不是 RR 的抄袭者，这里不存在 Notion 所遭遇的那种情况。</p>
+<p>它现在 Beta 阶段的主要功能包括现在及以后都将<strong>永久免费</strong>，这意味着体验它无需成本。它秉承<strong>隐私至上</strong>的理念，你可以<strong>完全离线</strong>使用它，所有文档将以 <strong>Markdown 格式存储在本地，</strong>任何一款文本编辑器都可以打开。你可以访问 <a target="_blank" rel="noopener" href="https://logseq.github.io/#/page/faq">官方 FAQ</a>，了解更多关于 Logseq 的运营策略。</p>
+<p>至少对我来说，纯云端就是没有安全感，而其他笔记软件的迁移可能也不会太简单，所以 Logseq 的运营策略让我能没有任何后顾之忧地使用它。</p>
+<p>![[source&#x2F;_attachment&#x2F;c770c1647bbb39ba8485e9d3a974765d_MD5.webp]]​</p>
+<h2 id="基本界面"><a href="#基本界面" class="headerlink" title="基本界面"></a>基本界面</h2><hr>
+<p>安装并打开软件后，你可以通过点击「Open a local directory」来定位你的「笔记存储位置」到本地任意一个文件夹中。如果是将文件夹放在坚果云或者群晖等<strong>同步盘</strong>中，就能够实现<strong>多端同步</strong>。</p>
+<p>![[source&#x2F;_attachment&#x2F;721cac09d1a353c20d1729740cb2a3ff_MD5.webp]]​</p>
+<p>如你所见，Logseq 是一款大纲结构的笔记软件，<strong>你可以暂时先把它当成幕布或 WorkFlowy，</strong>刚好 Logseq 同样也能生成思维导图。但看下去你就会明白，它可能会比传统的大纲笔记强不少。</p>
+<p>![[source&#x2F;_attachment&#x2F;2307ab9198cd86006e7f868e3d6936fd_MD5.webp]]​</p>
+<p>对笔记软件有需求的人大概有这几类：要做学科笔记的<strong>学牲</strong>，心血来潮想复盘工作的<strong>社畜</strong>，想做读书笔记的<strong>学者</strong>，或者是想随手记录灵感和心情的<strong>一般群众</strong>。</p>
+<p>接下来我将从这些人的视角，模拟在各种需求下，我们可以怎么样使用 Logseq。</p>
+<h1 id="用法一：全功能型日记本"><a href="#用法一：全功能型日记本" class="headerlink" title="用法一：全功能型日记本"></a>用法一：全功能型日记本</h1><hr>
+<p>Logseq 的最基础面板是「日志」。只要你打开它，它每天都会生成一页空白的日志（Daily Note），并以日期作为它的标题。你可以把它当成是一个打开即写的 Inbox，不用等待网络加载，不用纠结这次的记录该放在哪个文件夹，不用担心诸如灵感、吐槽、或者心情记录会搅乱这个 Inbox，也不会发生备忘会被真的遗忘的情况。</p>
+<p><strong>因为你今天所记录下的一切，都会以一种奇妙的方式，在未来某天再现于你眼前。</strong></p>
+<p>![[source&#x2F;_attachment&#x2F;e57f879b4b71c7340d1bb88b73402a9a_MD5.webp]]​</p>
+<p>所谓的正反馈即是，<strong>它让我相信一切记录都有价值，所以我才会一直不停地记。</strong></p>
+<p>但要真正理解它实现的方式，恐怕一时半会儿还讲不完。在「用法一」里，还是先简单展示一下这个日记本都能记些什么东西吧，功能演示如下图：</p>
+<p>![[source&#x2F;_attachment&#x2F;d36d31d606d3f2abe6fe7ead17e4b407_MD5.webp]]​</p>
+<p>那么我都用它记录了些什么呢？</p>
+<p><strong>我把生活中一切值得留下记录的文字都写在了上面</strong>，是每天早上的晨间日记、是一时兴起安排的旅行计划、或者是为了写这篇文章所列的提纲，没错就是这么杂乱无章，大部分还都「始乱终弃」。但过去确实没有哪款笔记软件能给我这么<strong>自由的体验</strong>，因为它们都太严肃了，太正经了，仿佛建一个文档就是要开始执行一个项目，莫名就有了压力。</p>
+<p>在日记中，通过<strong>插件系统</strong>它能实现类似 Flomo 这种的类 Github 的笔记热力图，我觉得它让我胡说八道的欲望更强了。不过明显是能看到 8 月份过后频率下降了很多，可能是有工作的时候会更喜欢碎碎念吧。</p>
+<p>![[source&#x2F;_attachment&#x2F;f9388df09581a178d3ec3533750bd907_MD5.webp]]​</p>
+<h1 id="用法二：任务管理系统"><a href="#用法二：任务管理系统" class="headerlink" title="用法二：任务管理系统"></a>用法二：任务管理系统</h1><hr>
+<p>Logseq 内置了一套虽然基础但基本够用的任务管理系统。假设我是一个钱少事多离家远的社畜（好像也不用假设），我可以怎么使用 Logseq？首先，每天早上我会在日志中花 5 分钟来梳理一下今天的工作。但如果只是简单的清单罗列，好像还不算任务管理，所以你可以<strong>通过</strong>​<code>/</code>​<strong>来添加</strong> <code>**todo**</code>​ <strong>标记</strong>，并在完成每条任务后打钩。</p>
+<p>![[source&#x2F;_attachment&#x2F;9fe4ab165ea8e466e382c0d67ace2493_MD5.webp]]​</p>
+<p>如果这个任务是未来某天需要完成的，你可以通过<code>**/**</code>​唤出 <code>**date picker**</code>​ 命令来添加时间，例如 10 月 31 号。</p>
+<p>![[source&#x2F;_attachment&#x2F;32779ec17c787c92b8878513198b0a4e_MD5.webp]]​</p>
+<p>当 31 号那天到来，这个任务就会再次出现在当天的日志中，起到提醒的效果。</p>
+<p>![[source&#x2F;_attachment&#x2F;a733353d6b985e61a800aac58b2e53fe_MD5.webp]]​</p>
+<p>如果使用 <code>**doing**</code>​ 或者 <code>**now**</code>​ 命令，它会更显眼地出现在每天日志的下方（如红框所示），以防当天记录的东西过多，或者到了第二天生成了新的日志后被忽略。<strong>直到你将它完成为止，它才会消失</strong>，算是一种强提醒。<br>​</p>
+<p>你还可以使用 <strong>Query 命令</strong>，来筛选、汇总你分散在<strong>任意页面</strong>的所有任务，这样一来是不是稍微有点「任务管理」那味儿了。</p>
+<p>此处只展示了最基础的 Query 命令，感兴趣的话可再自行探索进阶用法，这里推荐王树义老师的 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1eq4y1N7Su">视频教程</a>。</p>
+<h1 id="用法三：记录工作日报和周报"><a href="#用法三：记录工作日报和周报" class="headerlink" title="用法三：记录工作日报和周报"></a>用法三：记录工作日报和周报</h1><hr>
+<h3 id="Page-的概念"><a href="#Page-的概念" class="headerlink" title="Page 的概念"></a>Page 的概念</h3><p>在实操工作日报之间，我还需要先引入一个名为 Page 的概念。</p>
+<p>你可以在任意位置使用方括号<code>[[]]</code>​ 将某个关键词框柱，Logseq 就会新建一个以这个关键词命名的页面，点击就可以进入这个 Page 中，这里类似 Notion 的<code>/ page</code>​ 功能。这样你就能在 Daily Note 之外的地方留下你的记录了。另外，在中英文输入法下，双击<code>[</code>​ 都能快速补全<code>[[]]</code>​。</p>
+<p>![[source&#x2F;_attachment&#x2F;b5adebefe39b73dd14af1711c3764611_MD5.gif]]​</p>
+<h3 id="日报实操"><a href="#日报实操" class="headerlink" title="日报实操"></a><strong>日报实操</strong></h3><p>我每天都会在 Daily Note 中记录我的工作日报，点击「工作日报」关键词，就能进入这个页面中，并看到所有带这个关键词的日志，都被<strong>按时间顺序汇总</strong>到了这个页面下方的<strong>「Linked Reference」</strong>中。</p>
+<p>下面图示中的每个长长的黑色箭头，都代表一个「点击关键词并跳转」的动作。<br>​</p>
+<p>因为这里的<strong>「工作复盘」</strong>也是一个关键词，所以它也是可点击的。</p>
+<p>进入「工作复盘」这个 Page 后，你可以看到每天的复盘都将按照时间顺序汇总好。这个动作能让你将所有的「工作复盘」从所有的「工作日报」中筛选出来，让你能<strong>更聚焦地只看这一项</strong>，方便你按照时间线回顾这一段时间以来的经验心得。</p>
+<p>![[source&#x2F;_attachment&#x2F;c97cb83519a1596b05c8cece4eb0efd5_MD5.webp]]​</p>
+<p>如果你在每天的「工作日报」后面附上当周的 tag，例如<code>#week18</code>​，那么当一周结束后，只要你点击这个 tag，就能<strong>汇总当周的所有日报</strong>，以便你能更好地写周报。</p>
+<p>![[source&#x2F;_attachment&#x2F;03977a950bc830cfca2f3722f675644d_MD5.webp]]实际上这里是汇总了所有添加了<code>#week18</code>​ 的内容</p>
+<p>但这种用法，和传统的打标签有什么区别？印象笔记可以打标签，Bear 也可以打标签，如果用 Notion 记日报，还有多种视图可以切换，用滴答清单记日报，每周也能自动汇总，为什么我要用 Logseq 而不用它们？Logseq 的重点在下文的「用法四」里。</p>
+<h1 id="用法四：用双链串联碎片灵感"><a href="#用法四：用双链串联碎片灵感" class="headerlink" title="用法四：用双链串联碎片灵感"></a><strong>用法四：用双链串联碎片灵感</strong></h1><hr>
+<h2 id="双链的兴起"><a href="#双链的兴起" class="headerlink" title="双链的兴起"></a><strong>双链的兴起</strong></h2><p>从 2020 年开始，因为双链这一概念的流行，越来越多的笔记软件开始引入它，其中包括 Notion、字节跳动的幕布和飞书，以及印象笔记都有所沿用。</p>
+<p>![[source&#x2F;_attachment&#x2F;ffda915c522678517d497bf4f1c1c364_MD5.webp]]​</p>
+<p>另外，基于双链功能构筑的新笔记软件也开始井喷。既然连大厂都在跟进，我觉得现在你也可以试着体验下，或许就能明白，<strong>为什么双链这个古老的概念「一夜之间」火了</strong>。</p>
+<p>![[source&#x2F;_attachment&#x2F;c95a5ff420bea63775465ceb3376ede8_MD5.webp]]​</p>
+<h2 id="对双链的简单探讨"><a href="#对双链的简单探讨" class="headerlink" title="对双链的简单探讨"></a><strong>对双链的简单探讨</strong></h2><p>与双链相对的单向链接，例如在印象笔记中，你虽然可以生成一条笔记的链接并将它嵌入另一条笔记中，使你能够在 B 笔记中看到 A 笔记，但也只能看到标题而已，并且在 A 笔记中，我是看不到 B 的。</p>
+<p>![[source&#x2F;_attachment&#x2F;bc89242d76fa87b4f73841da647faa41_MD5.webp]]​</p>
+<p>所以，Logseq 多了这一层能<strong>「反向链接到日期」</strong>的信息，能起到什么用处？</p>
+<p>A 和 B 双链，B 和 C 双链，则 A 自动与 C 建立双链，且 B 将作为 A 反链到 C 时的「语境」，这个语境可以是日期、地理位置、事件、概念，或者是书中的章节、角色之间的人际关系等。</p>
+<p>这样一来，你除了能知道 A 和 C 有关系，还知道 A 和 C 是怎么建立关系的。</p>
+<p>![[source&#x2F;_attachment&#x2F;74492e370934aa55d53057290ebd5c52_MD5.webp]]​</p>
+<p>将这条链路再拉长，A 和 F 乍看之下可能是风马牛不相及的两个概念，但通过中间 B、C、D、E 的链接，你便能补齐从 A 到 F 的所有路径，因为 B、C、D、E 都是现成的「论据」，来自于你过去的每一次不经意的记录，它们共同促成了这一新的发现，给予你新的灵感。</p>
+<p>![[source&#x2F;_attachment&#x2F;1ae2119d78f87ba10b886a700ed1c116_MD5.webp]]​</p>
+<p>这正是双向链接带给我的最大价值之一，它让我相信一切记录都有其意义，因为我只需要将关键词框起来，然后期待碎片的支流终有一天能汇成汪洋大海。</p>
+<p>例如下图这四个主题（关键词），我在为每个主题记下第一条信息时并没有预设任何记录的目标，也没有为它建立什么文件夹，但每当我随便点进一个 Page 时我都会惊讶地发现，不经意间我已经积累了这么多东西。而这些东西未来又将创造何种价值，我内心将永远满怀期待。</p>
+<p>![[source&#x2F;_attachment&#x2F;3bb803f70d777586a249014985a65283_MD5.webp]]​</p>
+<p><strong>这时你可能会产生两个问题：</strong></p>
+<p>1、这样子跟单独建立一个文档然后输入有什么区别，Logseq 好在哪？</p>
+<p>2、所有东西都放在 Daily Note 中，不会变得很凌乱吗，找起来会不会很麻烦？</p>
+<p>解决问题 2 可以很简单，你可以为你最常访问、或者<strong>确定有长期记录需求</strong>的内容建立一个目录，如下图所示。然后这里的「目录」也是一个 Page，你可以在 Logseq 中搜索 Contents 以进入这个 Page，这样能更好地编辑它。如果是那些你觉得还没必要为它建立目录的内容，你不妨先在日志中随手记着，先不用担心它会被你遗忘，有的是办法能重新找到它。</p>
+<p>![[source&#x2F;_attachment&#x2F;163ed3eecf6c7cf1008e4a6fb8c48047_MD5.png]]</p>
+<p>问题 1 的答案，可以简单概括成「无压力记录」，但在展开之前，需要先聊聊我认为「有压力的记录」是怎么一回事。</p>
+<h2 id="记录的压力从何而来"><a href="#记录的压力从何而来" class="headerlink" title="记录的压力从何而来"></a><strong>记录的压力从何而来</strong></h2><h3 id="压力其一：分类"><a href="#压力其一：分类" class="headerlink" title="压力其一：分类"></a><strong>压力其一：分类</strong></h3><p>假设我正在使用印象笔记、或者 Bear 或者 Notion，突然我有了某种想法，很多时候我可能不是先把它写下来，而是会先思考它归属于哪个分类，我应该为它建立哪个层级的文件夹？如果不分类，Inbox 很快就会被填满，而二次分类势必又得再动脑子，但我是真的懒。并且如果它同时涉及多个分类，我是不是应该每个分类都放一份记录？</p>
+<p>![[source&#x2F;_attachment&#x2F;3adaaf386e5a5358feb753837d046671_MD5.webp]]​</p>
+<h3 id="压力其二：半途而废的负罪感"><a href="#压力其二：半途而废的负罪感" class="headerlink" title="压力其二：半途而废的负罪感"></a><strong>压力其二：半途而废的负罪感</strong></h3><p>一旦因为某种三分钟的热度而建立了文档，它就真的会对我产生实质上的压力，我会质问自己，是不是该继续往里记点什么？诚然有压力是好事，可以逼自己行动，然而历史经验告诉我，大概率会在未来某天，当我再次看到这个文档里还是只有零星几条记录时，就会嘲笑当初自己信誓旦旦想要大写一场，结果到头来憋不出几条废话，<strong>负反馈真的非常明显</strong>，最后干脆归档或者一删了之，然后渐渐地再也不愿开始任何一件事。</p>
+<p>尽管我明白，倘若总是坚持不下去，错的并不是哪款软件，应当是我自己。</p>
+<p>![[source&#x2F;_attachment&#x2F;f4d199049b2709575de4338b3a4507be_MD5.webp]]​</p>
+<h2 id="用-Logseq-减少纪录的压力"><a href="#用-Logseq-减少纪录的压力" class="headerlink" title="用 Logseq 减少纪录的压力"></a>用 Logseq 减少纪录的压力</h2><ol>
+<li>每日一页新的日志，让我能很轻松地告别一些不是那么重要的想法，不会被它时刻盯着以至于压力山大。</li>
+<li>Daily Note 中打开即写，无需分类。并且点进任意一个关键词，在 Linked Reference 的汇总是自动按照时间排序的，一方面是能按照时间线回顾（如前文的工作日报），另一方面「时间信息」本就是在我们回忆起某件事时最重要的元素之一。</li>
+<li>关键词之间的互相链接，让我在也能从「胡说八道」中找到一些事与事之间的联结和共性，从而更加大胆地胡说八道。</li>
+</ol>
+<h1 id="用法五：读书笔记（拆书）"><a href="#用法五：读书笔记（拆书）" class="headerlink" title="用法五：读书笔记（拆书）"></a><strong>用法五：读书笔记（拆书）</strong></h1><hr>
+<p>接下来我将以拆书的方式来为这部 166 万字的科幻小说《海伯利安》做一下每个章节的梗概， 看看在<strong>双链</strong>和 <strong>PDF 阅读 &amp; 标注系统</strong>的加持下，我的读书笔记是什么样子的。</p>
+<p>Logseq 除了能内嵌视频和图片之外，还支持直接嵌入 PDF 文件，并<strong>在左侧边栏中打开进行阅读和标注</strong>。我们可以先用书名新建一个 Page，并进入这个 Page 当中，然后把 PDF 文件直接拖曳进去，相当于把这个附件存储在了这个 Page 当中，用过 Notion 的话应该不会对此感到陌生。</p>
+<p>![[source&#x2F;_attachment&#x2F;7447d3836a639490088dadd87b2eafe1_MD5.webp]]​</p>
+<p>我的习惯是，在阅读那些晦涩难懂、或者人物关系错综复杂的书之前，都会先新建三个 page，分别是「故事卡」、「人物卡」、以及「背景卡」，它们的作用分别是：</p>
+<ul>
+<li><strong>人物卡：</strong>记录所有重要角色</li>
+<li><strong>背景卡：</strong>记录所有重要设定，包括重要地名、政治派系、科技设定等</li>
+<li><strong>故事卡：</strong>记录每个重要章节的情节概述</li>
+</ul>
+<p>![[source&#x2F;_attachment&#x2F;8c443cf1d6cf0c342d3569f30752a786_MD5.webp]]​</p>
+<p>左键点击「故事卡」，将它在主记录区中打开，<code>shift+左键</code>​将「背景卡」和「人物卡」打开在右侧边栏中。</p>
+<p>这样一来总共就有了从左到右的 3 个工作区：<strong>阅读区、主要记录区、侧边记录区</strong>。另外，这三个区域的宽度都是可以调整的，个人习惯是给阅读区尽量大的空间。</p>
+<p>![[source&#x2F;_attachment&#x2F;92f7ca83d8f85659e8437e6d05cba3be_MD5.webp]]![[source&#x2F;_attachment&#x2F;d18a9882845b7239d8d6c13216a0dfa8_MD5.webp]]​</p>
+<p>在阅读的过程中，我决定在「人物卡」中为「领事」和「西奥」这两个人做一些注解，以防我看到后面忘了他们的生平和设定，我们可以继续用<code>shift+左键</code>​，将这两个人物的 Page 在侧边栏中打开并记录。</p>
+<p>![[source&#x2F;_attachment&#x2F;cec67177398e2b8aaa7dfad1826a8b5e_MD5.webp]]​</p>
+<p>你可能注意到，因为我们在「西奥」这个 Page 中提到了「领事」，所以两者已经自动建立了双链关系。所以当进入「领事」这个 Page 时，你可以看「西奥」出现在了「领事」的 Linked Reference 区域。</p>
+<p>![[source&#x2F;_attachment&#x2F;ed7353329713f3ebf7d8b1ec7f4e3cb9_MD5.webp]]​</p>
+<p>这样一来，不管书中出现的人物再多，你再也不会搞混彼此的关系，他们相互之间都有哪些故事勾连也将一目了然。而且你还可以随时将鼠标悬停在任意一个「关键词」上，它将弹出一个小框，以作提示。</p>
+<p>![[source&#x2F;_attachment&#x2F;d5fde22a6412988178289e0cf771ddc0_MD5.gif]]​</p>
+<p>随着阅读进度的推进，我将用这种方式慢慢补全故事情节、重要人物，以及所有重要的设定：</p>
+<ol>
+<li>在主面板中记录故事情节，然后用双括号标注重要关键词</li>
+<li><code>shift+左键</code>​将关键词打开在侧边栏中</li>
+<li>在侧边栏中对关键词进行信息补充</li>
+</ol>
+<p>![[source&#x2F;_attachment&#x2F;cc38b4c559659684bf21d23886e885b2_MD5.webp]]​</p>
+<p>你除了可以用自己的语言来概括故事情节，还可以通过选中、并标注 PDF 原文，来将一些不便于概括的设定或者是重要的原文，直接引用（复制）到你的各个 Page 中，它除了会显示引文所在的 PDF 页数，还可以通过点击引文，直接跳转到 PDF 原来的位置。</p>
+<p>![[source&#x2F;_attachment&#x2F;b5bb3785841f702f9b3e08ea4a4c6599_MD5.webp]]</p>
+<p>点击 Page 中的引文，将自动打开 PDF 原件并跳转到引用位置</p>
+<p>我为这部百多万字的小说写了总计近 2.5 万字的情节梗概，尽管过程漫长，但这次我再也不会认真看完一本书却忘了它到底讲了些什么，我觉得这种「笨办法」或许很适合那些做剧情解读的博主或 UP 主。</p>
+<p>Logseq 中的每一个 Page 都像是《海伯利安》中的一颗星星，而双链就像「远距传送门」，让我能免去超光速旅行所带来的「时间债」，就像「诗人马丁塞利纳斯」在他的宅邸，他可以清晨在「鲸逖中心」吃早餐，中午一步跨过传送门，然后沐浴在 300 光年外的星光下，继续撰写他那不朽的「诗篇」。</p>
+<p>![[source&#x2F;_attachment&#x2F;36b53dd13cc0a96f79740a1a99b07b7e_MD5.webp]]![[source&#x2F;_attachment&#x2F;7f601e09c5d9230a4bad8eb10a85e621_MD5.webp]]​</p>
+<p>如上图所示，所有<strong>互相提及的关键词</strong>，都会自动生成相互链接的图谱，虽然很多时候图谱只是看着爽而已，特别是全局图谱，如果没有精心雕琢双链关系，很难起到什么实质性的用处，但更多时候「看着能爽」其实已经就是个了不起的功能了。我相信这种阅读方法不止适用于读小说，你可以用它来拆解大部头的著作，各种复杂艰深的专有名词也能在你的细致拆解下融会贯通，了然于心。</p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a><strong>结语</strong></h1><hr>
+<p>关于 Logseq 其实还有很多功能没有介绍到，例如<strong>插件系统、块属性、更详细的 Query 命令、Zotero 联动</strong>等，由于使用门槛较高或者个人使用频次较低，这里就不多做展示，等你觉得现有功能不太够用了，可以访问 <a target="_blank" rel="noopener" href="https://logseq.github.io/#/page/Contents">官方说明文档</a> 摸索看看</p>
+<p>在这里我并没有打算用 Logseq 来构筑所谓的第二大脑，实际上，每当有人提及「第二大脑」这个词时，我都会怀疑我这钝钝的脑袋，真能创造出与这个高大上名词相称的东西吗？当初会用 Logseq 纯粹出于偶然，只是期望能靠它多少获得一种「记录 ≈ 进步」的成就感，还好目前为止它做得还不错。</p>
+
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本站所有文章，如无特殊说明或标注，均为本站原创发布。任何个人或组织，在未征得本站同意时，禁止复制、盗用、采集、发布本站内容到任何网站、书籍等各类媒体平台。</p>
+</div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/202210302044.html">我来笔记 2022 综合测评</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/202210120726.html">永不消失的笔记！全自动的备份、加密与安全策略</a></div></section></div>
+
+
+
+
+
+
+<footer class="page-footer footnote"><hr><div class="text"><script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"3HvmahY3CrAtqhI7",ck:"3HvmahY3CrAtqhI7"})</script>
+<script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/3HvmahY3CrAtqhI7/quote.js?theme=0&f=12&display=0,0,0,1,0,0,1,1"></script>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BF%A1%E4%BB%BB%E7%9A%84%E8%B5%B7%E7%82%B9%EF%BC%9A%E5%BC%80%E6%BA%90%E7%A6%BB%E7%BA%BF%E3%80%81%E9%9A%90%E7%A7%81%E8%87%B3%E4%B8%8A"><span class="toc-text">信任的起点：开源离线、隐私至上</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%95%8C%E9%9D%A2"><span class="toc-text">基本界面</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E6%B3%95%E4%B8%80%EF%BC%9A%E5%85%A8%E5%8A%9F%E8%83%BD%E5%9E%8B%E6%97%A5%E8%AE%B0%E6%9C%AC"><span class="toc-text">用法一：全功能型日记本</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E6%B3%95%E4%BA%8C%EF%BC%9A%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="toc-text">用法二：任务管理系统</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E6%B3%95%E4%B8%89%EF%BC%9A%E8%AE%B0%E5%BD%95%E5%B7%A5%E4%BD%9C%E6%97%A5%E6%8A%A5%E5%92%8C%E5%91%A8%E6%8A%A5"><span class="toc-text">用法三：记录工作日报和周报</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Page-%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-text">Page 的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A5%E6%8A%A5%E5%AE%9E%E6%93%8D"><span class="toc-text">日报实操</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E6%B3%95%E5%9B%9B%EF%BC%9A%E7%94%A8%E5%8F%8C%E9%93%BE%E4%B8%B2%E8%81%94%E7%A2%8E%E7%89%87%E7%81%B5%E6%84%9F"><span class="toc-text">用法四：用双链串联碎片灵感</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8C%E9%93%BE%E7%9A%84%E5%85%B4%E8%B5%B7"><span class="toc-text">双链的兴起</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E5%8F%8C%E9%93%BE%E7%9A%84%E7%AE%80%E5%8D%95%E6%8E%A2%E8%AE%A8"><span class="toc-text">对双链的简单探讨</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%B0%E5%BD%95%E7%9A%84%E5%8E%8B%E5%8A%9B%E4%BB%8E%E4%BD%95%E8%80%8C%E6%9D%A5"><span class="toc-text">记录的压力从何而来</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%8B%E5%8A%9B%E5%85%B6%E4%B8%80%EF%BC%9A%E5%88%86%E7%B1%BB"><span class="toc-text">压力其一：分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%8B%E5%8A%9B%E5%85%B6%E4%BA%8C%EF%BC%9A%E5%8D%8A%E9%80%94%E8%80%8C%E5%BA%9F%E7%9A%84%E8%B4%9F%E7%BD%AA%E6%84%9F"><span class="toc-text">压力其二：半途而废的负罪感</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8-Logseq-%E5%87%8F%E5%B0%91%E7%BA%AA%E5%BD%95%E7%9A%84%E5%8E%8B%E5%8A%9B"><span class="toc-text">用 Logseq 减少纪录的压力</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E6%B3%95%E4%BA%94%EF%BC%9A%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%EF%BC%88%E6%8B%86%E4%B9%A6%EF%BC%89"><span class="toc-text">用法五：读书笔记（拆书）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-text">结语</span></a></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+<script type="text/javascript">
+  const ctx = {
+    date_suffix: {
+      just: `刚刚`,
+      min: `分钟前`,
+      hour: `小时前`,
+      day: `天前`,
+    },
+    root : `/`,
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+  };
+  const deps = {
+    jquery: `https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js`,
+    marked: `https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+    
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      let retryTimes = 3;
+      utils.onLoading(el);
+      function req() {
+        return new Promise((resolve, reject) => {
+          let status = 0; // 0 等待 1 完成 2 超时
+          let timer = setTimeout(() => {
+            if (status === 0) {
+              status = 2;
+              timer = null;
+              reject('请求超时');
+              if (retryTimes == 0) {
+                onFailure();
+              }
+            }
+          }, 5000);
+          fetch(url).then(function(response) {
+            if (status !== 2) {
+              clearTimeout(timer);
+              resolve(response);
+              timer = null;
+              status = 1;
+            }
+            if (response.ok) {
+              return response.json();
+            }
+            throw new Error('Network response was not ok.');
+          }).then(function(data) {
+            retryTimes = 0;
+            utils.onLoadSuccess(el);
+            callback(data);
+          }).catch(function(error) {
+            if (retryTimes > 0) {
+              retryTimes -= 1;
+              setTimeout(() => {
+                req();
+              }, 5000);
+            } else {
+              utils.onLoadFailure(el);
+              onFailure();
+            }
+          });
+        });
+      }
+      req();
+    },
+  };
+</script>
+
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+
+<!-- required -->
+<script src="/js/main.js?v=1.27.0" async></script>
+
+<!-- optional -->
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.bootcdn.net/ajax/libs/flying-pages/2.1.2/flying-pages.min.js"></script><script defer src="https://cdn.bootcdn.net/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+</script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.min.css`,
+    js: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.umd.min.js`
+  };
+  var selector = '[data-fancybox]:not(.error)';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const els = document.getElementsByClassName('ds-memos');
+    if (els != undefined && els.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || null
+        }
+      });
+    })
+  }
+</script><script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script><script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+
+</div></body></html>
