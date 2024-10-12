@@ -1,0 +1,880 @@
+
+<!DOCTYPE html><html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.27.0" theme-name="Stellar" theme-version="1.27.0">
+  
+  <meta name="generator" content="Hexo 7.1.1">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>离线版 Notion 来了？Anytype 万字入门解析 - 二一的笔记</title>
+
+  
+    <meta name="description" content="前言在一般的笔记工具中，一条信息的容器是「页面」，页面的容器是「文件夹」，我们通过描述文件夹的标题，来界定其子页面的类型、属性或者大致用途，侧边栏的文件夹结构将呈现树状分支形式。 使用这类笔记工具时，我们通常需要首先思考，当下要创建的这一则笔记需要放在哪一个文件夹里？思考一则笔记的归属是相当耗费脑力的一件事，所以才会有那么多 memo 式的笔记工具出现。 而 Anytype 则没有页面和文件夹的概">
+<meta property="og:type" content="article">
+<meta property="og:title" content="离线版 Notion 来了？Anytype 万字入门解析">
+<meta property="og:url" content="https://eryiblog.ink/posts/202409221743.html">
+<meta property="og:site_name" content="二一的笔记">
+<meta property="og:description" content="前言在一般的笔记工具中，一条信息的容器是「页面」，页面的容器是「文件夹」，我们通过描述文件夹的标题，来界定其子页面的类型、属性或者大致用途，侧边栏的文件夹结构将呈现树状分支形式。 使用这类笔记工具时，我们通常需要首先思考，当下要创建的这一则笔记需要放在哪一个文件夹里？思考一则笔记的归属是相当耗费脑力的一件事，所以才会有那么多 memo 式的笔记工具出现。 而 Anytype 则没有页面和文件夹的概">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409141742547.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409181154600.jpeg">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409150956119.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409191428298.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409150939073.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409121051309.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409121852446.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409121949383.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409180020068.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409151002723.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409151006912.gif">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409121112879.gif">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409121636303.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409182300901.gif">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409121924887.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409151135016.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409181204248.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409120822506.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409120856474.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409122010653.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409151203484.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409172139228.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409120845841.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409160203339.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409160203131.gif">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409152041962.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409152048639.jpeg">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409160145313.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409152117173.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409180032215.jpeg">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409180006471.gif">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409180007223.jpeg">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409171243877.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409122257498.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409180008446.gif">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409171236891.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409181757197.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409131154463.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409131155688.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409132048256.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409132102567.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409172334178.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409132112690.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409180105608.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409180109526.gif">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409132122843.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409180116720.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409191705279.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409131232993.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409172238343.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409172306952.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409180134867.jpeg">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409180134491.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409180141413.gif">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409202209314.gif">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409180158160.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409181253522.gif">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409132330720.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409181256842.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409141306001.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409141512774.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409141519300.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409181821680.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409141554666.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409141556329.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409141617016.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409180206141.jpeg">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409181627307.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409181723631.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409181733705.jpeg">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409182036640.jpeg">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409182038517.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409192205804.jpeg">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202409201351443.png">
+<meta property="article:published_time" content="2024-09-22T09:43:02.000Z">
+<meta property="article:modified_time" content="2024-09-22T10:17:41.795Z">
+<meta property="article:author" content="二一">
+<meta property="article:tag" content="Notion">
+<meta property="article:tag" content="Obsidian">
+<meta property="article:tag" content="Anytype">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.eryinote.com/PicGo/202409141742547.png">
+  
+  
+  
+  <meta name="keywords" content="Notion,Obsidian,Anytype">
+
+  <!-- feed -->
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.27.0">
+
+  
+
+  
+
+  <link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css" media="print" onload="this.media='all'">
+</head>
+<body>
+
+<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://pic.eryinote.com/PicGo/202403280735497.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">二一的笔记</div><div class="sub normal cap">等待和希望</div><div class="sub hover cap" style="opacity:0"> 记录我的所见所闻，所思所想</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+<nav class="menu dis-select"></nav>
+</div>
+<div class="widgets">
+
+
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/posts/202410121013.html"><span class="title">聊聊 Notion 的 2 个重磅新闻，以及我的最新课程</span></a><a class="item title" href="/posts/202409201545.html"><span class="title">Notion 表单系统更新</span></a><a class="item title" href="/posts/202409221743.html"><span class="title">离线版 Notion 来了？Anytype 万字入门解析</span></a><a class="item title" href="/posts/202409201546.html"><span class="title">Notion Callout 更新</span></a><a class="item title" href="/posts/202408261053.html"><span class="title">Notion 数据图表有什么用，该怎么用？</span></a><a class="item title" href="/posts/202408122148.html"><span class="title">Notion 新增两个函数 padStart 和 padEnd</span></a><a class="item title" href="/posts/202409151945.html"><span class="title">Notion 数据库如何只显示最近一条更新</span></a><a class="item title" href="/posts/202408191916.html"><span class="title">如何在 Notion 中进行随机回顾</span></a><a class="item title" href="/posts/202409151946.html"><span class="title">如何用 Notion 数据库制作随机语录</span></a><a class="item title" href="/posts/202408121742.html"><span class="title">Notion 中文版，真的来了｜抢先预览</span></a></div></widget>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://space.bilibili.com/319417" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403292128856.svg"/></a><a class="social" href="https://sspai.com/series/303/list" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403292126678.svg"/></a><a class="social" href="https://twitter.com/eryidebiji" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403292132510.svg"/></a></div></footer>
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-09-22T09:43:02.000Z">2024-09-22</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-09-22T10:17:41.795Z">2024-09-22</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>离线版 Notion 来了？Anytype 万字入门解析</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在一般的笔记工具中，一条信息的容器是「页面」，页面的容器是「文件夹」，我们通过描述文件夹的标题，来界定其子页面的类型、属性或者大致用途，侧边栏的文件夹结构将呈现<strong>树状分支形式</strong>。</p>
+<p>使用这类笔记工具时，我们通常需要首先思考，当下要创建的这一则笔记需要放在哪一个文件夹里？思考一则笔记的归属是相当耗费脑力的一件事，所以才会有那么多 memo 式的笔记工具出现。</p>
+<p>而 Anytype 则没有页面和文件夹的概念，取而代之的是<strong>对象和对象的集合</strong>，当你想在 Anytype 中创建一则笔记，你首先需要思考的似乎是更高层次的东西，即这一条信息的「<strong>本质</strong>」究竟是什么。</p>
+<p>听起来似乎有点玄乎，这种产品逻辑究竟能不能带来更高的<strong>信息管理与生产效率</strong>？</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409141742547.png"></p>
+<p>本文旨在简单介绍 Anytype 的各种特性，同时为新手提供一条简易的上手路径。如果你希望尝试不一样的笔记体验，那么 Anytype 至少能给你带来充分的新鲜感。</p>
+<p>如果你想看更多笔记系列测评文章或视频，欢迎访问我的《<a target="_blank" rel="noopener" href="https://leon21.notion.site/1060e68aa046809988f8e14a7fad0150?pvs=4">笔记软件全测评计划</a>》。</p>
+<h2 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h2><h3 id="产品定义"><a href="#产品定义" class="headerlink" title="产品定义"></a>产品定义</h3><p>Anytype 是一款支持 Markdown、<strong>支持中文</strong>、本地优先、数据隐私至上，开源、且支持端到端加密同步的笔记软件。</p>
+<p>它以块状编辑器为基础，以对象（Object）为基本笔记单位。通过对象之间的关联，构建一个可用于存储不同格式信息的知识管理工具。Anytype 能在各种设备上捕捉灵感和想法，且能在不同视图、不同维度上管理数据和任务。</p>
+<h3 id="支持中文"><a href="#支持中文" class="headerlink" title="支持中文"></a>支持中文</h3><p>新用户初始登录后，你可以根据下图所示步骤，将 Anytype 操作语言更换为中文。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409181154600.jpeg" alt="20240918701.jpeg"></p>
+<h3 id="支持设备"><a href="#支持设备" class="headerlink" title="支持设备"></a>支持设备</h3><ul>
+<li>客户端：Mac、Windows、Linux</li>
+<li>移动端：iPhone、iPad、安卓</li>
+</ul>
+<h3 id="同步方式"><a href="#同步方式" class="headerlink" title="同步方式"></a>同步方式</h3><ol>
+<li>官方加密云同步（免费 1 G 云空间，超出 1 G 存储于本地）</li>
+<li>自托管局域网加密同步（无限量）</li>
+<li>完全本地离线加密存储（无限量）</li>
+</ol>
+<h3 id="付费方案"><a href="#付费方案" class="headerlink" title="付费方案"></a>付费方案</h3><ul>
+<li>免费用户：1G 云空间，全平台免费同步，超过 1 G 的数据将存储在本地；功能区块无限制</li>
+<li>付费用户：99 美元&#x2F;每年 （提供学生半价优惠），128G 云同步空间，功能区块无限制</li>
+</ul>
+<h3 id="空间结构"><a href="#空间结构" class="headerlink" title="空间结构"></a>空间结构</h3><p>Anytype 的单个账号最多可创建 10 个空间（Space），这个空间的概念类似 Notion 的工作区（Workspace），不同空间的数据都是互相独立存储的。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409150956119.png"></p>
+<p>你可以邀请别人进入你的空间，也可以成为别人空间的访客。免费用户可创建 3 个共享空间，每个共享空间 3 名成员。付费用户可以创建 3 个共享空间，每个空间 10 名编辑者。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409191428298.png" alt="Anytype20240919Homepage - 测试 - Anytype007682@2x.png"></p>
+<h3 id="隐私体系"><a href="#隐私体系" class="headerlink" title="隐私体系"></a>隐私体系</h3><p>Anytype 无需注册账号，只要登录客户端，就会自动生成一串密钥，<strong>这串密钥既是你的账号，也是账号的钥匙</strong>。</p>
+<p>所有的数据都依赖于这串密钥的 AES 解密，因此需要妥善保管，否则就算是官方人员也无法在没有密钥的前提下找回你的数据。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409150939073.png"></p>
+<p>因此，即使你将数据上传到 Anytype 的云空间，它也是端到端加密的，除了你的密钥，没有任何人能够解密，在隐私性上做到了目前的最高保证。</p>
+<h3 id="适用人群"><a href="#适用人群" class="headerlink" title="适用人群"></a>适用人群</h3><ol>
+<li><strong>注重数据隐私和安全的用户</strong>：如果你对数据的安全性有极高要求，希望笔记能够完全本地存储，且具备端到端加密同步功能，Anytype 是少有的满足这些条件的工具。</li>
+<li><strong>对信息关联和数据结构有高要求的用户</strong>：如果你希望在笔记中实现复杂的对象关联、类型管理和数据聚合，Anytype 的对象、类型、关联和集合等功能能够满足你的需求。</li>
+<li><strong>愿意投入时间学习新工具的用户</strong>：Anytype 的学习曲线陡峭，需要花时间理解其独特的使用逻辑。如果你愿意投入精力，尝试新的笔记方式，那么 Anytype 可以为你带来不一样的体验。</li>
+<li><strong>不依赖插件生态的用户</strong>：如果你对插件和扩展功能的需求不高，更看重软件本身的内置功能和稳定性，那么 Anytype 的内置特性足以满足日常使用。</li>
+<li><strong>需要多平台同步且不愿付费的用户</strong>：Anytype 提供全平台的免费同步服务，1G 的云空间对于纯文本笔记已经足够。如果你需要在多个设备上访问笔记，又不想为此付费，Anytype 会是一个不错的选择。</li>
+</ol>
+<h2 id="基础功能"><a href="#基础功能" class="headerlink" title="基础功能"></a>基础功能</h2><h3 id="创建页面"><a href="#创建页面" class="headerlink" title="创建页面"></a>创建页面</h3><p>尽管 Anytype 的使用逻辑与传统笔记工具迥异，我们还是可以先从「<strong>创建一页笔记</strong>」这个动作开始。</p>
+<p>新用户<strong>初始登录</strong>后会有一个默认的 Homepage 页面，在这个页面内使用斜杠命令 <code>/</code> 就可以唤出功能菜单，输入命令 <code>/page</code> 就可以创建一个新的笔记页面。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409121051309.png"></p>
+<p>和 Notion 一样，你可以在页面中创建无限层级的子页面，只需要继续使用 <code>/page</code> 命令即可。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409121852446.png"></p>
+<p>也可以像 Notion 那样为页面添加图标和封面图：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409121949383.png"></p>
+<p>还可以像 Craft 那样预览页面的封面图：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409180020068.png" alt="20240918690.png"></p>
+<p><strong>页面的四种布局</strong></p>
+<p>每个页面都可以设置 4 种默认的布局，点击页面顶部的「布局」按钮，即可切换不同的布局类型：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409151002723.png"></p>
+<ul>
+<li>默认布局：常规的页面形式，有标题、有图标、有封面</li>
+<li>个人资料：突出显示圆形头像，用来记录人物相关内容</li>
+<li>待办事项：标题自带 Checkbox，可以进行勾选操作</li>
+<li>备注布局：没有标题和封面，适合简短零散的信息记录</li>
+</ul>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409151006912.gif"></p>
+<p>简单来说，布局能让「页面」强调或者弱化某些关键信息，但并不会让页面中的笔记内容有所减损，<strong>只是一种外观上的偏好选择</strong>。</p>
+<h3 id="功能区块"><a href="#功能区块" class="headerlink" title="功能区块"></a>功能区块</h3><p>继续使用斜杠命令唤出 Anytype 的区块列表，可以看到当前的基础功能已经比较完善。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409121112879.gif"></p>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>文字</strong></td>
+<td>多级标题、字体颜色、高亮显示、标注（Callout）</td>
+</tr>
+<tr>
+<td><strong>列表</strong></td>
+<td>复选框、无序列表、有序列表、折叠块</td>
+</tr>
+<tr>
+<td><strong>媒体</strong></td>
+<td>文件、图片、PDF、网页书签、代码片段</td>
+</tr>
+<tr>
+<td><strong>嵌入</strong></td>
+<td>LaTeX、Mermaid、常见社交媒体、视频平台</td>
+</tr>
+<tr>
+<td><strong>其它</strong></td>
+<td>分割线、目录、表格</td>
+</tr>
+</tbody></table>
+<p>在不考虑「对象」和「关联」是什么概念的前提下，Anytype 已经足够你用来创作几乎任意类型的图文内容。除此之外，分栏排版、代码块、Latex 公式块、以及第三方应用的嵌入，会让你在初次尝试 Anytype 时误以为，这会不会又是另一个 Notion 的模仿者。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409121636303.png"></p>
+<p>然而 Anytype 与 Notion 在使用逻辑和产品定位上是截然不同的两款产品，这点文章后面会再做展开。</p>
+<h3 id="页面编辑历史"><a href="#页面编辑历史" class="headerlink" title="页面编辑历史"></a>页面编辑历史</h3><p>Anytype 具备精确到每一分钟的页面编辑历史记录。由于优先本地存储，回顾各个历史版本的速度非常流畅。如果是在 Notion 中，可能还在转圈加载。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409182300901.gif" alt="Anytype20240918电影管理 - Eryinote - Anytype007680.gif"></p>
+<h3 id="对象和类型"><a href="#对象和类型" class="headerlink" title="对象和类型"></a>对象和类型</h3><p>初学者面临的第一道槛，就是需要理解 Anytype 的对象（Object）是什么，它有什么用？</p>
+<p>首先在 Anytype 中，你所看到的每一个广义上的「页面」都是一个对象（Object），不同的对象都有不同的类型（Type）。例如我前面创建的页面和子页面，它的对象类型就是「Page」本身。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409121924887.png"></p>
+<p>而页面中包含的图片、视频或者链接，它们各自也都分属不同的「类型」。例如你可以右键点击图片，它会出现「以对象形式打开」的按钮，说明这张图片也是一个对象。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409151135016.png"></p>
+<p>Page 是 Anytype 默认自带的类型之一，但正如 Anytype 的产品名是 Any + type，你也可以自定义「任意类型」的对象，例如同事、作者、明星、导演、任务、项目、图片、视频等等。</p>
+<p>举例：</p>
+<ul>
+<li>同事是一种类型（type）</li>
+<li>你的同事小王是类型（type）为「同事」的对象（object）</li>
+</ul>
+<p><strong>如何创建类型</strong></p>
+<p>你可以点击侧边栏「文库」按钮，然后在搜索框中输入你想要创建的类型名称，例如「书籍」</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409181204248.png" alt="Anytype20240918文库 - 测试 - Anytype007660@2x.png"></p>
+<p>然后就可以为这个类型设置预设的格式和排版：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409120822506.png"></p>
+<p>如果你想管理人际关系，你可以创建一个名为「朋友」的类型（布局设置为个人资料），然后设置生日、兴趣爱好、联系方式等固定内容格式。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409120856474.png"></p>
+<p>不同类型可以设置不同的内容格式，所以我们可以暂且将「类型」粗略理解成「<strong>标签 + 模板</strong>」，其中标签是用来作为分类的名称，而模板则是用来提前预设好内容格式。</p>
+<p>所有的「类型」同样都会存储在侧边栏的「文库」之中，你可以理解成这是<strong>当前空间里层级最高的一个文件夹</strong>。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409122010653.png"></p>
+<p>创建好类型后，你只需要在<strong>页面任意空白处</strong>输入斜杠 <code>/</code> 然后键入类型的名称，就可以快速创建、并沿用你提前设置好的对象格式。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409151203484.png"></p>
+<p>这是和 Notion 相比有很大不同的差异点，Notion 的模板只存在于特定的数据库内，而 <strong>Anytype 的模板则是可以全局调用的</strong>。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409172139228.png"></p>
+<p>也就是说，在你将信息录入到 Anytype 时，我们可以先用「类型」来对信息进行第一次分类。但如果你暂时搞不懂应该如何定义类型，我会建议你在使用 Anytype 的前几天，一律先使用默认的 <code>/page</code> 来记录你的笔记。</p>
+<p>我很难说 Anytype 的这种信息分类逻辑是否会更加高效，过去我们需要思考一则笔记应该放在哪个文件夹，而 <strong>Anytype 则需要思考这则笔记应该归属于哪个类型</strong>，因此这种分类方式并不能从根本上减少你思考的过程。</p>
+<p>不过一旦你理解并接受了对象和类型的概念，Anytype 的很多奇妙特性就能让你做一些过去笔记软件所不能做到的事，例如对象之间的关联，对象的集合，以及关联的集合。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409120845841.png"></p>
+<h3 id="对象之间的关联"><a href="#对象之间的关联" class="headerlink" title="对象之间的关联"></a>对象之间的关联</h3><p>当你在 Anytype 的一个页面里创建了另一个子页面，或者当你使用符号 <code>@</code> 引用了另一个页面，这几个页面就会构成双向链接关系，不仅在页面标题处会显示「反向链接」，Anytype 同样也有类似 Obsidian 的双链图谱：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409160203339.png"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409160203131.gif"></p>
+<p>但这里我们需要认识到，在 Anytype 中，一个页面和它的子页面，实际上并非是上下级包含关系，而<strong>仅仅只是关联关系</strong>。</p>
+<p>也就是说，当你执行「创建子页面」的动作，Anytype 实际上是先在后台库中创建了一个页面，然后再将这个页面（这个对象）链接到当前页面里。</p>
+<p>所以当你将页面中的子页面删除，这个操作只是将子页面从当前页面中移除了，实际上这个子页面在 Anytype 的库中依然是存在的。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409152041962.png"></p>
+<p>只有当你进入这个子页面，然后继续点击右上角的「移到回收站」才算是真正执行了删除这个动作。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409152048639.jpeg"></p>
+<p>被移到回收站的子页面会这么显示：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409160145313.png"></p>
+<p>而在 Notion 或者 Obisidian 中，当你删除了一个子页面，这个子页面就会被直接移除到回收站中，这似乎更符合我们的直觉。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409152117173.png"></p>
+<p>所以 Anytype 绕了这么一大圈，对象（Object）的这个机制除了能创建双向链接关系，还有什么其他用处？</p>
+<p>首先，每一个对象一定都属于某一个类型，而类型即分类，分类就代表着聚集、聚合，所以<strong>任意对象在 Anytype 中一定都存在于某个集合里</strong>。你可以点击侧边栏的文库，然后点击其中的任意类型，就会发现相同类型的对象会被聚合在一起。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409180032215.jpeg" alt="20240918691.jpeg"></p>
+<p>例如在下图中，我打开了文库中的「电影」这个类型，所有记录在案的电影对象（Object）都被罗列了出来，点击标题即可进入到这部电影之中：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409180006471.gif" alt="20240918686.gif"></p>
+<p>但每次都要打开文库去查找也太麻烦了，所以接下来就可以用到集合（Set）这一功能。</p>
+<h3 id="对象的集合"><a href="#对象的集合" class="headerlink" title="对象的集合"></a>对象的集合</h3><p>在 Notion 中，一个数据库就代表着一个固定的数据源，所以你无法将数据库 A 的页面放到数据库 B 里面，但 Anytype 就可以做到，只要它们的类型是相同的，就可以在任意地方被集合在一起。</p>
+<p>使用命令 <code>/inline set</code> 就可以在任意位置创建一个集合，这个「集合」可以查询整个笔记库内符合特定类型的对象，然后聚合在一起。</p>
+<p>例如你可以在「项目 A 」里创建「任务 01」，在「日记 B」 里创建「任务 02」，尽管日记和项目是不同的两个类型，但因为任务 01 和任务 02 的类型都是「Task」，那么通过聚合「Task」这个类型，你就可以集中管理整个笔记库内<strong>任意地方的任务</strong>。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409180007223.jpeg"></p>
+<p>我们也可以设置一个 Daily Note 类型（Type），然后在每一天的 Daily Note 中，创建不同的对象：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409171243877.png"></p>
+<p>你无需担心这些对象会分散在不同的 Daily Note 里，因为它们都可以被快速地集合在一起。并且任何集合都可以像 Notion 的数据库一样，为其添加更多的字段（关联）：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409122257498.png"></p>
+<p>Anytype 的集合同时具备 6 种布局，分别是网格、画廊、列表、看板、日历：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409180008446.gif"></p>
+<p>以及还有一个 Notion 所没有的关联视图：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409171236891.png"></p>
+<p><strong>集合的过滤筛选</strong></p>
+<p>集合除了可以像数据库一样汇集不同的对象，也可以对其中的对象进行一定程度的过滤和筛选，并且不同的视图可以设置不同的顾虑条件，就像 Notion 的数据库那样。</p>
+<p>例如在下图中，我就可以对 Task 这个集合进行视图+筛选的操作，以达到下图所示的笔记效果：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409181757197.png" alt="Anytype20240918Task - Eryinote - Anytype007673@2x.png"></p>
+<p>看到这里你应该就会产生一个疑问：所以 Anytype 能够成为 Notion 的替代品了吗？要回答这个问题，我们还需要再了解 Anytype 中的另一个概念：<strong>关联</strong>。</p>
+<h3 id="关联"><a href="#关联" class="headerlink" title="关联"></a>关联</h3><p>关联是 Anytype 中另一个不容易上手的功能，它可以为对象提供更细致、更精确的属性描述。先不要顾名思义把它当成 Notion 里的 Relation 字段，Anytype 的关联其实就等同于 Notion 的字段（Property）本身。</p>
+<p>首先，点击任意对象右上角的三角符号 △ 就可以打开关联列表，其中是每一个对象都会存在的一些默认关联，包括创建时间、创建者、对象类型等。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409131154463.png"></p>
+<p>这些就像是 Notion 数据库里默认存在的这四个字段：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409131155688.png"></p>
+<p>然而虽然 Anytype 的关联和 Notion 的字段看起来差不多，使用逻辑却是有巨大差异。Notion 的字段仅存在于当前的数据库中，而 Anytype 的关联则是在整个笔记库内共享的，就像对象（Object）一样可以被全局调用。</p>
+<p><strong>如何创建新的关联</strong></p>
+<p>在 Anytype 中，你可以使用命令 <code>/关联</code> 来将默认存在的关联添加到当前页面中：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409132048256.png"></p>
+<p>例如，我可以将 Creation date 和 Created by 添加到页面底部，形成类似署名的效果。而在 Notion 中，如果你想让页面显示「最后编辑时间」，则这个页面必须放在某个数据库之中才可以做到。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409132102567.png"></p>
+<p>除了添加默认的关联，我们也可以创建自定义的关联。使用命令 <code>/关联</code> ，然后点击 <code>新建关联</code> 按钮，就可以看到在 Anytype 中，目前一共有 11 种基础的关联类型：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409172334178.png"></p>
+<p>在 Notion 数据库中，我们是先选择字段类型，然后再为字段设置名称。而 Anytype 是先输入关联的名称，然后再为这个关联选择类型，这个使用逻辑上的调换是新手需要注意的地方。</p>
+<p>并且 <strong>Anytype 的关联可以存在于当前对象的任意位置</strong>，例如你可以在电影这个对象中，创建如下图所示的关联：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409132112690.png"></p>
+<p>这些关联也可以出现在对象的集合中，成为描述对象属性的「字段」：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409180105608.png" alt="Anytype20240918电影管理 - Eryinote - Anytype007642@2x.png"></p>
+<p>这里还有一个对新手来说很容易感到困惑的点，<strong>当你尝试在对象或者集合中创建新的关联</strong>，Anytype 首先出现的是一堆看不懂的关联：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409180109526.gif"></p>
+<p>你之所以会看到这些关联，是因为在 Anytype 中，已创建的关联就跟已创建的对象一样，是可以全局调用的，所有关联同样会存储在侧边栏的「文库」中：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409132122843.png"></p>
+<p>如果你想创建一个新的关联，那么在中文语言环境下，在你输入新的关联名称后，你需要按一下空格，Anytype 才能继续执行创建的动作：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409180116720.png" alt="Anytype20240918电影管理 - Eryinote - Anytype007645@2x.png"></p>
+<p>所有被创建的关联不仅是可以全局调用，这些关联的默认值也是可以继承的。</p>
+<p>例如你可以在「项目 A」创建一个名为「负责人」的关联，并且将「负责人」的值设为「小王」，那么当你在「项目 B」再次调用这个关联，你就不用重新输入「小王」这个值，因为它已经成为这个关联的默认选项，可以在任意地方被调用了。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409191705279.png" alt="Anytype20240919Project - Eryinote - Anytype007684@2x.png"></p>
+<h3 id="关联的集合"><a href="#关联的集合" class="headerlink" title="关联的集合"></a>关联的集合</h3><p>让我们假设在 Notion 中存在这样一种情况：</p>
+<p>你在 Notion 中有两个数据库，分别是任务数据库和购物清单数据库，虽然数据库各不相同，但都具备「执行」的要素，于是你分别在两个数据库内都创建了一个任务进度字段：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409131232993.png"></p>
+<p>这时你产生了一个疑问，有没有办法将 Notion 工作区内，所有数据库的「待办事项」都聚合在一起，然后制作成一个任务日历？</p>
+<p>过去你只能将所有的「待办事项」都创建在<strong>同一个数据库</strong>中，然后使用镜像视图和过滤筛选的方式，来达到分隔数据的目的。尽管 Notion 后来还推出了 Home 功能，让你可以聚合所有的 Task 数据库，但我认为 Home 还是不够灵活、不够好用。</p>
+<p>所以 Anytype 是怎么解决这个问题的呢？</p>
+<p>还记得前面我们创建过的<strong>对象的集合</strong>吗，再来复习一下，通过命令 <code>/inline set</code> 就可以查询特定的对象，然后聚合在一起。</p>
+<p>然后在 Anytype 中，<strong>关联也是可以被查询和集合的对象</strong>。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409172238343.png"></p>
+<p>所以现在我只需要创建 Status 这个关联的集合，就可以汇总 Anytype 中所有具备 Status 这个关联的对象了。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409172306952.png"></p>
+<p>我也可以创建 Creation date 这个关联的集合，就可以将 Anytype 中所有的对象都汇集到一起，然后就可以<strong>按照创建的先后顺序进行排序</strong>了，因为 Creation date 是所有对象都具有的一个默认关联。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409180134867.jpeg" alt="20240918694.jpeg"></p>
+<p>或者也可以直接用这个关联创建一个日历视图，就可以将你创建的所有对象按照日期排布在日历上。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409180134491.png" alt="Anytype20240918Creation date 集合 - Eryinote - Anytype007649@2x.png"></p>
+<p>这种实现方式，在 Notion 中可以说是无法想象的。</p>
+<h3 id="用关联创建联系"><a href="#用关联创建联系" class="headerlink" title="用关联创建联系"></a>用关联创建联系</h3><p>Anytype 的关联除了可以用来描述对象的某个属性，其实也可以用来实现 Notion 数据库中的 Relation 字段的效果。</p>
+<p>在下面这个例子中，我分别创建了电影集合以及演员集合，你可以看到当我点击「参演电影」这个关联时，Anytype 直接跳转到了相应的对象里，确实就是 Notion Relation 字段所能起到的效果。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409180141413.gif" alt="Anytype20240918电影管理 - Eryinote - Anytype007651.gif"></p>
+<p>但这里我不得不再次吐槽一下，Anytype 的很多细节实在做得让人挠头，用关联建立联系的方法真的很隐蔽，很繁琐，你需要按照下图所示的步骤来操作：</p>
+<ol>
+<li>输入命令 <code>/关联</code> ，点击「新建关联」</li>
+<li>输入你想要设置的关联的名称（中文结尾记得加空格）</li>
+<li>点击「创建关联」</li>
+<li>在「选择关联类型」这个选项中，点击「对象」</li>
+<li>在「选择对象类型」中，点击「添加对象类型」</li>
+<li>选择你要关联的那个对象</li>
+</ol>
+<p>Anytype 的易用性确实还有很大的改进空间，新用户如果想尝试的话，需要做好心理准备。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409202209314.gif" alt="20240920743.gif"></p>
+<p>幸好我们<strong>可以提前在类型的模板中设置好这些关联</strong>，之后创建新的对象的时候，就可以自动创建这些关联了。</p>
+<p>例如在下图案例中，我在 Project 这个类型的模板中，提前设置好了「关联到任务」的这个选项，那么之后每当我创建一个新的项目，就可以直接关联对应的任务。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409180158160.png" alt="Anytype20240918Project - Eryinote - Anytype007654@2x.png"></p>
+<p>实际操作效果如下：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409181253522.gif" alt="20240918705.gif"></p>
+<h3 id="集锦"><a href="#集锦" class="headerlink" title="集锦"></a>集锦</h3><p>在 Anytype 中，集合（Set）只能聚合属于同一种类型的对象或者关联，而集锦（Collection）则允许你聚合任意类型的对象、关联、集合、甚至是另一个集锦，它像是一个更大号、更灵活的文件夹。</p>
+<p>使用命令 <code>/collection</code> 就可以创建一个集锦，你可以直接在这个集锦中创建任意类型的对象，也可以将其他对象、集合、或者是另一个集锦添加到当前集锦中：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409132330720.png"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409181256842.png" alt="Anytype20240918Project - Eryinote - Anytype007665@2x.png"></p>
+<h3 id="侧边栏小组件"><a href="#侧边栏小组件" class="headerlink" title="侧边栏小组件"></a>侧边栏小组件</h3><p>对于一个初学者而言，笔记软件最重要的应该是要先告诉我，我创建的笔记放在了哪里，以及我该如何找到这些笔记。在传统笔记软件中，即便是 Notion，都给了你清晰无误的<strong>侧边栏树状目录</strong>，你知道自己的笔记放在哪，你才会感到安心。</p>
+<p>然而 Anytype 的另一大特色是它的侧边栏小组件。对于初学者来说，其使用逻辑确实容易令人迷惑。因为在使用小组件之前，你得先搞懂什么是对象，以及什么是对象的集合。而侧边目录对于理解和应用「对象的集合」又是至关重要的一环，所以很多用户在面对看不懂的小组件时，就很容易产生放弃的情绪。</p>
+<p>新用户初始登录状态下，会有默认的 5 个小组件，分别如下：</p>
+<ul>
+<li><strong>收藏夹</strong>：可以收藏任意对象、集合或者集锦</li>
+<li><strong>集合</strong>：你所创建的所有集合</li>
+<li><strong>最近编辑的文档</strong>：如字面意思</li>
+<li><strong>文库</strong>：存放所有的类型和关联</li>
+<li><strong>回收站</strong>：存放所有被删除的对象、集合或集锦</li>
+</ul>
+<p>也就是说，当你在 Homepage 中创建了一个对象，它会首先出现在侧边栏的「最近编辑的文档」组件中。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409141306001.png"></p>
+<p>你也可以点击对象右上角的三个小点，然后选择「创建小工具」，或者选择「添加到收藏夹」，前者会将这个对象变成侧边栏小组件，后者则会将这个页面放到收藏夹内。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409141512774.png"></p>
+<p>当你在这个对象中新建子页面，侧边栏的页面小工具就会呈现传统的树状目录结构：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409141519300.png"></p>
+<p>右键这个小组件，你还可以进一步更改它的外观</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409181821680.png" alt="Anytype20240918页面 - Eryinote - Anytype007675@2x.png"></p>
+<p>你也可以将某个集合创建为小工具：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409141554666.png"></p>
+<p>如果你创建的是<strong>任务的集合</strong>，则可以直接在侧边栏小组件里，对任务进行勾选等操作：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409141556329.png"></p>
+<p>小组件同时还支持显示集合的画廊卡片：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409141617016.png"></p>
+<p>也可以在侧边栏显示日程这个集合的日历视图：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409180206141.jpeg" alt="20240918699.jpeg"></p>
+<p>小组件还有更多细节和用法，篇幅所限无法一一展示，但我认为这确实是 Anytype 中的一大亮点功能，在你习惯之后能带来很大的便利性。</p>
+<h2 id="上手建议"><a href="#上手建议" class="headerlink" title="上手建议"></a>上手建议</h2><p>介绍完 Anytype 中的大部分功能后，我们终于可以来完整地梳理一遍它的使用逻辑了。在我看来，笔记软件要解决的是信息的录入、存储、分类和查找等问题，而 Anytype 在这几件事上都有点特立独行的意味，所以才使得它的上手路径显得那么陡峭。</p>
+<p><strong>所以，对新手来说最重要的有以下 4 件事</strong></p>
+<ol>
+<li>学会创建一个类型，例如「项目」</li>
+<li>学会创建一个类型为「项目」的对象</li>
+<li>学会创建「项目」的集合</li>
+<li>学会将这个集合创建为侧边栏小工具</li>
+</ol>
+<p>学会这四项基本操作后，你就可以开始尝试在 Anytype 中记录你的笔记了。</p>
+<p>当然你也可以将「项目」替换为任意类型，例如「作业」、「电影」、「购物清单」等等。所谓的类型其实可以当成是一种提前创建好的文件夹，而创建对象则是在往这个文件夹里放东西。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409181627307.png" alt="Anytype20240918Project - Eryinote - Anytype007667@2x.png"></p>
+<p>Anytype 的页面也具备简易的分栏排版模式，所以在你熟悉 Anytype 的基本操作之后，可以创建一个 Homepage，然后将自己最常用的内容、集合或者集锦放在这个主页中。</p>
+<p>如果你是学生，可以创建一个课表和日常任务的主页</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409181723631.png" alt="20240918710.png"></p>
+<p>如果你想实践简易的 PARA 笔记法，也可以利用分栏排版加上不同的集合来做到：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409181733705.jpeg" alt="20240918712.jpeg"></p>
+<p>Anytype 的集合在很多时候都可以当成 Notion 的数据库来使用，因此在你掌握了集合与关联的用法后，可以进一步发挥「视图」加「过滤」这两个功能的灵活性，在多种维度更好地管理你的笔记或者数据。</p>
+<p>另外 Anytype 像 Notion 那样也创建了自己的官方模板库，你可以点击侧边栏的小地球按钮即可打开</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409182036640.jpeg" alt="20240918718.jpeg"></p>
+<p>在下载官方模板时，我建议你将模板安装到一个独立的空间里，以免将你的笔记库弄乱。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409182038517.png" alt="20240918720.png"></p>
+<p>就我个人的体验而言，下载下来的模板一般都是不能直接使用的，但你可以参考模板中不同集合的使用方式、参考其 Homepage 的排版设定，甚至参考其侧边栏小组件的灵活用法，相信这些都能给你提供极大的参考价值。</p>
+<p>最后要引用一下我在我的 <a target="_blank" rel="noopener" href="https://sspai.com/series/303/list">Notion 系统课程</a>的《<a target="_blank" rel="noopener" href="https://sspai.com/post/80972">1.1 篇</a>》中提过的一个观点，那就是在入门一款笔记工具的至少前一个月，请先不要进行迁移笔记库这样的大工程，因为这有很大概率会是浪费时间的一件事。</p>
+<p>在这第一个月里，你会持续处在与 Anytype 的「甜蜜期」里，你可以对很多缺点、很多 BUG 视而不见，可以暂时容忍很多相对繁琐的操作，但时间一长你必然会越加难以忍受，迁移过来的笔记就成了沉默成本。</p>
+<p>并且迁移笔记的整个过程我们并未创造任何新知识，但在 Anytype 中一下子新增大量的笔记，又会让你产生虚假的满足，等到搬运结束后，巨大的空虚感就会向你袭来，届时弃坑也就在所难免。</p>
+<p>所以在入门 Anytype 的早期，我的建议是新旧两款笔记一起使用，等到你百分之百确定可以选择 Anytype 作为你的主力工具，再考虑迁移笔记的工作也不迟。</p>
+<h2 id="整体评价"><a href="#整体评价" class="headerlink" title="整体评价"></a>整体评价</h2><h3 id="Anytype-能替代-Notion-吗？"><a href="#Anytype-能替代-Notion-吗？" class="headerlink" title="Anytype 能替代 Notion 吗？"></a>Anytype 能替代 Notion 吗？</h3><p>我设想那些会对「Notion 替代品」有需求的用户，大概都会有以下几个特征：</p>
+<ol>
+<li>对 Notion 的数据库有需求</li>
+<li>对 Notion 完全云端的产品有担忧</li>
+<li>对 Notion 的加载速度有抱怨</li>
+</ol>
+<p>所以这部分用户的问题其实可以转化为，有没有本地离线版的 Notion 数据库？以及 Anytype 可以替代 Notion 的哪一部分功能？</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409192205804.jpeg" alt="20240919728.jpeg"></p>
+<p>如果只是简单的图文创作，那么 Anytype 完全可以替代 Notion，优点前面也说了，完全本地离线 + 优秀流畅的加载体验，确实要比 Notion 好上不少。善加利用集合与集锦，也能够起到基本的数据库管理功能。</p>
+<p>如果你有轻度的任务管理需求，例如只需要隔三差五地创建几个任务或项目，不用一次性输入太多的数据条目，那么 Anytype 的对象集合也可以基本满足这个需求。</p>
+<p>如果你经常需要一次性创建很多个数据库，需要输入和处理大量的数据，那么 Anytype 则不适合用作 Notion 的替代品，因为集合的数据录入体验并不算好，你一定会在很多细节上无法忍受 Anytype 的产品逻辑。</p>
+<p>如果你对 Notion 的数据库自动化、数据库按钮、函数公式、AI 字段、多级分组功能有需求，那么 Anytype 则完全可以不用考虑，因为它目前还不具备这些功能。</p>
+<p>不严谨地讲，我认为 Anytype 目前最多只能达到 Notion  30% 的功能体验。并且就我目前的观察而言，满怀期待去下载 Anytype，并期待它能完全替代 Notion 的话，你有很大概率其实会失望而归，所以我们有必要降低对它的预期。</p>
+<p>如果只是把 Anytype 当成是一款完全本地离线的图文编辑器，并且附加了合格的、可玩性不低的数据库，那么它反而有可能给你超出预期的使用体验。因为端到端加密同步，以及可选的完全本地离线这两个特性，确实不是一般的笔记软件所能具备的。</p>
+<h3 id="Anytype-能替代-Obsidian-吗？"><a href="#Anytype-能替代-Obsidian-吗？" class="headerlink" title="Anytype 能替代 Obsidian 吗？"></a>Anytype 能替代 Obsidian 吗？</h3><p>尽管 Anytype 也有双向链接和知识图谱，但本质上和 Obsidian 相比是完全不同的另一款产品。 </p>
+<p>如果你需要的只是一款简单的 Markdown 笔记工具，但又不想折腾 Obsidian 较为繁琐的自定义同步，也不想花上 4 美元订阅官方的同步服务，那么 Anytype 可以作为你的选项之一进行尝试，因为它自带优秀的官方加密同步。</p>
+<p>只要你能理解对象和集合的概念，用 Anytype 来记笔记、管理笔记是绰绰有余的。</p>
+<p>从<strong>数据存储方式</strong>来看，Obsidian 完全基于本地 Markdown 文件，所有笔记都是独立的 .md 文件，易于备份和迁移，这能给人带来巨大的便利性。而 Anytype 则采用了自己的数据库格式，虽然同样支持本地存储，也支持将全部笔记导出为 .md 文件，但目前有一个巨大的 BUG 是，导出的文件标题全部变成了中文拼音，实在让人有点难绷。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202409201351443.png" alt="QSpace Pro20240920默认007698@2x.png"></p>
+<p>从扩展性和自定义程度看，Obsidian 目前在所有笔记产品中还是无出其右的，如果你曾经感受到过 Obsidian 插件市场的魅力，那么就不要选择 Anytype，因为它的生态还不成熟，扩展性几乎没有。不过 Anytype 内置的集合、集锦以及侧边栏小组件，能在一定程度上弥补这方面的不足。</p>
+<p>总的来说，如果你追求极高的自定义和插件扩展能力，且熟悉 Markdown，那么 Obsidian 更适合你；如果你希望在一个工具内实现更复杂的关联和数据管理，不想折腾插件，并且<strong>极其看重数据的安全性和隐私性</strong>，那么 Anytype 值得一试。</p>
+<h3 id="优点补充"><a href="#优点补充" class="headerlink" title="优点补充"></a>优点补充</h3><ol>
+<li><strong>同步速度优秀</strong>，Anytype 的同步速度即便没有借助任何网络工具的帮助，也能够几乎即时同步到所有平台上，并且还有免费 1 G 的云空间，如果你仅用来记录文字类的笔记，那么 Anytype 将是一个不错的选择。</li>
+<li><strong>加载体验优秀</strong>，由于是本地优先，所以在对象之间或者空间之间的切换速度非常快，几乎没有延迟</li>
+<li><strong>隐私保护优秀</strong>，Anytype 奉行个人数据至上的原则，采用端到端加密，只有个人密钥可以解密</li>
+<li><strong>集合与集锦非常灵活</strong>，妥善使用能够带来完全不一样的笔记体验</li>
+</ol>
+<h3 id="缺点补充"><a href="#缺点补充" class="headerlink" title="缺点补充"></a>缺点补充</h3><ol>
+<li><strong>上手曲线陡峭</strong>，对象、关联以及集合的概念需要一定时间才能掌握</li>
+<li><strong>细节体验不佳</strong>，尽管 Anytype 已经开发了 5 年之久，但很多细节依然有待打磨，不少功能逻辑的设置非常繁琐，两相对比你会发现原来 Notion 对细节的打磨有多么优秀</li>
+<li><strong>开发效率不佳</strong>，Anytype 尽管已经在 2023 年获得了 1340 万美元的<a target="_blank" rel="noopener" href="https://blog.anytype.io/anytype-raises-13-4million-usd-funding/">融资</a>，但目前的团队规模依然很小，各种功能开发的响应速度比较慢，无法期待一下子能够焕然一新</li>
+<li><strong>中文搜索体验不佳</strong>，对中文分词的支持几乎没有，难以准确地搜索到笔记</li>
+</ol>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>Anytype 作为一款强调本地存储和数据隐私的笔记工具，为用户带来了全新的信息管理方式。它独特的对象、类型和关联等概念，虽然增加了上手难度，但也赋予了笔记更强大的组织和关联能力。</p>
+<p>对于注重数据安全、寻求不同笔记体验的用户来说，Anytype 值得一试。然而它在细节打磨和功能完善度上仍有提升空间，尤其是对于习惯了 Notion 等成熟工具的用户，可能需要一段时间来适应。</p>
+<p>选择适合自己的工具，关键在于明确个人需求和使用场景。无论你追求的是数据隐私、离线存储，还是丰富的数据库案例应用，希望这篇文章能为你的选择提供有价值的参考。</p>
+
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本站所有文章，如无特殊说明或标注，均为本站原创发布。任何个人或组织，在未征得本站同意时，禁止复制、盗用、采集、发布本站内容到任何网站、书籍等各类媒体平台。</p>
+</div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/202410121013.html">聊聊 Notion 的 2 个重磅新闻，以及我的最新课程</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/202409201546.html">Notion Callout 更新</a></div></section></div>
+
+
+
+
+
+
+<footer class="page-footer footnote"><hr><div class="text"><script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"3HvmahY3CrAtqhI7",ck:"3HvmahY3CrAtqhI7"})</script>
+<script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/3HvmahY3CrAtqhI7/quote.js?theme=0&f=12&display=0,0,0,1,0,0,1,1"></script>
+<p>本站由 <a href="/">二一</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.27.0">Stellar 1.27.0</a> 主题创建。<br><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">闽ICP备2022015368号-2</a></p>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF"><span class="toc-text">基本信息</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%A7%E5%93%81%E5%AE%9A%E4%B9%89"><span class="toc-text">产品定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87"><span class="toc-text">支持中文</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%AF%E6%8C%81%E8%AE%BE%E5%A4%87"><span class="toc-text">支持设备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8C%E6%AD%A5%E6%96%B9%E5%BC%8F"><span class="toc-text">同步方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%98%E8%B4%B9%E6%96%B9%E6%A1%88"><span class="toc-text">付费方案</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A9%BA%E9%97%B4%E7%BB%93%E6%9E%84"><span class="toc-text">空间结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%90%E7%A7%81%E4%BD%93%E7%B3%BB"><span class="toc-text">隐私体系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%82%E7%94%A8%E4%BA%BA%E7%BE%A4"><span class="toc-text">适用人群</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E5%8A%9F%E8%83%BD"><span class="toc-text">基础功能</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E9%A1%B5%E9%9D%A2"><span class="toc-text">创建页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E5%8C%BA%E5%9D%97"><span class="toc-text">功能区块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B5%E9%9D%A2%E7%BC%96%E8%BE%91%E5%8E%86%E5%8F%B2"><span class="toc-text">页面编辑历史</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E5%92%8C%E7%B1%BB%E5%9E%8B"><span class="toc-text">对象和类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E8%81%94"><span class="toc-text">对象之间的关联</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%9B%86%E5%90%88"><span class="toc-text">对象的集合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E8%81%94"><span class="toc-text">关联</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E8%81%94%E7%9A%84%E9%9B%86%E5%90%88"><span class="toc-text">关联的集合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E5%85%B3%E8%81%94%E5%88%9B%E5%BB%BA%E8%81%94%E7%B3%BB"><span class="toc-text">用关联创建联系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%86%E9%94%A6"><span class="toc-text">集锦</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%A7%E8%BE%B9%E6%A0%8F%E5%B0%8F%E7%BB%84%E4%BB%B6"><span class="toc-text">侧边栏小组件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E6%89%8B%E5%BB%BA%E8%AE%AE"><span class="toc-text">上手建议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B4%E4%BD%93%E8%AF%84%E4%BB%B7"><span class="toc-text">整体评价</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Anytype-%E8%83%BD%E6%9B%BF%E4%BB%A3-Notion-%E5%90%97%EF%BC%9F"><span class="toc-text">Anytype 能替代 Notion 吗？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Anytype-%E8%83%BD%E6%9B%BF%E4%BB%A3-Obsidian-%E5%90%97%EF%BC%9F"><span class="toc-text">Anytype 能替代 Obsidian 吗？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E7%82%B9%E8%A1%A5%E5%85%85"><span class="toc-text">优点补充</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%BA%E7%82%B9%E8%A1%A5%E5%85%85"><span class="toc-text">缺点补充</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+<script type="text/javascript">
+  const ctx = {
+    date_suffix: {
+      just: `刚刚`,
+      min: `分钟前`,
+      hour: `小时前`,
+      day: `天前`,
+    },
+    root : `/`,
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+  };
+  const deps = {
+    jquery: `https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js`,
+    marked: `https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+    
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      let retryTimes = 3;
+      utils.onLoading(el);
+      function req() {
+        return new Promise((resolve, reject) => {
+          let status = 0; // 0 等待 1 完成 2 超时
+          let timer = setTimeout(() => {
+            if (status === 0) {
+              status = 2;
+              timer = null;
+              reject('请求超时');
+              if (retryTimes == 0) {
+                onFailure();
+              }
+            }
+          }, 5000);
+          fetch(url).then(function(response) {
+            if (status !== 2) {
+              clearTimeout(timer);
+              resolve(response);
+              timer = null;
+              status = 1;
+            }
+            if (response.ok) {
+              return response.json();
+            }
+            throw new Error('Network response was not ok.');
+          }).then(function(data) {
+            retryTimes = 0;
+            utils.onLoadSuccess(el);
+            callback(data);
+          }).catch(function(error) {
+            if (retryTimes > 0) {
+              retryTimes -= 1;
+              setTimeout(() => {
+                req();
+              }, 5000);
+            } else {
+              utils.onLoadFailure(el);
+              onFailure();
+            }
+          });
+        });
+      }
+      req();
+    },
+  };
+</script>
+
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+
+<!-- required -->
+<script src="/js/main.js?v=1.27.0" async></script>
+
+<!-- optional -->
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.bootcdn.net/ajax/libs/flying-pages/2.1.2/flying-pages.min.js"></script><script defer src="https://cdn.bootcdn.net/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+</script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.min.css`,
+    js: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.umd.min.js`
+  };
+  var selector = '[data-fancybox]:not(.error)';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const els = document.getElementsByClassName('ds-memos');
+    if (els != undefined && els.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || null
+        }
+      });
+    })
+  }
+</script><script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script><script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+
+</div></body></html>
