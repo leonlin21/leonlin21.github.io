@@ -1,0 +1,592 @@
+
+<!DOCTYPE html><html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.27.0" theme-name="Stellar" theme-version="1.27.0">
+  
+  <meta name="generator" content="Hexo 7.1.1">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>在 Obsidian 中集成 AI 问答功能：Obsidian Copilot + DeepSeek 设置教程 - 二一的笔记</title>
+
+  
+    <meta name="description" content="效果演示这个插件将 AI 问答窗口植入到 Obsidian 中，可以让在 Obsidian 中拥有类似 ChatGPT 的问答窗口，你可以提出任何问题，然后让 AI 来回答。  你也可以指定 Obsidian 库中特定的某篇文章，或者某个文件夹下的一系列文章，然后让 AI 来回答你的问题。  当然也可以选中某个笔记段落后，让 AI 来回答你的问题。 这个插件最大的优势就在于，我们不用在多个工具之间">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在 Obsidian 中集成 AI 问答功能：Obsidian Copilot + DeepSeek 设置教程">
+<meta property="og:url" content="https://eryiblog.ink/posts/202501140938.html">
+<meta property="og:site_name" content="二一的笔记">
+<meta property="og:description" content="效果演示这个插件将 AI 问答窗口植入到 Obsidian 中，可以让在 Obsidian 中拥有类似 ChatGPT 的问答窗口，你可以提出任何问题，然后让 AI 来回答。  你也可以指定 Obsidian 库中特定的某篇文章，或者某个文件夹下的一系列文章，然后让 AI 来回答你的问题。  当然也可以选中某个笔记段落后，让 AI 来回答你的问题。 这个插件最大的优势就在于，我们不用在多个工具之间">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202501131748186.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202501131749330.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202501130023818.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202501130021718.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202501130024617.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202501130029009.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202501130030150.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202501130035647.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202501131049914.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202501131055875.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202501131146838.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202501131148200.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202501131100114.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202501131655526.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202501131102510.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202501131108496.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202501131637203.png">
+<meta property="article:published_time" content="2025-01-14T01:38:08.000Z">
+<meta property="article:modified_time" content="2025-01-14T06:16:42.734Z">
+<meta property="article:author" content="二一">
+<meta property="article:tag" content="AI">
+<meta property="article:tag" content="Obsidian">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.eryinote.com/PicGo/202501131748186.png">
+  
+  
+  
+  <meta name="keywords" content="AI,Obsidian">
+
+  <!-- feed -->
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.27.0">
+
+  
+
+  
+
+  <link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css" media="print" onload="this.media='all'">
+</head>
+<body>
+
+<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://pic.eryinote.com/PicGo/202403280735497.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">二一的笔记</div><div class="sub normal cap">等待和希望</div><div class="sub hover cap" style="opacity:0"> 记录我的所见所闻，所思所想</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+<nav class="menu dis-select"></nav>
+</div>
+<div class="widgets">
+
+
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/posts/202501161430.html"><span class="title">自由使用任意大模型 API：OpenRouter 注册、付费与 API Key 设置教程</span></a><a class="item title" href="/posts/202501151548.html"><span class="title">AI 笔记软件的 RAG 能力简单测试</span></a><a class="item title" href="/posts/202410161211.html"><span class="title">Tana 的 AI 是我用过最强大的笔记 AI</span></a><a class="item title" href="/posts/202501151051.html"><span class="title">Obsidian AI 插件 Text Generator 的配置方法</span></a><a class="item title" href="/posts/202405082006.html"><span class="title">Notion 插件推荐：用谷歌搜索 Notion 笔记库的内容</span></a><a class="item title" href="/posts/202406141324.html"><span class="title">聊聊 Heptabase，如何用白板做知识管理</span></a><a class="item title" href="/posts/202407071944.html"><span class="title">用 Notion 写 Wordpress 博客</span></a><a class="item title" href="/posts/202407072351.html"><span class="title">Mac 图片压缩工具 Clop 体验</span></a><a class="item title" href="/posts/202408121742.html"><span class="title">Notion 中文版，真的来了｜抢先预览</span></a><a class="item title" href="/posts/202409221743.html"><span class="title">离线版 Notion 来了？Anytype 万字入门解析</span></a></div></widget>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://space.bilibili.com/319417" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403292128856.svg"/></a><a class="social" href="https://sspai.com/series/303/list" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403292126678.svg"/></a><a class="social" href="https://twitter.com/eryidebiji" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403292132510.svg"/></a></div></footer>
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2025-01-14T01:38:08.000Z">2025-01-14</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-01-14T06:16:42.734Z">2025-01-14</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>在 Obsidian 中集成 AI 问答功能：Obsidian Copilot + DeepSeek 设置教程</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><h2 id="效果演示"><a href="#效果演示" class="headerlink" title="效果演示"></a>效果演示</h2><p>这个插件将 AI 问答窗口植入到 Obsidian 中，可以让在 Obsidian 中拥有类似 ChatGPT 的问答窗口，你可以提出任何问题，然后让 AI 来回答。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202501131748186.png" alt="202501131920.png"></p>
+<p>你也可以指定 Obsidian 库中特定的某篇文章，或者某个文件夹下的一系列文章，然后让 AI 来回答你的问题。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202501131749330.png" alt="Obsidian20250113Obsidian Copilot +DeepSeek 王炸组合 - Hexo - Obsidian v1.7.7009235@2x.png"></p>
+<p>当然也可以选中某个笔记段落后，让 AI 来回答你的问题。</p>
+<p>这个插件最大的优势就在于，我们不用在多个工具之间来回跳转， 只需要在 Obsidian 内部就可以完成从构思、创作到 AI 答疑的全流程，不用将各种数据在不同 App 之间来回倒腾。</p>
+<h2 id="基础设置"><a href="#基础设置" class="headerlink" title="基础设置"></a>基础设置</h2><h3 id="安装-Copilot-插件"><a href="#安装-Copilot-插件" class="headerlink" title="安装 Copilot 插件"></a>安装 Copilot 插件</h3><p>在 Obsidian 的插件市场搜索 Copilot 插件并安装。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202501130023818.png" alt="安装Copilot插件的界面截图"></p>
+<h3 id="申请-DeepSeek-API"><a href="#申请-DeepSeek-API" class="headerlink" title="申请 DeepSeek API"></a>申请 DeepSeek API</h3><ol>
+<li>在 <a target="_blank" rel="noopener" href="https://www.deepseek.com/">DeepSeek官网</a> 注册一个账号。</li>
+<li>访问 DeepSeek 的 <a target="_blank" rel="noopener" href="https://platform.deepseek.com/api_keys">API 申请页面</a>。</li>
+<li>点击“创建 API key”按钮，保存生成的 API。</li>
+</ol>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202501130021718.png" alt="DeepSeek API申请页面截图"></p>
+<h3 id="插件设置"><a href="#插件设置" class="headerlink" title="插件设置"></a>插件设置</h3><ol>
+<li>按照下图所示步骤，依次选择并填好相关设置内容。<ul>
+<li>点击步骤 6 测试 API 连接，成功后右上角会弹出<code>successful</code>提示。</li>
+<li>点击步骤 7 添加模型。</li>
+</ul>
+</li>
+</ol>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202501130024617.png" alt="插件设置界面截图"></p>
+<ol start="2">
+<li>勾选 <code>deepseek-chat</code> 作为 Copilot 的默认模型。</li>
+</ol>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202501130029009.png" alt="选择默认模型界面截图"></p>
+<h3 id="测试对话"><a href="#测试对话" class="headerlink" title="测试对话"></a>测试对话</h3><p>一切安装成功后，侧边栏右上角会出现一个图标，点击后即可打开 Copilot 并进行对话。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202501130030150.png" alt="Copilot对话界面截图"></p>
+<p>你可以使用 <code>[[</code> 符号来指定特定的文章，然后让 Copilot 根据这篇文章的内容来回答问题。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202501130035647.png" alt="Obsidian20250113Obsidian Copilot +DeepSeek 王炸组合 - Hexo - Obsidian v1.7.7009181@2x.png"></p>
+<p>完成以上设置后，你就可以在 Obsidian 中充分利用 Copilot 和 DeepSeek 的强大功能了。</p>
+<h2 id="细节设置"><a href="#细节设置" class="headerlink" title="细节设置"></a>细节设置</h2><h3 id="修改对话存储位置"><a href="#修改对话存储位置" class="headerlink" title="修改对话存储位置"></a>修改对话存储位置</h3><p>这个插件的默认对话存储位置是放在根目录下的 <code>copilot-conversations</code> 文件夹里，如果你想修改这个位置的话，可以在 <code>Default Conversation Folder Name</code> 这个选项下修改。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202501131049914.png" alt="Obsidian20250113Obsidian Copilot +DeepSeek 王炸组合 - Hexo - Obsidian v1.7.7009183@2x.png"></p>
+<h3 id="修改自定义-Prompt-的存储位置"><a href="#修改自定义-Prompt-的存储位置" class="headerlink" title="修改自定义 Prompt 的存储位置"></a>修改自定义 Prompt 的存储位置</h3><p>这个插件可以让你存储自定义的 Prompt 然后快速调用，首先你需要创建一个用于存储 Prompt 的文件夹，然后在 <code>Custom Prompts Folder Name</code> 这个设置中，指定好这个文件夹的位置</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202501131055875.png" alt="Obsidian20250113Obsidian Copilot +DeepSeek 王炸组合 - Hexo - Obsidian v1.7.7009185@2x.png"></p>
+<p>接下里你就可以在对话窗口中，使用按钮 <code>/</code> 来快速调用提前预设的 Prompt 了。</p>
+<h3 id="添加自定义-Prompt"><a href="#添加自定义-Prompt" class="headerlink" title="添加自定义 Prompt"></a>添加自定义 Prompt</h3><p>有两种方法。</p>
+<ol>
+<li>使用快捷命令</li>
+</ol>
+<p>使用 ctrl+P 唤出命令菜单，然后输入 <code>copilot add</code> 就会出现添加命令的选项</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202501131146838.png" alt="Obsidian20250113Obsidian Copilot +DeepSeek 王炸组合 - Hexo - Obsidian v1.7.7009195@2x.png"></p>
+<p>然后回车，就可以具体的 Prompt 设置页面</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202501131148200.png" alt="Obsidian20250113Obsidian Copilot +DeepSeek 王炸组合 - Hexo - Obsidian v1.7.7009197@2x.png"></p>
+<h3 id="自定义-Prompt-的变量"><a href="#自定义-Prompt-的变量" class="headerlink" title="自定义 Prompt 的变量"></a>自定义 Prompt 的变量</h3><p>在使用 Copilot 进行文本编辑时，有时你会遇到一个问题：Copilot 不知道你正在编辑的是哪篇文章。为了避免这种情况，你可以在自定义的 Prompt 中使用以下变量：</p>
+<ul>
+<li><code>&#123;activeNote&#125;</code> 告诉 Copilot，你指定的是「当前窗口下激活的这篇文章」</li>
+<li><code>&#123;[[]]&#125;</code> 告诉 Copilot 你指定的是哪一篇文章</li>
+<li><code>&#123;&#125;</code> 告诉 Copilot 你指定的是光标选中的段落</li>
+<li><code>&#123;#tag1,tag2&#125;</code>告诉 Copilot 你指定的是包含了哪些标签的文章，只要包含其中一个标签就会命中</li>
+<li><code>&#123;FolderPage&#125;</code> 告诉 Copilot 你指定的是哪个文件夹路径下的所有文档</li>
+</ul>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202501131100114.png" alt="Obsidian20250113SEO 专家 - Hexo - Obsidian v1.7.7009189@2x.png"></p>
+<h3 id="将-Prompt-作用于选中的段落"><a href="#将-Prompt-作用于选中的段落" class="headerlink" title="将 Prompt 作用于选中的段落"></a>将 Prompt 作用于选中的段落</h3><p>前面的文章提到，虽然我们可以在侧边栏的 对话窗口里，使用 <code>/</code> 按钮来唤出自定义 Prompt，但是这样一来指定的就是 <strong>整篇文章</strong>，而非 <strong>特定的段落</strong>。</p>
+<p>所以如果你想让 AI 作用于特定段落，可以选中这个段落后，使用快捷键 <code>ctrl+P</code> 唤出 Obsidian 的命令窗口，再输入 <code>copilot apply</code>，然后回车，就可以选择你预设的 Prompt，然后作用于你选中的这个段落。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202501131655526.png" alt="Obsidian20250113Obsidian Copilot +DeepSeek 王炸组合 - Hexo - Obsidian v1.7.7009231@2x.png"></p>
+<h3 id="自动保存对话"><a href="#自动保存对话" class="headerlink" title="自动保存对话"></a>自动保存对话</h3><p>开启 <code>Autosave Chat</code> 这个选项，就可以在开启新对话的时候，自动保存旧的对话。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202501131102510.png" alt="Obsidian20250113Obsidian Copilot +DeepSeek 王炸组合 - Hexo - Obsidian v1.7.7009191@2x.png"></p>
+<h3 id="设置优先级最高的-Prompt"><a href="#设置优先级最高的-Prompt" class="headerlink" title="设置优先级最高的 Prompt"></a>设置优先级最高的 Prompt</h3><p>在某些情况下，AI 的回答有可能会输出英文，或者回答的格式不符合你的习惯，例如我希望 AI 能够在中文和英文之间添加空格，但是每次都需要手动指定的话就显得有点麻烦。</p>
+<p>所以我们可以在 <code>Advanced Settings</code> 这个位置，添加<strong>优先级最高的 Prompt</strong>。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202501131108496.png" alt="Obsidian20250113Obsidian Copilot +DeepSeek 王炸组合 - Hexo - Obsidian v1.7.7009193@2x.png"></p>
+<p><em>这个插件还有基于整个笔记库的问答模式，不过现在还没能设置成功，等之后搞定了再来更新这篇文章合</em>。</p>
+<h2 id="关联阅读"><a href="#关联阅读" class="headerlink" title="关联阅读"></a>关联阅读</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://eryinote.com/post/1509">Obsidian 的 8 个用法</a></li>
+<li><a target="_blank" rel="noopener" href="https://eryinote.com/post/1448">超越 Notion，挑战 AI 工作流的极限！最强大纲笔记 Tana 终极测评</a></li>
+<li>Notion AI 从入门到进阶<ul>
+<li><a target="_blank" rel="noopener" href="https://xiaobot.net/post/4f964e65-7654-4c2f-acae-5387301308b9">Notion AI 详解（常见问题答疑）</a></li>
+<li><a target="_blank" rel="noopener" href="https://xiaobot.net/post/55036041-a0a4-480f-a4d0-473f37e3e5a8">Notion AI 详解（图文基础篇 ）：与 ChatGPT 相比，Notion AI 有什么用，该怎么用？</a></li>
+<li><a target="_blank" rel="noopener" href="https://xiaobot.net/post/55036041-a0a4-480f-a4d0-473f37e3e5a8">Notion AI 详解（增强数据篇）：AI 与数据库结合，打通全局工作流</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="我的-Notion-课程"><a href="#我的-Notion-课程" class="headerlink" title="我的 Notion 课程"></a>我的 Notion 课程</h2><p>《Notion 搭建高能效率系统》</p>
+<ul>
+<li>从「效率困局」到「生产力中枢」</li>
+<li>用 18 个月打磨的 Notion 精进指南</li>
+<li>助你在 7 天内掌握精英必备的效率神器</li>
+<li>推出一年半，帮助近 6000 位学员精通 Notion</li>
+<li>国内销量最高的 Notion 系统课程</li>
+<li>小红书好评率超过 98%</li>
+</ul>
+<p>详情介绍：<a target="_blank" rel="noopener" href="https://leon21.notion.site/notion-course?pvs=4">点我</a></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202501131637203.png" alt="202501131915.png"></p>
+
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本站所有文章，如无特殊说明或标注，均为本站原创发布。任何个人或组织，在未征得本站同意时，禁止复制、盗用、采集、发布本站内容到任何网站、书籍等各类媒体平台。</p>
+</div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/202501141237.html">Obsidian  AI 插件：Copilot 的 vault QA 设置教程</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/202501131643.html">MacBook M1 芯片使用 LM Studio 运行本地大模型的简单记录</a></div></section></div>
+
+
+
+
+
+
+<footer class="page-footer footnote"><hr><div class="text"><script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"3HvmahY3CrAtqhI7",ck:"3HvmahY3CrAtqhI7"})</script>
+<script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/3HvmahY3CrAtqhI7/quote.js?theme=0&f=12&display=0,0,0,1,0,0,1,1"></script>
+<p>本站由 <a href="/">二一</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.27.0">Stellar 1.27.0</a> 主题创建。<br><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">闽ICP备2022015368号-2</a></p>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%88%E6%9E%9C%E6%BC%94%E7%A4%BA"><span class="toc-text">效果演示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E8%AE%BE%E7%BD%AE"><span class="toc-text">基础设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-Copilot-%E6%8F%92%E4%BB%B6"><span class="toc-text">安装 Copilot 插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%B3%E8%AF%B7-DeepSeek-API"><span class="toc-text">申请 DeepSeek API</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE"><span class="toc-text">插件设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E5%AF%B9%E8%AF%9D"><span class="toc-text">测试对话</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%86%E8%8A%82%E8%AE%BE%E7%BD%AE"><span class="toc-text">细节设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%AF%B9%E8%AF%9D%E5%AD%98%E5%82%A8%E4%BD%8D%E7%BD%AE"><span class="toc-text">修改对话存储位置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E8%87%AA%E5%AE%9A%E4%B9%89-Prompt-%E7%9A%84%E5%AD%98%E5%82%A8%E4%BD%8D%E7%BD%AE"><span class="toc-text">修改自定义 Prompt 的存储位置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89-Prompt"><span class="toc-text">添加自定义 Prompt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89-Prompt-%E7%9A%84%E5%8F%98%E9%87%8F"><span class="toc-text">自定义 Prompt 的变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%86-Prompt-%E4%BD%9C%E7%94%A8%E4%BA%8E%E9%80%89%E4%B8%AD%E7%9A%84%E6%AE%B5%E8%90%BD"><span class="toc-text">将 Prompt 作用于选中的段落</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E4%BF%9D%E5%AD%98%E5%AF%B9%E8%AF%9D"><span class="toc-text">自动保存对话</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E4%BC%98%E5%85%88%E7%BA%A7%E6%9C%80%E9%AB%98%E7%9A%84-Prompt"><span class="toc-text">设置优先级最高的 Prompt</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E8%81%94%E9%98%85%E8%AF%BB"><span class="toc-text">关联阅读</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E7%9A%84-Notion-%E8%AF%BE%E7%A8%8B"><span class="toc-text">我的 Notion 课程</span></a></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+<script type="text/javascript">
+  const ctx = {
+    date_suffix: {
+      just: `刚刚`,
+      min: `分钟前`,
+      hour: `小时前`,
+      day: `天前`,
+    },
+    root : `/`,
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+  };
+  const deps = {
+    jquery: `https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js`,
+    marked: `https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+    
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      let retryTimes = 3;
+      utils.onLoading(el);
+      function req() {
+        return new Promise((resolve, reject) => {
+          let status = 0; // 0 等待 1 完成 2 超时
+          let timer = setTimeout(() => {
+            if (status === 0) {
+              status = 2;
+              timer = null;
+              reject('请求超时');
+              if (retryTimes == 0) {
+                onFailure();
+              }
+            }
+          }, 5000);
+          fetch(url).then(function(response) {
+            if (status !== 2) {
+              clearTimeout(timer);
+              resolve(response);
+              timer = null;
+              status = 1;
+            }
+            if (response.ok) {
+              return response.json();
+            }
+            throw new Error('Network response was not ok.');
+          }).then(function(data) {
+            retryTimes = 0;
+            utils.onLoadSuccess(el);
+            callback(data);
+          }).catch(function(error) {
+            if (retryTimes > 0) {
+              retryTimes -= 1;
+              setTimeout(() => {
+                req();
+              }, 5000);
+            } else {
+              utils.onLoadFailure(el);
+              onFailure();
+            }
+          });
+        });
+      }
+      req();
+    },
+  };
+</script>
+
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+
+<!-- required -->
+<script src="/js/main.js?v=1.27.0" async></script>
+
+<!-- optional -->
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.bootcdn.net/ajax/libs/flying-pages/2.1.2/flying-pages.min.js"></script><script defer src="https://cdn.bootcdn.net/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+</script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.min.css`,
+    js: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.umd.min.js`
+  };
+  var selector = '[data-fancybox]:not(.error)';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const els = document.getElementsByClassName('ds-memos');
+    if (els != undefined && els.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || null
+        }
+      });
+    })
+  }
+</script><script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script><script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+
+</div></body></html>

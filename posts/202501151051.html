@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.27.0" theme-name="Stellar" theme-version="1.27.0">
-  <meta name="robots" content="noindex,follow">
+  
   <meta name="generator" content="Hexo 7.1.1">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   
@@ -16,20 +16,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>分类：人工智能 - 二一的笔记</title>
+  <title>Obsidian AI 插件 Text Generator 的配置方法 - 二一的笔记</title>
 
   
-    <meta property="og:type" content="website">
-<meta property="og:title" content="二一的笔记">
-<meta property="og:url" content="https://eryiblog.ink/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/index.html">
+    <meta name="description" content="在之前的文章中，我分享了《Obsidian Copilot + DeepSeek 设置教程》将 AI 问答功能集成到 Obsidian 中，让你可以在笔记软件内直接与 AI 对话，甚至让 AI 根据特定文章内容回答问题。 接着在《Copilot 的 vault QA 设置教程》中，我进一步探讨了如何让 AI 基于整个笔记库进行问答，真正实现了 RAG（检索增强生成）的效果。 今天再来分享一个 Ob">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Obsidian AI 插件 Text Generator 的配置方法">
+<meta property="og:url" content="https://eryiblog.ink/posts/202501151051.html">
 <meta property="og:site_name" content="二一的笔记">
+<meta property="og:description" content="在之前的文章中，我分享了《Obsidian Copilot + DeepSeek 设置教程》将 AI 问答功能集成到 Obsidian 中，让你可以在笔记软件内直接与 AI 对话，甚至让 AI 根据特定文章内容回答问题。 接着在《Copilot 的 vault QA 设置教程》中，我进一步探讨了如何让 AI 基于整个笔记库进行问答，真正实现了 RAG（检索增强生成）的效果。 今天再来分享一个 Ob">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202501142250662.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202501142254265.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202501142255353.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202501142256578.png">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202501150958397.gif">
+<meta property="og:image" content="https://pic.eryinote.com/PicGo/202501131637203.png">
+<meta property="article:published_time" content="2025-01-15T02:51:45.000Z">
+<meta property="article:modified_time" content="2025-01-15T02:52:08.293Z">
 <meta property="article:author" content="二一">
+<meta property="article:tag" content="Obsidian">
+<meta property="article:tag" content="插件">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.eryinote.com/PicGo/202501142250662.png">
   
   
   
-  
+  <meta name="keywords" content="Obsidian,插件">
 
   <!-- feed -->
   
@@ -44,7 +57,7 @@
 </head>
 <body>
 
-<div class="l_body s:aa index tech" id="start" layout="undefined" ><aside class="l_left"><div class="leftbar-container">
+<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
 
 
 <header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://pic.eryinote.com/PicGo/202403280735497.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">二一的笔记</div><div class="sub normal cap">等待和希望</div><div class="sub hover cap" style="opacity:0"> 记录我的所见所闻，所思所想</div></a></div></header>
@@ -56,29 +69,89 @@
 <nav class="menu dis-select"></nav>
 </div>
 <div class="widgets">
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/posts/202501081147.html"><span class="title">笔记诊所：寻找支持 Markdown 格式且能自动清理图片的笔记软件</span></a><a class="item title" href="/posts/202501051829.html"><span class="title">Notion 问答：如何统计 Select 字段的选项百分比</span></a><a class="item title" href="/posts/202501051510.html"><span class="title">用 Bolt.new 制作课程宣传页的一次尝试</span></a><a class="item title" href="/posts/202501032149.html"><span class="title">无编程经验，我用 Claude 做了一些好看的网页和图片</span></a><a class="item title" href="/posts/202412311726.html"><span class="title">10 款年度最佳效率工具，总结我的 2024</span></a><a class="item title" href="/posts/202411211738.html"><span class="title">创作手记：用 AI 克隆人声，并翻译成英语音轨</span></a><a class="item title" href="/posts/202412261505.html"><span class="title">AI 搜索正在爆发，聊聊我的认知和用法</span></a><a class="item title" href="/posts/202411231752.html"><span class="title">沉浸式翻译免费 API：硅基流动 API 的使用方法</span></a><a class="item title" href="/posts/202412141202.html"><span class="title">Notion 自动化技巧：用函数变量构建自动间隔重复任务</span></a><a class="item title" href="/posts/202411171410.html"><span class="title">Notion 问答：Notion 数据库层级嵌套太深怎么办？</span></a></div></widget>
+
+
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/posts/202501161430.html"><span class="title">自由使用任意大模型 API：OpenRouter 注册、付费与 API Key 设置教程</span></a><a class="item title" href="/posts/202501151548.html"><span class="title">AI 笔记软件的 RAG 能力简单测试</span></a><a class="item title" href="/posts/202410161211.html"><span class="title">Tana 的 AI 是我用过最强大的笔记 AI</span></a><a class="item title" href="/posts/202501151051.html"><span class="title">Obsidian AI 插件 Text Generator 的配置方法</span></a><a class="item title" href="/posts/202405082006.html"><span class="title">Notion 插件推荐：用谷歌搜索 Notion 笔记库的内容</span></a><a class="item title" href="/posts/202406141324.html"><span class="title">聊聊 Heptabase，如何用白板做知识管理</span></a><a class="item title" href="/posts/202407071944.html"><span class="title">用 Notion 写 Wordpress 博客</span></a><a class="item title" href="/posts/202407072351.html"><span class="title">Mac 图片压缩工具 Clop 体验</span></a><a class="item title" href="/posts/202408121742.html"><span class="title">Notion 中文版，真的来了｜抢先预览</span></a><a class="item title" href="/posts/202409221743.html"><span class="title">离线版 Notion 来了？Anytype 万字入门解析</span></a></div></widget>
 </div>
 <footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://space.bilibili.com/319417" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403292128856.svg"/></a><a class="social" href="https://sspai.com/series/303/list" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403292126678.svg"/></a><a class="social" href="https://twitter.com/eryidebiji" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202403292132510.svg"/></a></div></footer>
 </div></aside><div class="l_main" id="main">
 
-<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://pic.eryinote.com/PicGo/202403280735497.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">二一的笔记</div><div class="sub normal cap">等待和希望</div><div class="sub hover cap" style="opacity:0"> 记录我的所见所闻，所思所想</div></a></div></header>
-
- 
 
 
 
 
-<div class="navbar top"><nav class="post"><a href="/">近期发布</a><a class="active" href="/categories">分类：人工智能</a><a href="/tags">标签</a><a href="/archives">归档</a></nav></div>
-<div class="post-list post"><a class="post-card post" href="/posts/1.html">
-<article class="md-text"><h2 class="post-title">2024-11-29</h2><div class="excerpt"><p>安装 Ollama
-官网：https://ollama.com/download
-下载后解压缩，然后安装程序
-按照提示，在 Mac 终端内输入命令，即可自动完成安装与配置
-随后点击 Ollama 应用程序图标， 启动运行
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2025-01-15T02:51:45.000Z">2025-01-15</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-01-15T02:52:08.293Z">2025-01-15</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>Obsidian AI 插件 Text Generator 的配置方法</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><p>在之前的文章中，我分享了《<a target="_blank" rel="noopener" href="https://eryinote.com/post/1683">Obsidian Copilot + DeepSeek 设置教程</a>》将 AI 问答功能集成到 Obsidian 中，让你可以在笔记软件内直接与 AI 对话，甚至让 AI 根据特定文章内容回答问题。</p>
+<p>接着在《<a target="_blank" rel="noopener" href="https://eryinote.com/post/1685">Copilot 的 vault QA 设置教程</a>》中，我进一步探讨了如何让 AI 基于整个笔记库进行问答，真正实现了 RAG（检索增强生成）的效果。</p>
+<p>今天再来分享一个 Obsidian 的 AI 插件 <strong>Text Generator</strong> 的配置方法。</p>
+<h2 id="安装-Text-Generator-插件"><a href="#安装-Text-Generator-插件" class="headerlink" title="安装 Text Generator 插件"></a>安装 Text Generator 插件</h2><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202501142250662.png" alt="Obsidian20250114Obsidian Text Generator - Hexo - Obsidian v1.7.7009285@2x.png"></p>
+<h2 id="添加-DeepSeek-API"><a href="#添加-DeepSeek-API" class="headerlink" title="添加 DeepSeek API"></a>添加 DeepSeek API</h2><p>注册和申请 DeepSeek API 的方法在这篇《<a target="_blank" rel="noopener" href="https://eryinote.com/post/1683#shen_qing_DeepSeek_API">Obsidian Copilot + DeepSeek 设置教程</a>》中有介绍，本文就不再赘述。</p>
+<p>申请完 API 后，打开 Text Generator 的设置界面，按照下面的步骤进行设置。</p>
+<ol>
+<li>Endpoint：<a target="_blank" rel="noopener" href="https://api.deepseek.com/v1/chat/completions">https://api.deepseek.com/v1/chat/completions</a></li>
+<li>API key：填你申请好的 API</li>
+<li>Model：deepseek-chat</li>
+<li>点击加号，会出现 Name 的选项</li>
+<li>在 Name 位置填入 Deepseek 的名称（也可以自定义）</li>
+</ol>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202501142254265.png" alt="202501141973.png"></p>
+<ol start="6">
+<li>点击 Advance mode 按钮</li>
+</ol>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202501142255353.png" alt="Obsidian20250114新标签页 - Hexo - Obsidian v1.7.7009291@2x.png"></p>
+<ol start="7">
+<li>勾选 Streamable 和 CORS Bypass 这两个选项</li>
+</ol>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202501142256578.png" alt="Obsidian20250114新标签页 - Hexo - Obsidian v1.7.7009293@2x.png"></p>
+<h2 id="插件效果测试"><a href="#插件效果测试" class="headerlink" title="插件效果测试"></a>插件效果测试</h2><p>在任意文章位置，使用快捷键 Ctrl+J 激活 Text Generator，看看是否可以成功生成内容</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202501150958397.gif" alt="202501151977.gif"></p>
+<h2 id="关联阅读"><a href="#关联阅读" class="headerlink" title="关联阅读"></a>关联阅读</h2><h3 id="关联文章"><a href="#关联文章" class="headerlink" title="关联文章"></a>关联文章</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://eryinote.com/post/1683">在 Obsidian 中集成 AI 问答功能：Obsidian Copilot + DeepSeek 设置教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://eryinote.com/post/1685">Obsidian AI 插件 Copilot vault QA 设置教程</a></li>
+</ul>
+<h3 id="关联视频"><a href="#关联视频" class="headerlink" title="关联视频"></a>关联视频</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://eryinote.com/post/1448">超越 Notion，挑战 AI 工作流的极限！最强大纲笔记 Tana 终极测评</a></li>
+<li><a target="_blank" rel="noopener" href="https://eryinote.com/post/1509">Obsidian 的 8 个用法</a></li>
+</ul>
+<h2 id="我的-Notion-课程"><a href="#我的-Notion-课程" class="headerlink" title="我的 Notion 课程"></a>我的 Notion 课程</h2><p>《Notion 搭建高能效率系统》</p>
+<ul>
+<li>从「效率困局」到「生产力中枢」</li>
+<li>用 18 个月打磨的 Notion 精进指南</li>
+<li>助你在 7 天内掌握精英必备的效率神器</li>
+<li>推出一年半，帮助近 6000 位学员精通 Notion</li>
+<li>国内销量最高的 Notion 系统课程</li>
+<li>小红书好评率超过 98%</li>
+</ul>
+<p>详情介绍：<a target="_blank" rel="noopener" href="https://leon21.notion.site/notion-course?pvs=4">点我</a></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic.eryinote.com/PicGo/202501131637203.png" alt="202501131915.png"></p>
+
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本站所有文章，如无特殊说明或标注，均为本站原创发布。任何个人或组织，在未征得本站同意时，禁止复制、盗用、采集、发布本站内容到任何网站、书籍等各类媒体平台。</p>
+</div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/202501151548.html">AI 笔记软件的 RAG 能力简单测试</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/202501141423.html">Notion 数据库根据字段内容自动设置标题名称</a></div></section></div>
 
 
-使用 Docker 安装...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2024-11-29T08:37:36.190Z">2024-11-29</time></span><span class="cap breadcrumb"><svg style="margin-bottom:1px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6.95c0-.883 0-1.324.07-1.692A4 4 0 0 1 5.257 2.07C5.626 2 6.068 2 6.95 2c.386 0 .58 0 .766.017a4 4 0 0 1 2.18.904c.144.119.28.255.554.529L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .848.352C14.098 6 14.675 6 15.828 6h.374c2.632 0 3.949 0 4.804.77c.079.07.154.145.224.224c.77.855.77 2.172.77 4.804V14c0 3.771 0 5.657-1.172 6.828C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172C2 19.657 2 17.771 2 14z" opacity=".5"/><path fill="currentColor" d="M20 6.238c0-.298-.005-.475-.025-.63a3 3 0 0 0-2.583-2.582C17.197 3 16.965 3 16.5 3H9.988c.116.104.247.234.462.45L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .849.352C14.098 6 14.675 6 15.829 6h.373c1.78 0 2.957 0 3.798.238"/><path fill="currentColor" fill-rule="evenodd" d="M12.25 10a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg><span>技术教程</span></span></div></article>
-</a></div>
+
+
 
 
 <footer class="page-footer footnote"><hr><div class="text"><script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
@@ -87,7 +160,14 @@
 <p>本站由 <a href="/">二一</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.27.0">Stellar 1.27.0</a> 主题创建。<br><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">闽ICP备2022015368号-2</a></p>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
-</aside><div class='float-panel blur'>
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-Text-Generator-%E6%8F%92%E4%BB%B6"><span class="toc-text">安装 Text Generator 插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0-DeepSeek-API"><span class="toc-text">添加 DeepSeek API</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6%E6%95%88%E6%9E%9C%E6%B5%8B%E8%AF%95"><span class="toc-text">插件效果测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E8%81%94%E9%98%85%E8%AF%BB"><span class="toc-text">关联阅读</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E8%81%94%E6%96%87%E7%AB%A0"><span class="toc-text">关联文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E8%81%94%E8%A7%86%E9%A2%91"><span class="toc-text">关联视频</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E7%9A%84-Notion-%E8%AF%BE%E7%A8%8B"><span class="toc-text">我的 Notion 课程</span></a></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
   <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
   </button>
